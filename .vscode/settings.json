@@ -1,0 +1,20 @@
+{
+    // Pdf output directory
+    "markdown-pdf.outputDirectory": "",
+  
+    // paper size and margins
+    "markdown-pdf.paperFormat": "A4",
+    "markdown-pdf.paperMargin": {
+      "top": "1cm",
+      "right": "1cm",
+      "bottom": "1cm",
+      "left": "1cm"
+    },
+  
+    "markdown-pdf.renderDelay": 2000,
+    // styles
+    "markdown-pdf.styles": [
+      "styles.css"
+    ]
+  }
+  
