@@ -59,7 +59,7 @@ Los `id` coinciden con el índice de `00-introduction.md`. (Los números 5.2.1�
 <h4 id="5217-team-collaboration-insights-during-sprint">5.2.1.7 Team Collaboration Insights during Sprint</h4>
 <p><em>Contenido por desarrollar.</em></p>
 
-<h4 id="5218-kanban-board--tp1">5.2.1.8 Kanban Board --&gt; TP1</h4>
+<h4 id="5218-kanban-board">5.2.1.8 Kanban Board</h4>
 <p><em>Contenido por desarrollar.</em></p>
 
 <h3 id="522-sprint-2">5.2.2 Sprint 2</h3>
@@ -86,7 +86,7 @@ Los `id` coinciden con el índice de `00-introduction.md`. (Los números 5.2.1�
 <h4 id="5227-team-collaboration-insights-during-sprint">5.2.2.7 Team Collaboration Insights during Sprint</h4>
 <p><em>Contenido por desarrollar.</em></p>
 
-<h4 id="5228-kanban-board--avance-3">5.2.2.8 Kanban Board --&gt; (Avance 3)</h4>
+<h4 id="5228-kanban-board">5.2.2.8 Kanban Board</h4>
 <p><em>Contenido por desarrollar.</em></p>
 
 <h3 id="523-sprint-3">5.2.3 Sprint 3</h3>
@@ -113,7 +113,7 @@ Los `id` coinciden con el índice de `00-introduction.md`. (Los números 5.2.1�
 <h4 id="5237-team-collaboration-insights-during-sprint">5.2.3.7 Team Collaboration Insights during Sprint</h4>
 <p><em>Contenido por desarrollar.</em></p>
 
-<h4 id="5238-kanban-board--avance-4">5.2.3.8 Kanban Board --&gt; (Avance 4)</h4>
+<h4 id="5238-kanban-board">5.2.3.8 Kanban Board</h4>
 <p><em>Contenido por desarrollar.</em></p>
 
 <h3 id="524-sprint-4">5.2.4 Sprint 4</h3>
@@ -149,5 +149,5 @@ Los `id` coinciden con el índice de `00-introduction.md`. (Los números 5.2.1�
 <h3 id="531-cloud-architecture-diagram">5.3.1 Cloud Architecture Diagram</h3>
 <p><em>Contenido por desarrollar.</em></p>
 
-<h3 id="532-cloud-architecture-deployment-aws-microsoft-azure-or-google-cloud--tf1">5.3.2 Cloud Architecture Deployment (AWS, Microsoft Azure or Google Cloud) --&gt; TF1</h3>
+<h3 id="532-cloud-architecture-deployment-aws-microsoft-azure-or-google-cloud">5.3.2 Cloud Architecture Deployment (AWS, Microsoft Azure or Google Cloud)</h3>
 <p><em>Contenido por desarrollar.</em></p>

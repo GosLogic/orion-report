@@ -14,6 +14,6 @@ Los `id` coinciden con el índice de `00-introduction.md`.
 
 <p><em>Contenido por desarrollar.</em></p>
 
-<h2 id="34-product-backlog-avance1">3.4 Product Backlog (Avance1)</h2>
+<h2 id="34-product-backlog">3.4 Product Backlog </h2>
 
 <p><em>Contenido por desarrollar.</em></p>
