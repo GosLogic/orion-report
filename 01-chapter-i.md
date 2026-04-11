@@ -13,11 +13,11 @@
 
 <table border="1">
   <tr>
-      <td style="text-align:center;"><img alt="Angelo Solano" src="assets/chapter-I-assets/foto3.png" /></td>
+      <td style="text-align:center;"><img alt="Angelo Solano" src="assets/chapter-i/FotoAngelo.png" /></td>
       <td><strong>Angelo Solano - u20231B775</strong><br>Mi nombre es Angelo Solano, soy estudiante de Ingeniería de Software en la UPC. Me apasiona la tecnología y todo lo relacionado con el desarrollo de software. Me gusta enfrentarme a desafíos complejos y encontrar soluciones creativas. Estoy en constante aprendizaje, siempre buscando mejorar mis habilidades en programación y análisis de sistemas. Me considero una persona comprometida con mis proyectos y con ganas de crecer tanto profesionalmente como personalmente. Disfruto trabajar en equipo y siempre trato de aportar lo mejor de mí en todo lo que hago.</td>
   </tr>
   <tr>
-      <td style="text-align:center;"><img alt="Sergio Iglesias " src="assets/chapter-I-assets/foto1.png" /></td>
+      <td style="text-align:center;"><img alt="Sergio Iglesias " src="assets/chapter-i/FotoSergio.png" /></td>
       <td><strong>Sergio Iglesias - u202316118</strong><br>Mi nombre es Sergio Iglesias, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Soy una persona proactiva, creativa y con gran pasión por la tecnología. Me destaco por mi capacidad de resolver problemas de manera eficiente y mi habilidad para trabajar colaborativamente en proyectos complejos. Estoy comprometido con el aprendizaje continuo y siempre busco aplicar las mejores prácticas en el desarrollo de software. Mi objetivo es contribuir significativamente al éxito de este proyecto y crecer profesionalmente en el campo de la ingeniería de software.</td>
   </tr>
 </table>
