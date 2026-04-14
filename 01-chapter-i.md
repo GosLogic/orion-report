@@ -25,6 +25,10 @@ A largo plazo, la visión de GosLogic es convertirse en un aliado estratégico p
       <td style="text-align:center;"><img alt="Sergio Iglesias " src="assets/chapter-i/FotoSergio.png" /></td>
       <td><strong>Sergio Iglesias - u202316118</strong><br>Mi nombre es Sergio Iglesias, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Soy una persona proactiva, creativa y con gran pasión por la tecnología. Me destaco por mi capacidad de resolver problemas de manera eficiente y mi habilidad para trabajar colaborativamente en proyectos complejos. Estoy comprometido con el aprendizaje continuo y siempre busco aplicar las mejores prácticas en el desarrollo de software. Mi objetivo es contribuir significativamente al éxito de este proyecto y crecer profesionalmente en el campo de la ingeniería de software.</td>
   </tr>
+  <tr>
+      <td style="text-align:center;"><img alt="Martin Gonzales " src="assets/chapter-i/Foto_Martin.jpeg" /></td>
+      <td><strong>Martin Gonzales - u202319724</strong><br>Mi nombre es Martin Gonzales, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Me caracterizo por mi interés en la programación, la tecnología y el aprendizaje continuo. Tengo una actitud analítica y organizada, lo que me permite desarrollar proyectos académicos y prácticos con dedicación, buscando siempre aplicar los conocimientos adquiridos de manera efectiva.</td>
+  </tr>
 </table>
 
 <h2 id="12-solution-profile">1.2 Solution Profile</h2>
