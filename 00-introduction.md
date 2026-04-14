@@ -73,9 +73,6 @@
 
 </div>
 
----
-
-## VII. Estructura del informe
 
 <a id="registro-de-versiones-del-informe"></a>
 
@@ -141,7 +138,7 @@
   - [**3.1 To-Be Scenario Mapping**](./03-chapter-iii.md#31-to-be-scenario-mapping)
   - [**3.2 User Stories**](./03-chapter-iii.md#32-user-stories)
   - [**3.3 Impact Map**](./03-chapter-iii.md#33-impact-map)
-  - [**3.4 Product Backlog (Avance1)**](./03-chapter-iii.md#34-product-backlog-avance1)
+  - [**3.4 Product Backlog**](./03-chapter-iii.md#34-product-backlog)
 
 - [**Capítulo IV: Product Architecture Design**](./04-chapter-iv.md)
   - [**4.1 Desing Concepts, ViewPoints & ER Diagrams**](./04-chapter-iv.md#41-desing-concepts-viewpoints--er-diagrams)
@@ -166,7 +163,7 @@
       - [**4.2.X.4 Choose One or More Design Concepts That Satisfy the Selected Drivers**](./04-chapter-iv.md#42x4-choose-one-or-more-design-concepts-that-satisfy-the-selected-drivers)
       - [**4.2.X.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces**](./04-chapter-iv.md#42x5-instantiate-architectural-elements-allocate-responsibilities-and-define-interfaces)
       - [**4.2.X.6 Sketch Views (C4 & UML) and Record Design Decisions**](./04-chapter-iv.md#42x6-sketch-views-c4--uml-and-record-design-decisions)
-      - [**4.2.X.7 Analysis of Current Design and Review Iteration Goal (Kanban Board) (Avance 2)**](./04-chapter-iv.md#42x7-analysis-of-current-design-and-review-iteration-goal-kanban-board-avance-2)
+      - [**4.2.X.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)**](./04-chapter-iv.md#42x7-analysis-of-current-design-and-review-iteration-goal-kanban-board)
 
 - [**Capítulo V: Product Implementation, Validation & Deployment**](./05-chapter-v.md)
   - [**5.1 Testing Suites & General Patterns**](./05-chapter-v.md#51-testing-suites--general-patterns)
@@ -188,7 +185,7 @@
       - [**5.2.1.5 Microservices Documentation Evidence for Sprint Review**](./05-chapter-v.md#5215-microservices-documentation-evidence-for-sprint-review)
       - [**5.2.1.6 Software Deployment Evidence for Sprint Review**](./05-chapter-v.md#5216-software-deployment-evidence-for-sprint-review)
       - [**5.2.1.7 Team Collaboration Insights during Sprint**](./05-chapter-v.md#5217-team-collaboration-insights-during-sprint)
-      - [**5.2.1.8 Kanban Board --> TP1**](./05-chapter-v.md#5218-kanban-board--tp1)
+      - [**5.2.1.8 Kanban Board**](./05-chapter-v.md#5218-kanban-board)
     - [**5.2.2 Sprint 2**](./05-chapter-v.md#522-sprint-2)
       - [**5.2.2.1 Sprint Backlog 2**](./05-chapter-v.md#5221-sprint-backlog-2)
       - [**5.2.2.2 Development Evidence for Sprint Review**](./05-chapter-v.md#5222-development-evidence-for-sprint-review)
@@ -197,7 +194,7 @@
       - [**5.2.2.5 Microservices Documentation Evidence for Sprint Review**](./05-chapter-v.md#5225-microservices-documentation-evidence-for-sprint-review)
       - [**5.2.2.6 Software Deployment Evidence for Sprint Review**](./05-chapter-v.md#5226-software-deployment-evidence-for-sprint-review)
       - [**5.2.2.7 Team Collaboration Insights during Sprint**](./05-chapter-v.md#5227-team-collaboration-insights-during-sprint)
-      - [**5.2.2.8 Kanban Board --> (Avance 3)**](./05-chapter-v.md#5228-kanban-board--avance-3)
+      - [**5.2.2.8 Kanban Board**](./05-chapter-v.md#5228-kanban-board)
     - [**5.2.3 Sprint 3**](./05-chapter-v.md#523-sprint-3)
       - [**5.2.3.1 Sprint Backlog 3**](./05-chapter-v.md#5231-sprint-backlog-3)
       - [**5.2.3.2 Development Evidence for Sprint Review**](./05-chapter-v.md#5232-development-evidence-for-sprint-review)
@@ -206,7 +203,7 @@
       - [**5.2.3.5 Microservices Documentation Evidence for Sprint Review**](./05-chapter-v.md#5235-microservices-documentation-evidence-for-sprint-review)
       - [**5.2.3.6 Software Deployment Evidence for Sprint Review**](./05-chapter-v.md#5236-software-deployment-evidence-for-sprint-review)
       - [**5.2.3.7 Team Collaboration Insights during Sprint**](./05-chapter-v.md#5237-team-collaboration-insights-during-sprint)
-      - [**5.2.3.8 Kanban Board --> (Avance 4)**](./05-chapter-v.md#5238-kanban-board--avance-4)
+      - [**5.2.3.8 Kanban Board**](./05-chapter-v.md#5238-kanban-board)
     - [**5.2.4 Sprint 4**](./05-chapter-v.md#524-sprint-4)
       - [**5.2.4.1 Sprint Backlog 4**](./05-chapter-v.md#5241-sprint-backlog-4)
       - [**5.2.4.2 Development Evidence for Sprint Review**](./05-chapter-v.md#5242-development-evidence-for-sprint-review)
@@ -218,7 +215,7 @@
       - [**5.2.4.8 Kanban Board**](./05-chapter-v.md#5248-kanban-board)
   - [**5.4 Microservices Deployment**](./05-chapter-v.md#54-microservices-deployment)
     - [**5.3.1 Cloud Architecture Diagram**](./05-chapter-v.md#531-cloud-architecture-diagram)
-    - [**5.3.2 Cloud Architecture Deployment (AWS, Microsoft Azure or Google Cloud) --> TF1**](./05-chapter-v.md#532-cloud-architecture-deployment-aws-microsoft-azure-or-google-cloud--tf1)
+    - [**5.3.2 Cloud Architecture Deployment (AWS, Microsoft Azure or Google Cloud)**](./05-chapter-v.md#532-cloud-architecture-deployment-aws-microsoft-azure-or-google-cloud)
 
 - [**Conclusiones**](./06-conclusiones.md#conclusiones)
   - [**Conclusiones y recomendaciones**](./06-conclusiones.md#conclusiones-y-recomendaciones)

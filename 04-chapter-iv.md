@@ -69,5 +69,5 @@ Los `id` coinciden con el índice de `00-introduction.md`.
 <h4 id="42x6-sketch-views-c4--uml-and-record-design-decisions">4.2.X.6 Sketch Views (C4 & UML) and Record Design Decisions</h4>
 <p><em>Contenido por desarrollar.</em></p>
 
-<h4 id="42x7-analysis-of-current-design-and-review-iteration-goal-kanban-board-avance-2">4.2.X.7 Analysis of Current Design and Review Iteration Goal (Kanban Board) (Avance 2)</h4>
+<h4 id="42x7-analysis-of-current-design-and-review-iteration-goal-kanban-board">4.2.X.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)</h4>
 <p><em>Contenido por desarrollar.</em></p>
