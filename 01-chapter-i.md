@@ -29,6 +29,14 @@ A largo plazo, la visión de GosLogic es convertirse en un aliado estratégico p
       <td style="text-align:center;"><img alt="Martin Gonzales " src="assets/chapter-i/Foto_Martin.jpeg" /></td>
       <td><strong>Martin Gonzales - u202319724</strong><br>Mi nombre es Martin Gonzales, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Me caracterizo por mi interés en la programación, la tecnología y el aprendizaje continuo. Tengo una actitud analítica y organizada, lo que me permite desarrollar proyectos académicos y prácticos con dedicación, buscando siempre aplicar los conocimientos adquiridos de manera efectiva.</td>
   </tr>
+    <tr>
+      <td style="text-align:center;"><img alt="Eduardo Cossar " src="assets/chapter-i/FotoEduardo.png" /></td>
+      <td><strong>Eduardo Cossar - u202312109</strong><br>Mi nombre es Eduardo Cossar. Soy estudiante de la carrera de Ingeniería de Software, tengo 20 años y actualmente estoy cursando el septimo ciclo en la UPC. Me considero una persona responsable y comprometida con un gran interés por la tecnología. Como integrante de este equipo, me comprometo a brindar todo mi apoyo y participación activa para afrontar los desafíos que se presenten y dar lo mejor de mí para lograr el éxito de este proyecto.</td>
+  </tr>
+
+  <tr>
+      <td style="text-align:center;"><img alt="Maria Fernanda Mostajo " src="assets/chapter-i/FotoMariaFernanda.png" /></td>
+      <td><strong>Maria Fernanda Mostajo - u202312874</strong><br>Mi nombre es Maria Fernanda Mostajo, estoy estudiando la carrera de Ingeniería de Software en la UPC, tengo conocimientos en los lenguajes de programación C++, Python, HTML, CSS, JavaScript y SQL. Además, cuento con habilidades de trabajo en equipo, el cual me permitira realizar un buen trabajo y cumplir con los objetivos planteados en el tiempo establecido.
 </table>
 
 <h2 id="12-solution-profile">1.2 Solution Profile</h2>
