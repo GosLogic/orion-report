@@ -153,7 +153,7 @@ Creemos que aplicando caché y control de frecuencia de actualización en Google
 
 <h4 id="1234-lean-ux-canvas">1.2.3.4 Lean UX Canvas</h4>
 
-<p><em>Contenido por desarrollar.</em></p>
+  <img src="./assets/chapter-i/LeanUXCanva.png" alt="Logo UPC" style="max-width: 1000; width: 55%; height: auto; display: inline-block;" />
 
 <h2 id="13-segmentos-objetivo">1.3 Segmentos objetivo</h2>
 
