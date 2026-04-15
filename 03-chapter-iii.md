@@ -296,13 +296,527 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
       <td style="padding: 0.5rem;">Escenario 1: Publicar contrato API<br>DADO que existe un módulo expuesto a terceros<br>CUANDO el equipo publica su especificación OpenAPI<br>ENTONCES los endpoints, esquemas y códigos de respuesta deben quedar documentados<br><br>Escenario 2: Validar autenticación y consumo<br>DADO un tercero con credenciales válidas<br>CUANDO consume los endpoints principales<br>ENTONCES el sistema debe responder según contrato y políticas de seguridad<br><br>Escenario 3: Detectar cambios incompatibles<br>DADO una nueva versión de API<br>CUANDO se ejecutan pruebas de contrato<br>ENTONCES el sistema debe alertar si existe ruptura de compatibilidad con consumidores actuales</td>
       <td style="padding: 0.5rem;">E08</td>
     </tr>
+
+    <tr>
+  <td style="padding: 0.5rem;">US29</td>
+  <td style="padding: 0.5rem;">Historial de Mantenimiento por Vehículo</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero consultar el historial de mantenimientos de cada vehículo, para evaluar su estado y planificar intervenciones futuras.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Consultar historial existente<br>DADO que el gestor selecciona un vehículo con mantenimientos registrados<br>CUANDO accede a la sección de historial<br>ENTONCES el sistema debe mostrar la lista cronológica de mantenimientos realizados<br><br>Escenario 2: Consultar vehículo sin historial<br>DADO que el gestor selecciona un vehículo sin mantenimientos registrados<br>CUANDO accede a la sección de historial<br>ENTONCES el sistema debe informar que no existen registros previos</td>
+  <td style="padding: 0.5rem;">E03</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US30</td>
+  <td style="padding: 0.5rem;">Calendario de Mantenimientos</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero ver un calendario con los mantenimientos próximos y vencidos, para organizar mejor la disponibilidad de la flota.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Visualizar mantenimientos programados<br>DADO que existen mantenimientos planificados para distintas unidades<br>CUANDO el gestor abre el calendario<br>ENTONCES el sistema debe mostrar los eventos según su fecha programada<br><br>Escenario 2: Resaltar mantenimientos vencidos<br>DADO que existen mantenimientos fuera de fecha<br>CUANDO el gestor revisa el calendario<br>ENTONCES el sistema debe destacarlos como vencidos o atrasados</td>
+  <td style="padding: 0.5rem;">E03</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US31</td>
+  <td style="padding: 0.5rem;">Estado General de Salud de la Flota</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero visualizar un resumen del estado técnico de todas las unidades, para identificar rápidamente las más críticas.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Ver resumen general<br>DADO que existen vehículos registrados en la plataforma<br>CUANDO el gestor accede al panel de salud de flota<br>ENTONCES el sistema debe mostrar el estado general de cada unidad<br><br>Escenario 2: Identificar unidades críticas<br>DADO que algunas unidades presentan alertas activas o fallas pendientes<br>CUANDO el gestor revisa el panel<br>ENTONCES el sistema debe marcar esas unidades con mayor prioridad o criticidad</td>
+  <td style="padding: 0.5rem;">E03</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US32</td>
+  <td style="padding: 0.5rem;">Confirmación de Mantenimiento Realizado</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero registrar cuando un mantenimiento fue completado, para reiniciar el ciclo preventivo correctamente.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Registrar mantenimiento completado<br>DADO que una unidad tiene un mantenimiento pendiente<br>CUANDO el gestor registra que el servicio fue realizado<br>ENTONCES el sistema debe actualizar el estado a completado<br><br>Escenario 2: Reiniciar ciclo preventivo<br>DADO que el mantenimiento fue confirmado correctamente<br>CUANDO el sistema guarda el registro<br>ENTONCES debe reiniciar el conteo de kilometraje o tiempo asociado a ese mantenimiento</td>
+  <td style="padding: 0.5rem;">E03</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US33</td>
+  <td style="padding: 0.5rem;">Dashboard de Mantenimiento</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero tener un dashboard con alertas, próximos servicios e historial resumido, para tomar decisiones rápidas sobre el mantenimiento.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Visualizar dashboard consolidado<br>DADO que existen unidades y mantenimientos registrados<br>CUANDO el gestor ingresa al dashboard de mantenimiento<br>ENTONCES el sistema debe mostrar alertas, servicios próximos e indicadores resumidos<br><br>Escenario 2: Actualizar dashboard con nuevos eventos<br>DADO que se registra una nueva alerta o mantenimiento<br>CUANDO el sistema procesa el cambio<br>ENTONCES el dashboard debe reflejar la información actualizada</td>
+  <td style="padding: 0.5rem;">E03</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US34</td>
+  <td style="padding: 0.5rem;">Priorización de Unidades Críticas</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero ordenar vehículos por nivel de riesgo mecánico, para atender primero los casos más urgentes.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Ordenar por criticidad<br>DADO que existen unidades con distintos niveles de riesgo<br>CUANDO el gestor aplica el orden por criticidad<br>ENTONCES el sistema debe mostrar primero las unidades más críticas<br><br>Escenario 2: Recalcular prioridad<br>DADO que una unidad cambia de estado técnico<br>CUANDO el sistema actualiza su condición<br>ENTONCES debe recalcular su nivel de prioridad dentro de la lista</td>
+  <td style="padding: 0.5rem;">E03</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US35</td>
+  <td style="padding: 0.5rem;">Notificaciones Operativas al Conductor</td>
+  <td style="padding: 0.5rem;">Como conductor, quiero recibir notificaciones operativas en la app, para conocer cambios de ruta, horarios o instrucciones sin depender de llamadas.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Recibir cambio de ruta<br>DADO que el gestor modifica una ruta asignada<br>CUANDO el cambio es confirmado en el sistema<br>ENTONCES la app del conductor debe mostrar una notificación operativa<br><br>Escenario 2: Recibir cambio de horario<br>DADO que el gestor actualiza el horario de una asignación<br>CUANDO el sistema procesa la actualización<br>ENTONCES el conductor debe recibir la nueva información en la app</td>
+  <td style="padding: 0.5rem;">E05</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US36</td>
+  <td style="padding: 0.5rem;">Confirmación de Ruta Asignada</td>
+  <td style="padding: 0.5rem;">Como conductor, quiero confirmar que recibí y entendí la ruta asignada, para evitar errores de coordinación al iniciar la jornada.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Confirmar recepción de ruta<br>DADO que el conductor tiene una nueva ruta asignada<br>CUANDO accede al detalle y presiona confirmar<br>ENTONCES el sistema debe registrar la confirmación de recepción<br><br>Escenario 2: Visualizar ruta pendiente de confirmar<br>DADO que existe una ruta aún no confirmada<br>CUANDO el conductor ingresa a la app<br>ENTONCES el sistema debe mostrar la asignación como pendiente de confirmación</td>
+  <td style="padding: 0.5rem;">E05</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US37</td>
+  <td style="padding: 0.5rem;">Visualización Detallada de Ruta</td>
+  <td style="padding: 0.5rem;">Como conductor, quiero ver los puntos de parada y observaciones de mi ruta, para ejecutarla correctamente durante el día.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Ver detalle completo de ruta<br>DADO que el conductor tiene una ruta asignada<br>CUANDO abre el detalle de la ruta<br>ENTONCES el sistema debe mostrar paradas, horarios y observaciones asociadas<br><br>Escenario 2: Mostrar ruta sin observaciones<br>DADO que la ruta no contiene observaciones adicionales<br>CUANDO el conductor consulta el detalle<br>ENTONCES el sistema debe mostrar la información disponible sin errores</td>
+  <td style="padding: 0.5rem;">E05</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US38</td>
+  <td style="padding: 0.5rem;">Registro de Entrega o Parada Completada</td>
+  <td style="padding: 0.5rem;">Como conductor, quiero marcar una parada o entrega como completada, para mantener actualizado el avance de mi ruta.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Marcar parada completada<br>DADO que el conductor se encuentra en una parada activa<br>CUANDO presiona la opción de completar<br>ENTONCES el sistema debe registrar la parada como realizada<br><br>Escenario 2: Reflejar avance de ruta<br>DADO que una parada fue completada correctamente<br>CUANDO el sistema actualiza el estado<br>ENTONCES debe reflejar el avance acumulado de la ruta</td>
+  <td style="padding: 0.5rem;">E05</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US39</td>
+  <td style="padding: 0.5rem;">Check-in en Punto de Control</td>
+  <td style="padding: 0.5rem;">Como conductor, quiero registrar mi llegada a puntos clave de la ruta, para dejar evidencia de cumplimiento operativo.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Registrar llegada a punto de control<br>DADO que el conductor llega a un punto de control definido<br>CUANDO realiza el check-in desde la app<br>ENTONCES el sistema debe guardar fecha, hora y ubicación del evento<br><br>Escenario 2: Evitar check-in fuera de contexto<br>DADO que el conductor intenta registrar un check-in sin punto asignado<br>CUANDO ejecuta la acción<br>ENTONCES el sistema debe bloquear el registro o informar que no corresponde</td>
+  <td style="padding: 0.5rem;">E05</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US40</td>
+  <td style="padding: 0.5rem;">Navegación Asistida en Ruta</td>
+  <td style="padding: 0.5rem;">Como conductor, quiero abrir navegación guiada desde la app, para seguir la ruta asignada con mayor facilidad.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Iniciar navegación<br>DADO que el conductor tiene una ruta asignada<br>CUANDO presiona la opción de navegar<br>ENTONCES la app debe abrir la navegación hacia el siguiente punto de la ruta<br><br>Escenario 2: Navegación sin ruta asignada<br>DADO que el conductor no tiene una ruta activa<br>CUANDO intenta usar la función de navegación<br>ENTONCES el sistema debe informar que no existe una ruta disponible</td>
+  <td style="padding: 0.5rem;">E05</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US41</td>
+  <td style="padding: 0.5rem;">Reasignación por Contingencia</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero reasignar rápidamente una ruta o unidad ante una incidencia, para mantener la continuidad de la operación.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Reasignar ruta por incidencia<br>DADO que una unidad o conductor presenta una contingencia<br>CUANDO el gestor realiza una nueva asignación<br>ENTONCES el sistema debe actualizar la operación con el nuevo recurso<br><br>Escenario 2: Notificar reasignación<br>DADO que la reasignación fue completada<br>CUANDO el sistema guarda el cambio<br>ENTONCES debe notificar a los usuarios involucrados</td>
+  <td style="padding: 0.5rem;">E04</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US42</td>
+  <td style="padding: 0.5rem;">Vista de Cumplimiento de Despachos</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero ver qué despachos están pendientes, en ruta o finalizados, para tener control del avance diario.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Visualizar estados de despacho<br>DADO que existen despachos programados en el día<br>CUANDO el gestor accede al panel operativo<br>ENTONCES el sistema debe mostrar el estado de cada despacho<br><br>Escenario 2: Actualizar estado en tiempo real<br>DADO que un despacho cambia de estado<br>CUANDO el sistema recibe la actualización<br>ENTONCES el panel debe reflejar el nuevo estado del despacho</td>
+  <td style="padding: 0.5rem;">E04</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US43</td>
+  <td style="padding: 0.5rem;">Búsqueda Rápida de Vehículo en Mapa</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero buscar una unidad específica en el mapa, para consultar su situación sin revisar toda la flota.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Buscar unidad existente<br>DADO que el gestor conoce la placa o nombre de la unidad<br>CUANDO utiliza la función de búsqueda en el mapa<br>ENTONCES el sistema debe ubicar y resaltar el vehículo correspondiente<br><br>Escenario 2: Buscar unidad inexistente<br>DADO que el gestor ingresa un identificador no registrado<br>CUANDO ejecuta la búsqueda<br>ENTONCES el sistema debe informar que no se encontraron resultados</td>
+  <td style="padding: 0.5rem;">E02</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US44</td>
+  <td style="padding: 0.5rem;">Detalle de Evento Telemétrico</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero ver el detalle de eventos telemétricos de una unidad, para analizar incidencias o comportamientos fuera de lo normal.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Consultar detalle de evento<br>DADO que una unidad generó eventos telemétricos registrados<br>CUANDO el gestor selecciona uno de ellos<br>ENTONCES el sistema debe mostrar hora, ubicación y tipo de evento<br><br>Escenario 2: Consultar unidad sin eventos<br>DADO que la unidad no tiene eventos en el rango seleccionado<br>CUANDO el gestor realiza la consulta<br>ENTONCES el sistema debe informar que no hay eventos disponibles</td>
+  <td style="padding: 0.5rem;">E02</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US45</td>
+  <td style="padding: 0.5rem;">Estado de Sincronización Offline</td>
+  <td style="padding: 0.5rem;">Como conductor, quiero ver qué eventos siguen pendientes de sincronizar, para saber si mi información ya fue enviada correctamente.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Ver eventos pendientes<br>DADO que existen registros guardados localmente sin sincronizar<br>CUANDO el conductor revisa la cola de sincronización<br>ENTONCES la app debe mostrar la lista de eventos pendientes<br><br>Escenario 2: Actualizar estado tras sincronización<br>DADO que la conexión fue recuperada y los eventos fueron enviados<br>CUANDO la sincronización finaliza correctamente<br>ENTONCES la app debe actualizar el estado de esos eventos como sincronizados</td>
+  <td style="padding: 0.5rem;">E05</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US46</td>
+  <td style="padding: 0.5rem;">Auditoría de Accesos por Tenant</td>
+  <td style="padding: 0.5rem;">Como administrador, quiero consultar un registro de accesos y acciones por tenant, para detectar comportamientos sospechosos y mantener trazabilidad.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Consultar auditoría de tenant<br>DADO que existen registros de actividad de un tenant<br>CUANDO el administrador accede al módulo de auditoría<br>ENTONCES el sistema debe mostrar accesos y acciones realizadas<br><br>Escenario 2: Filtrar auditoría por rango o usuario<br>DADO que el administrador necesita revisar un caso específico<br>CUANDO aplica filtros por fecha o usuario<br>ENTONCES el sistema debe mostrar solo los registros coincidentes</td>
+  <td style="padding: 0.5rem;">E01</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US47</td>
+  <td style="padding: 0.5rem;">Exportación de Reportes Operativos</td>
+  <td style="padding: 0.5rem;">Como gestor de flota, quiero exportar reportes en PDF o Excel, para compartir información operativa con otras áreas de la empresa.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Exportar reporte en PDF<br>DADO que el gestor visualiza un reporte operativo<br>CUANDO selecciona la opción de exportar en PDF<br>ENTONCES el sistema debe generar el archivo correspondiente<br><br>Escenario 2: Exportar reporte en Excel<br>DADO que el gestor visualiza un reporte operativo<br>CUANDO selecciona la opción de exportar en Excel<br>ENTONCES el sistema debe descargar el archivo con los datos mostrados</td>
+  <td style="padding: 0.5rem;">E08</td>
+</tr>
+
+<tr>
+  <td style="padding: 0.5rem;">US48</td>
+  <td style="padding: 0.5rem;">Versionado de API para Integraciones</td>
+  <td style="padding: 0.5rem;">Como integrador externo, quiero consumir versiones estables de la API, para evitar fallos cuando el sistema evolucione.</td>
+  <td style="padding: 0.5rem;">Escenario 1: Consumir versión vigente de API<br>DADO que existe una versión pública y estable de la API<br>CUANDO el integrador realiza una solicitud válida<br>ENTONCES el sistema debe responder según el contrato de esa versión<br><br>Escenario 2: Mantener compatibilidad entre versiones<br>DADO que se publica una nueva versión de la API<br>CUANDO un integrador sigue usando la versión anterior soportada<br>ENTONCES el sistema debe permitir su consumo sin romper la compatibilidad anunciada</td>
+  <td style="padding: 0.5rem;">E08</td>
+</tr>
+
   </tbody>
 </table>
 
 <h2 id="33-impact-map">3.3 Impact Map</h2>
 
-<p><em>Contenido por desarrollar.</em></p>
+<p align="center">
+  <img src="assets/chapter-iii/Impact mapFinal.png"
+  alt="TOBE" style="width: 600px;"/>
+</p>
 
-<h2 id="34-product-backlog">3.4 Product Backlog </h2>
+<h2 id="34-product-backlog">3.4. Product Backlog.</h2>
 
-<p><em>Contenido por desarrollar.</em></p>
+<p>En esta sección se presenta el Product Backlog priorizado de Orion, organizado a partir de las User Stories identificadas para el sistema. Cada elemento incluye su orden de prioridad, identificador, título, descripción y estimación en Story Points.</p>
+
+<table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem;">
+  <thead>
+    <tr>
+      <th style="padding: 0.5rem;">Orden</th>
+      <th style="padding: 0.5rem;">User Story ID</th>
+      <th style="padding: 0.5rem;">Título</th>
+      <th style="padding: 0.5rem;">Descripción</th>
+      <th style="padding: 0.5rem;">Story Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.5rem;">1</td>
+      <td style="padding: 0.5rem;">US01</td>
+      <td style="padding: 0.5rem;">Configuración de Tenant</td>
+      <td style="padding: 0.5rem;">Como administrador del sistema, quiero crear perfiles de empresa únicos, para que cada cliente tenga su propio espacio de trabajo aislado.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">2</td>
+      <td style="padding: 0.5rem;">US04</td>
+      <td style="padding: 0.5rem;">Autenticación JWT</td>
+      <td style="padding: 0.5rem;">Como gestor, quiero acceder mediante tokens JWT, para asegurar autenticación robusta en el sistema.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">3</td>
+      <td style="padding: 0.5rem;">US02</td>
+      <td style="padding: 0.5rem;">Aislamiento de Datos</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero que mis datos de conductores y rutas sean invisibles para otras empresas, para garantizar la privacidad comercial.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">4</td>
+      <td style="padding: 0.5rem;">US07</td>
+      <td style="padding: 0.5rem;">Filtro Obligatorio por TenantId</td>
+      <td style="padding: 0.5rem;">Como arquitecto, quiero que toda consulta a BD incluya TenantId, para asegurar 0% de fuga entre empresas.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">5</td>
+      <td style="padding: 0.5rem;">US03</td>
+      <td style="padding: 0.5rem;">Gestión de Usuarios y Roles</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero invitar usuarios con roles específicos, para delegar la supervisión de la flota.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">6</td>
+      <td style="padding: 0.5rem;">US05</td>
+      <td style="padding: 0.5rem;">Expiración de Sesión</td>
+      <td style="padding: 0.5rem;">Como gestor, quiero que la sesión expire automáticamente tras inactividad, para reducir el riesgo de acceso no autorizado.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">7</td>
+      <td style="padding: 0.5rem;">US06</td>
+      <td style="padding: 0.5rem;">Cifrado HTTPS de Telemetría</td>
+      <td style="padding: 0.5rem;">Como administrador, quiero que toda la telemetría se transmita vía HTTPS, para evitar interceptación de datos.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">8</td>
+      <td style="padding: 0.5rem;">US15</td>
+      <td style="padding: 0.5rem;">Asignación Dinámica</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero asignar conductores a vehículos y rutas específicas según la demanda del día.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">9</td>
+      <td style="padding: 0.5rem;">US16</td>
+      <td style="padding: 0.5rem;">Disponibilidad de Personal</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero ver quién está en turno activo, para no sobrepasar las horas permitidas de manejo.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">10</td>
+      <td style="padding: 0.5rem;">US41</td>
+      <td style="padding: 0.5rem;">Reasignación por Contingencia</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero reasignar rápidamente una ruta o unidad ante una incidencia, para mantener la continuidad de la operación.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">11</td>
+      <td style="padding: 0.5rem;">US18</td>
+      <td style="padding: 0.5rem;">Recepción de Horarios</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero ver mi cronograma diario en el móvil, para saber qué unidad debo operar.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">12</td>
+      <td style="padding: 0.5rem;">US17</td>
+      <td style="padding: 0.5rem;">Reporte de Jornada</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero marcar inicio y fin de jornada desde la app, para que mi tiempo laborado quede registrado.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">13</td>
+      <td style="padding: 0.5rem;">US36</td>
+      <td style="padding: 0.5rem;">Confirmación de Ruta Asignada</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero confirmar que recibí y entendí la ruta asignada, para evitar errores de coordinación al iniciar la jornada.</td>
+      <td style="padding: 0.5rem;">2</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">14</td>
+      <td style="padding: 0.5rem;">US37</td>
+      <td style="padding: 0.5rem;">Visualización Detallada de Ruta</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero ver los puntos de parada y observaciones de mi ruta, para ejecutarla correctamente durante el día.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">15</td>
+      <td style="padding: 0.5rem;">US35</td>
+      <td style="padding: 0.5rem;">Notificaciones Operativas al Conductor</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero recibir notificaciones operativas en la app, para conocer cambios de ruta, horarios o instrucciones sin depender de llamadas.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">16</td>
+      <td style="padding: 0.5rem;">US08</td>
+      <td style="padding: 0.5rem;">Visualización en Mapa</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero ver la ubicación en tiempo real de mis vehículos, para optimizar la logística.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">17</td>
+      <td style="padding: 0.5rem;">US43</td>
+      <td style="padding: 0.5rem;">Búsqueda Rápida de Vehículo en Mapa</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero buscar una unidad específica en el mapa, para consultar su situación sin revisar toda la flota.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">18</td>
+      <td style="padding: 0.5rem;">US09</td>
+      <td style="padding: 0.5rem;">Historial de Rutas</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero consultar el recorrido histórico de una unidad, para verificar el cumplimiento de las rutas.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">19</td>
+      <td style="padding: 0.5rem;">US42</td>
+      <td style="padding: 0.5rem;">Vista de Cumplimiento de Despachos</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero ver qué despachos están pendientes, en ruta o finalizados, para tener control del avance diario.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">20</td>
+      <td style="padding: 0.5rem;">US38</td>
+      <td style="padding: 0.5rem;">Registro de Entrega o Parada Completada</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero marcar una parada o entrega como completada, para mantener actualizado el avance de mi ruta.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">21</td>
+      <td style="padding: 0.5rem;">US39</td>
+      <td style="padding: 0.5rem;">Check-in en Punto de Control</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero registrar mi llegada a puntos clave de la ruta, para dejar evidencia de cumplimiento operativo.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">22</td>
+      <td style="padding: 0.5rem;">US40</td>
+      <td style="padding: 0.5rem;">Navegación Asistida en Ruta</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero abrir navegación guiada desde la app, para seguir la ruta asignada con mayor facilidad.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">23</td>
+      <td style="padding: 0.5rem;">US19</td>
+      <td style="padding: 0.5rem;">Reporte de Incidentes</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero enviar fotos de fallas mecánicas desde la app, para que el gestor programe el taller de inmediato.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">24</td>
+      <td style="padding: 0.5rem;">US20</td>
+      <td style="padding: 0.5rem;">Botón de Pánico</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero activar una alerta de emergencia, para que la central reciba mi ubicación exacta al instante.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">25</td>
+      <td style="padding: 0.5rem;">US21</td>
+      <td style="padding: 0.5rem;">Persistencia Local Offline</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero que la app móvil guarde eventos offline en SQLite, para garantizar la experiencia en zonas sin señal.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">26</td>
+      <td style="padding: 0.5rem;">US22</td>
+      <td style="padding: 0.5rem;">Sincronización Inteligente</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero que la app sincronice automáticamente los datos pendientes al recuperar señal, para no perder información registrada en modo offline.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">27</td>
+      <td style="padding: 0.5rem;">US45</td>
+      <td style="padding: 0.5rem;">Estado de Sincronización Offline</td>
+      <td style="padding: 0.5rem;">Como conductor, quiero ver qué eventos siguen pendientes de sincronizar, para saber si mi información ya fue enviada correctamente.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">28</td>
+      <td style="padding: 0.5rem;">US10</td>
+      <td style="padding: 0.5rem;">Gestión de Geocercas</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero definir zonas permitidas, para recibir alertas cuando un vehículo salga del perímetro autorizado.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">29</td>
+      <td style="padding: 0.5rem;">US11</td>
+      <td style="padding: 0.5rem;">Alertas por Geocerca</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero recibir alertas si un vehículo sale del perímetro autorizado, para actuar oportunamente.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">30</td>
+      <td style="padding: 0.5rem;">US44</td>
+      <td style="padding: 0.5rem;">Detalle de Evento Telemétrico</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero ver el detalle de eventos telemétricos de una unidad, para analizar incidencias o comportamientos fuera de lo normal.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">31</td>
+      <td style="padding: 0.5rem;">US12</td>
+      <td style="padding: 0.5rem;">Alertas de Kilometraje</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero recibir alertas automáticas de cambio de aceite, para evitar daños mecánicos por exceso de uso.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">32</td>
+      <td style="padding: 0.5rem;">US13</td>
+      <td style="padding: 0.5rem;">Registro de Activos</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero registrar el estado de neumáticos y frenos, para proyectar gastos de renovación anual.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">33</td>
+      <td style="padding: 0.5rem;">US14</td>
+      <td style="padding: 0.5rem;">Control de Revisiones Técnicas</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero programar revisiones legales, para evitar multas por documentos vencidos.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">34</td>
+      <td style="padding: 0.5rem;">US29</td>
+      <td style="padding: 0.5rem;">Historial de Mantenimiento por Vehículo</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero consultar el historial de mantenimientos de cada vehículo, para evaluar su estado y planificar intervenciones futuras.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">35</td>
+      <td style="padding: 0.5rem;">US30</td>
+      <td style="padding: 0.5rem;">Calendario de Mantenimientos</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero ver un calendario con los mantenimientos próximos y vencidos, para organizar mejor la disponibilidad de la flota.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">36</td>
+      <td style="padding: 0.5rem;">US31</td>
+      <td style="padding: 0.5rem;">Estado General de Salud de la Flota</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero visualizar un resumen del estado técnico de todas las unidades, para identificar rápidamente las más críticas.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">37</td>
+      <td style="padding: 0.5rem;">US32</td>
+      <td style="padding: 0.5rem;">Confirmación de Mantenimiento Realizado</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero registrar cuando un mantenimiento fue completado, para reiniciar el ciclo preventivo correctamente.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">38</td>
+      <td style="padding: 0.5rem;">US33</td>
+      <td style="padding: 0.5rem;">Dashboard de Mantenimiento</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero tener un dashboard con alertas, próximos servicios e historial resumido, para tomar decisiones rápidas sobre el mantenimiento.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">39</td>
+      <td style="padding: 0.5rem;">US34</td>
+      <td style="padding: 0.5rem;">Priorización de Unidades Críticas</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero ordenar vehículos por nivel de riesgo mecánico, para atender primero los casos más urgentes.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">40</td>
+      <td style="padding: 0.5rem;">US23</td>
+      <td style="padding: 0.5rem;">Circuit Breaker</td>
+      <td style="padding: 0.5rem;">Como gestor, quiero que el sistema active un Circuit Breaker si Google Maps falla, para no bloquear la operación.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">41</td>
+      <td style="padding: 0.5rem;">US24</td>
+      <td style="padding: 0.5rem;">Recuperación ante Caídas</td>
+      <td style="padding: 0.5rem;">Como administrador, quiero que el sistema autorrecupere microservicios caídos, para restaurar la operación en el menor tiempo posible.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">42</td>
+      <td style="padding: 0.5rem;">US25</td>
+      <td style="padding: 0.5rem;">Latencia de Telemetría GPS</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero que la telemetría GPS se procese y visualice con baja latencia, para tomar decisiones operativas en tiempo real.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">43</td>
+      <td style="padding: 0.5rem;">US26</td>
+      <td style="padding: 0.5rem;">Autoescalado Horizontal de Servicios</td>
+      <td style="padding: 0.5rem;">Como administrador de plataforma, quiero escalar horizontalmente los servicios ante picos de tráfico, para mantener estabilidad y continuidad del sistema.</td>
+      <td style="padding: 0.5rem;">8</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">44</td>
+      <td style="padding: 0.5rem;">US27</td>
+      <td style="padding: 0.5rem;">Cobertura Mínima de Pruebas</td>
+      <td style="padding: 0.5rem;">Como equipo de QA, quiero validar una cobertura mínima automatizada, para asegurar calidad antes de cada despliegue.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">45</td>
+      <td style="padding: 0.5rem;">US28</td>
+      <td style="padding: 0.5rem;">API REST Estandarizada para Integración</td>
+      <td style="padding: 0.5rem;">Como integrador externo, quiero consumir APIs REST documentadas, para integrar sistemas de terceros en menor tiempo y con menos errores.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">46</td>
+      <td style="padding: 0.5rem;">US46</td>
+      <td style="padding: 0.5rem;">Auditoría de Accesos por Tenant</td>
+      <td style="padding: 0.5rem;">Como administrador, quiero consultar un registro de accesos y acciones por tenant, para detectar comportamientos sospechosos y mantener trazabilidad.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">47</td>
+      <td style="padding: 0.5rem;">US47</td>
+      <td style="padding: 0.5rem;">Exportación de Reportes Operativos</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero exportar reportes en PDF o Excel, para compartir información operativa con otras áreas de la empresa.</td>
+      <td style="padding: 0.5rem;">3</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">48</td>
+      <td style="padding: 0.5rem;">US48</td>
+      <td style="padding: 0.5rem;">Versionado de API para Integraciones</td>
+      <td style="padding: 0.5rem;">Como integrador externo, quiero consumir versiones estables de la API, para evitar fallos cuando el sistema evolucione.</td>
+      <td style="padding: 0.5rem;">5</td>
+    </tr>
+  </tbody>
+</table>

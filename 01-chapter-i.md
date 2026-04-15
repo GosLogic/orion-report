@@ -3,11 +3,16 @@
 
 <h2 id="11-startup-profile">1.1 Startup Profile</h2>
 
-<p><em>Contenido por desarrollar.</em></p>
 
 <h3 id="111-descripción-de-la-startup">1.1.1 Descripción de la Startup</h3>
 
-<p><em>Contenido por desarrollar.</em></p>
+<p>GosLogic es una startup de base tecnológica conformada por estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas (UPC). Nuestra organización nace con el propósito fundamental de optimizar la gestión empresarial a través del desarrollo de software de alta calidad, con un enfoque estratégico y especializado en el sector de la logística.
+
+Nos distinguimos en el mercado por nuestro rigor técnico, priorizando siempre la aplicación de criterios sólidos de ingeniería en cada etapa del ciclo de vida del producto. Para GosLogic, la calidad no es solo un objetivo, sino un estándar que alcanzamos mediante el uso de arquitecturas modernas, patrones de diseño y metodologías ágiles.
+
+Nuestra cultura organizacional se sustenta en dos pilares críticos: el aprendizaje continuo y autónomo, y la búsqueda constante de la excelencia técnica. Esto nos permite integrar rápidamente nuevos conocimientos y tecnologías para resolver problemas complejos de manera eficiente.
+
+A largo plazo, la visión de GosLogic es convertirse en un aliado estratégico para las pequeñas y medianas empresas, liderando su transformación digital y optimizando sus procesos logísticos para hacerlas más competitivas en un entorno globalizado y altamente digitalizado.</p>
 
 <h3 id="112-perfiles-de-integrantes-del-equipo">1.1.2 Perfiles de integrantes del equipo</h3>
 
@@ -20,19 +25,66 @@
       <td style="text-align:center;"><img alt="Sergio Iglesias " src="assets/chapter-i/FotoSergio.png" /></td>
       <td><strong>Sergio Iglesias - u202316118</strong><br>Mi nombre es Sergio Iglesias, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Soy una persona proactiva, creativa y con gran pasión por la tecnología. Me destaco por mi capacidad de resolver problemas de manera eficiente y mi habilidad para trabajar colaborativamente en proyectos complejos. Estoy comprometido con el aprendizaje continuo y siempre busco aplicar las mejores prácticas en el desarrollo de software. Mi objetivo es contribuir significativamente al éxito de este proyecto y crecer profesionalmente en el campo de la ingeniería de software.</td>
   </tr>
+  <tr>
+      <td style="text-align:center;"><img alt="Martin Gonzales " src="assets/chapter-i/Foto_Martin.jpeg" /></td>
+      <td><strong>Martin Gonzales - u202319724</strong><br>Mi nombre es Martin Gonzales, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Me caracterizo por mi interés en la programación, la tecnología y el aprendizaje continuo. Tengo una actitud analítica y organizada, lo que me permite desarrollar proyectos académicos y prácticos con dedicación, buscando siempre aplicar los conocimientos adquiridos de manera efectiva.</td>
+
+  </tr>
+
+  <tr>
+      <td style="text-align:center;"><img alt="Eduardo Cossar " src="assets/chapter-i/FotoEduardo.png" /></td>
+      <td><strong>Eduardo Cossar - u202312109</strong><br>Mi nombre es Eduardo Cossar. Soy estudiante de la carrera de Ingeniería de Software, tengo 20 años y actualmente estoy cursando el septimo ciclo en la UPC. Me considero una persona responsable y comprometida con un gran interés por la tecnología. Como integrante de este equipo, me comprometo a brindar todo mi apoyo y participación activa para afrontar los desafíos que se presenten y dar lo mejor de mí para lograr el éxito de este proyecto.</td>
+  </tr>
+
+  <tr>
+      <td style="text-align:center;"><img alt="Maria Fernanda Mostajo " src="assets/chapter-i/FotoMariaFernanda.png" /></td>
+      <td><strong>Maria Fernanda Mostajo - u202312874</strong><br>Mi nombre es Maria Fernanda Mostajo, estoy estudiando la carrera de Ingeniería de Software en la UPC, tengo conocimientos en los lenguajes de programación C++, Python, HTML, CSS, JavaScript y SQL. Además, cuento con habilidades de trabajo en equipo, el cual me permitira realizar un buen trabajo y cumplir con los objetivos planteados en el tiempo establecido.
 </table>
 
 <h2 id="12-solution-profile">1.2 Solution Profile</h2>
 
-<p><em>Contenido por desarrollar.</em></p>
 
 <h3 id="121-nombre-del-producto">1.2.1 Nombre del producto</h3>
 
-<p><em>Contenido por desarrollar.</em></p>
+<p>El producto de software que desarrollaremos como startup es <strong>Orion</strong></p>
 
 <h3 id="122-antecedentes-y-problemática">1.2.2 Antecedentes y problemática</h3>
 
-<p><em>Contenido por desarrollar.</em></p>
+<h4> Antecedentes </h4>
+
+En el Perú, las PYMES representan el 99.1% del tejido empresarial formal y aportan el 20.2% del PBI nacional (PRODUCE, 2025). Sin embargo, el sector logístico atraviesa una dualidad crítica: mientras el comercio electrónico exige inmediatez, existe una brecha tecnológica profunda donde el 66% de las PYMES aún depende de procesos manuales o herramientas básicas como Excel para gestionar su cadena de suministro. Según el Ministerio de la Producción (PRODUCE), solo el 9% de estas empresas alcanza una madurez digital avanzada. En este escenario, Orion surge como una plataforma diseñada bajo paradigmas de Microservicios y Domain-Driven Design (DDD) para democratizar el acceso a herramientas de alta ingeniería que optimicen la logística y permitan a las PYMES competir en un mercado globalizado.
+
+<h4>Problemática (5W 2h)</h4>
+
+#### **Who (¿Quién?)**
+
+El segmento objetivo son las PYMES peruanas del sector comercial y de servicios logísticos que gestionan un volumen crítico de inventario y distribución, pero que operan con un nivel de madurez digital "incipiente" o "encaminado"
+
+#### **What (¿Qué?)**
+
+Ineficiencia operativa sistémica caracterizada por la falta de trazabilidad en tiempo real, errores críticos de inventario y la incapacidad de integrar sistemas fragmentados (ventas, almacén y distribución).
+
+#### **Where (¿Dónde?)**
+
+El problema se concentra geográficamente en nodos de alta presión como Lima y Callao (donde se ubica el 63.2% de las MYPEs), y se manifiesta técnicamente en la desconexión entre el back-office logístico y el front-office digital.
+
+#### **When (¿Cuándo?)**
+
+La crisis de gestión se agudiza en picos estacionales como la Campaña Escolar (25-40% de ventas anuales), Fiestas Patrias y los Cyber Days, donde el aumento de demanda sobrepasa la capacidad de respuesta de los sistemas manuales.
+
+
+#### **Why (¿Por qué?)**
+
+La causa raíz es el uso de arquitecturas monolíticas y silos de datos que impiden la escalabilidad. Además, el alto costo de implementación de software tradicional (señalado por el 39% de empresas como barrera principal) limita la adopción tecnológica.
+
+#### **How (¿Cómo?)**
+
+Se manifiesta a través de un 20% de entregas fallidas en el primer intento y retrasos de hasta 15 días en nodos logísticos clave, lo que genera una pérdida de confianza que aleja al 89% de los clientes tras una mala experiencia.
+
+#### **How Much (¿Cuánto?)**
+
+La ineficiencia eleva los costos logísticos hasta un 21.1% sobre las ventas (frente al 15% en grandes corporaciones). Esto incluye pérdidas de aproximadamente 15 euros por cada entrega fallida y tasas de devolución (logística inversa) que alcanzan el 41% en temporadas altas.
+
 
 <h3 id="123-lean-ux-process">1.2.3 Lean UX Process</h3>
 
@@ -103,8 +155,84 @@ Creemos que aplicando caché y control de frecuencia de actualización en Google
 
 <h4 id="1234-lean-ux-canvas">1.2.3.4 Lean UX Canvas</h4>
 
-<p><em>Contenido por desarrollar.</em></p>
+  <img src="./assets/chapter-i/LeanUXCanva.png" alt="Logo UPC" style="max-width: 800; width: 55%; height: auto; display: inline-block;" />
 
 <h2 id="13-segmentos-objetivo">1.3 Segmentos objetivo</h2>
 
-<p><em>Contenido por desarrollar.</em></p>
+Con el fin de llegar de manera efectiva a clientes potenciales, hemos definido a los siguientes segmentos objetivos para la plataforma Orion.
+
+### **Segmento objetivo #1: Gestor de flota**
+
+Es el profesional responsable de la toma de decisiones estratégicas y la supervisión de la cadena de suministro dentro de la empresa cliente. Su principal preocupación es la eficiencia operativa y la reducción de los costos logísticos.
+
+<strong>Aspectos demográficos:</strong>
+
+Sexo: Masculino y femenino.
+
+Rango de edad: 30–50 años.
+
+Nivel socioeconómico: Clases B y C.
+
+<strong>Aspectos geográficos: </strong>
+
+Nacionalidad: Perú.
+
+Zona geográfica: Urbana (principalmente Lima y provincias con alta actividad logística).
+
+<strong>Aspectos psicográficos:</strong>
+
+Intereses: Optimización de recursos, monitoreo en tiempo real, análisis de datos para la toma de decisiones y transformación digital.
+
+Estilo de vida: Profesional orientado a resultados, acostumbrado a gestionar múltiples activos y personal bajo presión.
+
+Actitudes: Busca herramientas que eliminen la incertidumbre y los procesos manuales (papel/Excel) para tener un control total sobre la ubicación y estado de sus unidades.
+
+<strong>Necesidades clave:</strong>
+
+Panel de control centralizado para visualizar la flota.
+
+Reportes automáticos de cumplimiento de rutas.
+
+Reducción de costos por kilómetros en vacío y mantenimiento preventivo.
+
+<strong>Comportamiento digital: </strong>
+
+Usuario de herramientas ERP, plataformas SaaS de gestión y aplicaciones de comunicación corporativa.
+
+### **Segmento objetivo #2: Propietarios**
+
+Es el personal operativo encargado de la ejecución física del transporte y distribución. Es el usuario principal de la aplicación móvil de Orion durante sus jornadas laborales.
+
+<strong>Aspectos demográficos:</strong>
+
+Sexo: Masculino (mayoría según estadísticas del sector).
+
+Rango de edad: 25–55 años.
+
+Nivel socioeconómico: Clases C y D.
+
+<strong>Aspectos geográficos: </strong>
+
+Nacionalidad: Perú.
+
+Zona geográfica: Rutas urbanas e interprovinciales.
+
+<strong>Aspectos psicográficos: </strong>
+
+Intereses: Facilidad de navegación, rapidez en el reporte de incidencias, herramientas que faciliten su trabajo diario sin añadir burocracia digital.
+
+Estilo de vida: Dinámico, pasa la mayor parte del día en ruta y depende críticamente de su dispositivo móvil.
+
+Actitudes: Práctico y directo; prefiere aplicaciones intuitivas que funcionen con pocos toques y que no consuman excesivos datos móviles.
+
+<strong>Necesidades clave:</strong>
+
+Hojas de ruta digitales claras y actualizadas.
+
+Mecanismo simple para reportar entregas o problemas en la vía.
+
+Navegación asistida y comunicación directa con la central.
+
+<strong>Comportamiento digital: </strong>
+
+Usuario habitual de aplicaciones de mensajería (WhatsApp) y navegación (Waze/Google Maps). Acostumbrado al uso de apps móviles pero con poca paciencia para flujos de usuario complejos.
