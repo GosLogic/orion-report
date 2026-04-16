@@ -28,8 +28,15 @@ A largo plazo, la visión de GosLogic es convertirse en un aliado estratégico p
   <tr>
       <td style="text-align:center;"><img alt="Martin Gonzales " src="assets/chapter-i/Foto_Martin.jpeg" /></td>
       <td><strong>Martin Gonzales - u202319724</strong><br>Mi nombre es Martin Gonzales, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Me caracterizo por mi interés en la programación, la tecnología y el aprendizaje continuo. Tengo una actitud analítica y organizada, lo que me permite desarrollar proyectos académicos y prácticos con dedicación, buscando siempre aplicar los conocimientos adquiridos de manera efectiva.</td>
+<<<<<<< HEAD
   </tr>
     <tr>
+=======
+
+  </tr>
+
+  <tr>
+>>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="text-align:center;"><img alt="Eduardo Cossar " src="assets/chapter-i/FotoEduardo.png" /></td>
       <td><strong>Eduardo Cossar - u202312109</strong><br>Mi nombre es Eduardo Cossar. Soy estudiante de la carrera de Ingeniería de Software, tengo 20 años y actualmente estoy cursando el septimo ciclo en la UPC. Me considero una persona responsable y comprometida con un gran interés por la tecnología. Como integrante de este equipo, me comprometo a brindar todo mi apoyo y participación activa para afrontar los desafíos que se presenten y dar lo mejor de mí para lograr el éxito de este proyecto.</td>
   </tr>
@@ -153,11 +160,15 @@ Creemos que aplicando caché y control de frecuencia de actualización en Google
 
 <h4 id="1234-lean-ux-canvas">1.2.3.4 Lean UX Canvas</h4>
 
+<<<<<<< HEAD
 <div style="text-align: center; margin: 20px 0;">
   <img src="./assets/chapter-i/LeanUXCanva.png" 
        alt="Lean UX Canvas" 
        style="width: 95%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 </div>
+=======
+  <img src="./assets/chapter-i/LeanUXCanva.png" alt="Logo UPC" style="max-width: 800; width: 55%; height: auto; display: inline-block;" />
+>>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
 
 <h2 id="13-segmentos-objetivo">1.3 Segmentos objetivo</h2>
 

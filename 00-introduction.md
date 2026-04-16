@@ -45,7 +45,7 @@
     <tbody>
       <tr>
         <td style="text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor;">Cossar Sánchez, Eduardo José</td>
-        <td style="text-align: center; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor; font-variant-numeric: tabular-nums;">u202312874</td>
+        <td style="text-align: center; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor; font-variant-numeric: tabular-nums;">u202312109</td>
       </tr>
       <tr>
         <td style="text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor;">Gonzales Castillo, Angel Martin</td>
@@ -57,7 +57,7 @@
       </tr>
       <tr>
         <td style="text-align: left; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor;">Mostajo Orosco, Maria Fernanda</td>
-        <td style="text-align: center; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor; font-variant-numeric: tabular-nums;">u202312109</td>
+        <td style="text-align: center; padding: 0.6rem 1rem; border-bottom: 1px solid currentColor; font-variant-numeric: tabular-nums;">u202312874</td>
       </tr>
       <tr>
         <td style="text-align: left; padding: 0.6rem 1rem;">Solano Armas, Angelo Hector</td>

@@ -2,8 +2,11 @@
 
 <h2 id="21-competidores">2.1 Competidores</h2>
 
+<<<<<<< HEAD
 ## 2.1.2. Análisis Competitivo
 
+=======
+>>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
 <table border="1">
 <thead>
 <tr>
@@ -105,6 +108,7 @@
 </tr>
 </tbody>
 </table>
+<<<<<<< HEAD
 
 ## 2.1.2. Estrategias y tácticas frente a competidores
 
@@ -150,6 +154,8 @@ Para competir eficazmente frente a plataformas de última milla consolidadas y s
 **Tácticas:**
 * Diseñar una interfaz móvil intuitiva con botones de gran tamaño y flujos de máximo 3 pasos para confirmar una entrega.
 * Proporcionar documentación técnica clara y un centro de ayuda con micro-guías visuales para los gestores de flota.
+=======
+>>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
 
 <h2 id="22-entrevistas">2.2 Entrevistas</h2>
 
