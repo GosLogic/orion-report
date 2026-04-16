@@ -1,5 +1,7 @@
 # Capítulo III: Requirements Specification
 
+Los `id` coinciden con el índice de `00-introduction.md`.
+
 <h2 id="31-to-be-scenario-mapping">3.1 To-Be Scenario Mapping</h2>
 
 En el To-Be Scenario Map se representa la experiencia del usuario considerando la implementación de la solución propuesta. Este mapa se construye a partir del análisis del AS-IS, con el objetivo de evidenciar cómo el sistema puede mejorar las actividades y procesos que realiza cada user persona en su día a día.
@@ -385,114 +387,33 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
     </tr>
     <tr>
       <td style="padding: 0.5rem;">10</td>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">US41</td>
-      <td style="padding: 0.5rem;">Reasignación por Contingencia</td>
-      <td style="padding: 0.5rem;">Como gestor de flota, quiero reasignar rápidamente una ruta o unidad ante una incidencia, para mantener la continuidad de la operación.</td>
-      <td style="padding: 0.5rem;">5</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">11</td>
-=======
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">US18</td>
       <td style="padding: 0.5rem;">Recepción de Horarios</td>
       <td style="padding: 0.5rem;">Como conductor, quiero ver mi cronograma diario en el móvil, para saber qué unidad debo operar.</td>
       <td style="padding: 0.5rem;">3</td>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">12</td>
-=======
       <td style="padding: 0.5rem;">11</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">US17</td>
       <td style="padding: 0.5rem;">Reporte de Jornada</td>
       <td style="padding: 0.5rem;">Como conductor, quiero marcar inicio y fin de jornada desde la app, para que mi tiempo laborado quede registrado.</td>
       <td style="padding: 0.5rem;">3</td>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">13</td>
-      <td style="padding: 0.5rem;">US36</td>
-      <td style="padding: 0.5rem;">Confirmación de Ruta Asignada</td>
-      <td style="padding: 0.5rem;">Como conductor, quiero confirmar que recibí y entendí la ruta asignada, para evitar errores de coordinación al iniciar la jornada.</td>
-      <td style="padding: 0.5rem;">2</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">14</td>
-      <td style="padding: 0.5rem;">US37</td>
-      <td style="padding: 0.5rem;">Visualización Detallada de Ruta</td>
-      <td style="padding: 0.5rem;">Como conductor, quiero ver los puntos de parada y observaciones de mi ruta, para ejecutarla correctamente durante el día.</td>
-      <td style="padding: 0.5rem;">3</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">15</td>
-      <td style="padding: 0.5rem;">US35</td>
-      <td style="padding: 0.5rem;">Notificaciones Operativas al Conductor</td>
-      <td style="padding: 0.5rem;">Como conductor, quiero recibir notificaciones operativas en la app, para conocer cambios de ruta, horarios o instrucciones sin depender de llamadas.</td>
-      <td style="padding: 0.5rem;">3</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">16</td>
-=======
       <td style="padding: 0.5rem;">12</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">US08</td>
       <td style="padding: 0.5rem;">Visualización en Mapa</td>
       <td style="padding: 0.5rem;">Como gestor de flota, quiero ver la ubicación en tiempo real de mis vehículos, para optimizar la logística.</td>
       <td style="padding: 0.5rem;">8</td>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">17</td>
-      <td style="padding: 0.5rem;">US43</td>
-      <td style="padding: 0.5rem;">Búsqueda Rápida de Vehículo en Mapa</td>
-      <td style="padding: 0.5rem;">Como gestor de flota, quiero buscar una unidad específica en el mapa, para consultar su situación sin revisar toda la flota.</td>
-      <td style="padding: 0.5rem;">3</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">18</td>
-=======
       <td style="padding: 0.5rem;">13</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">US09</td>
       <td style="padding: 0.5rem;">Historial de Rutas</td>
       <td style="padding: 0.5rem;">Como gestor de flota, quiero consultar el recorrido histórico de una unidad, para verificar el cumplimiento de las rutas.</td>
       <td style="padding: 0.5rem;">5</td>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">19</td>
-      <td style="padding: 0.5rem;">US42</td>
-      <td style="padding: 0.5rem;">Vista de Cumplimiento de Despachos</td>
-      <td style="padding: 0.5rem;">Como gestor de flota, quiero ver qué despachos están pendientes, en ruta o finalizados, para tener control del avance diario.</td>
-      <td style="padding: 0.5rem;">5</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">20</td>
-      <td style="padding: 0.5rem;">US38</td>
-      <td style="padding: 0.5rem;">Registro de Entrega o Parada Completada</td>
-      <td style="padding: 0.5rem;">Como conductor, quiero marcar una parada o entrega como completada, para mantener actualizado el avance de mi ruta.</td>
-      <td style="padding: 0.5rem;">3</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">21</td>
-      <td style="padding: 0.5rem;">US39</td>
-      <td style="padding: 0.5rem;">Check-in en Punto de Control</td>
-      <td style="padding: 0.5rem;">Como conductor, quiero registrar mi llegada a puntos clave de la ruta, para dejar evidencia de cumplimiento operativo.</td>
-      <td style="padding: 0.5rem;">3</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">22</td>
-      <td style="padding: 0.5rem;">US40</td>
-      <td style="padding: 0.5rem;">Navegación Asistida en Ruta</td>
-      <td style="padding: 0.5rem;">Como conductor, quiero abrir navegación guiada desde la app, para seguir la ruta asignada con mayor facilidad.</td>
-      <td style="padding: 0.5rem;">5</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">23</td>
-=======
       <td style="padding: 0.5rem;">14</td>
       <td style="padding: 0.5rem;">US10</td>
       <td style="padding: 0.5rem;">Gestión de Geocercas</td>
@@ -529,52 +450,33 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
     </tr>
     <tr>
       <td style="padding: 0.5rem;">19</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">US19</td>
       <td style="padding: 0.5rem;">Reporte de Incidentes</td>
       <td style="padding: 0.5rem;">Como conductor, quiero enviar fotos de fallas mecánicas desde la app, para que el gestor programe el taller de inmediato.</td>
       <td style="padding: 0.5rem;">5</td>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">24</td>
-=======
       <td style="padding: 0.5rem;">20</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">US20</td>
       <td style="padding: 0.5rem;">Botón de Pánico</td>
       <td style="padding: 0.5rem;">Como conductor, quiero activar una alerta de emergencia, para que la central reciba mi ubicación exacta al instante.</td>
       <td style="padding: 0.5rem;">8</td>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">25</td>
-=======
       <td style="padding: 0.5rem;">21</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">US21</td>
       <td style="padding: 0.5rem;">Persistencia Local Offline</td>
       <td style="padding: 0.5rem;">Como conductor, quiero que la app móvil guarde eventos offline en SQLite, para garantizar la experiencia en zonas sin señal.</td>
       <td style="padding: 0.5rem;">8</td>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">26</td>
-=======
       <td style="padding: 0.5rem;">22</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">US22</td>
       <td style="padding: 0.5rem;">Sincronización Inteligente</td>
       <td style="padding: 0.5rem;">Como conductor, quiero que la app sincronice automáticamente los datos pendientes al recuperar señal, para no perder información registrada en modo offline.</td>
       <td style="padding: 0.5rem;">8</td>
     </tr>
     <tr>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">27</td>
-      <td style="padding: 0.5rem;">US45</td>
-      <td style="padding: 0.5rem;">Estado de Sincronización Offline</td>
-      <td style="padding: 0.5rem;">Como conductor, quiero ver qué eventos siguen pendientes de sincronizar, para saber si mi información ya fue enviada correctamente.</td>
-=======
       <td style="padding: 0.5rem;">23</td>
       <td style="padding: 0.5rem;">US23</td>
       <td style="padding: 0.5rem;">Circuit Breaker</td>
@@ -607,20 +509,13 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
       <td style="padding: 0.5rem;">US27</td>
       <td style="padding: 0.5rem;">Cobertura Mínima de Pruebas</td>
       <td style="padding: 0.5rem;">Como equipo de QA, quiero validar una cobertura mínima automatizada, para asegurar calidad antes de cada despliegue.</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">3</td>
     </tr>
     <tr>
       <td style="padding: 0.5rem;">28</td>
-<<<<<<< HEAD
-      <td style="padding: 0.5rem;">US10</td>
-      <td style="padding: 0.5rem;">Gestión de Geocercas</td>
-      <td style="padding: 0.5rem;">Como gestor de flota, quiero definir zonas permitidas, para recibir alertas cuando un vehículo salga del perímetro autorizado.</td>
-=======
       <td style="padding: 0.5rem;">US28</td>
       <td style="padding: 0.5rem;">API REST Estandarizada para Integración</td>
       <td style="padding: 0.5rem;">Como integrador externo, quiero consumir APIs REST documentadas, para integrar sistemas de terceros en menor tiempo y con menos errores.</td>
->>>>>>> 0cfc16827bc22d9735081b5fdc53a1612e66bb66
       <td style="padding: 0.5rem;">5</td>
     </tr>
   </tbody>
