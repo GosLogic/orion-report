@@ -201,7 +201,7 @@ Reducción de costos por kilómetros en vacío y mantenimiento preventivo.
 
 Usuario de herramientas ERP, plataformas SaaS de gestión y aplicaciones de comunicación corporativa.
 
-### **Segmento objetivo #2: Propietarios**
+### **Segmento objetivo #2: Conductor de flota**
 
 Es el personal operativo encargado de la ejecución física del transporte y distribución. Es el usuario principal de la aplicación móvil de Orion durante sus jornadas laborales.
 

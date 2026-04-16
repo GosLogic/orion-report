@@ -996,19 +996,69 @@ En esta imagen, se presenta información relacionada al user persona conductor d
 
 
 <h3 id="232-user-task-matrix">2.3.2 User Task Matrix</h3>
+<h3 id="232-user-task-matrix">2.3.2 User Task Matrix</h3>
 
-| **Tarea**                                       | **Carlos Ramirez (Gestor de flota / Jefe de operaciones)**                                                                   | **Luis Torres (Conductor)**                                                                                                                |
-| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Monitorear vehículos en tiempo real**         | **Often – High** → Necesita visibilidad constante de la flota para tomar decisiones rápidas y mantener el control operativo. | **Rarely – Low** → No necesita monitorear toda la flota, sino seguir su propia ruta y recibir indicaciones claras.                         |
-| **Revisar alertas de mantenimiento preventivo** | **Often – High** → Es clave para prevenir fallas mecánicas, reducir costos y programar mantenimientos oportunamente.         | **Sometimes – Medium** → Puede recibir avisos básicos o detectar señales del vehículo, pero no gestiona el mantenimiento de toda la flota. |
-| **Gestionar rutas y horarios**                  | **Often – High** → Debe optimizar rutas, asignaciones y tiempos para mejorar la eficiencia de la operación.                  | **Often – High** → Necesita consultar y cumplir las rutas y horarios asignados durante su jornada.                                         |
-| **Registrar inicio y fin de jornada**           | **Sometimes – Medium** → Le interesa supervisar el cumplimiento, aunque normalmente no realiza el registro directamente.     | **Often – High** → Es una acción recurrente en su trabajo diario y debe ser rápida, clara y sencilla.                                      |
-| **Reportar incidencias o eventos en ruta**      | **Sometimes – High** → Necesita recibir esta información para reaccionar, coordinar soluciones y evitar retrasos mayores.    | **Often – High** → Debe reportar problemas, retrasos o incidencias durante el recorrido de forma simple.                                   |
-| **Consultar reportes operativos**               | **Often – High** → Usa reportes para analizar desempeño, costos, cumplimiento y tomar decisiones basadas en datos.           | **Rarely – Low** → No suele requerir reportes analíticos, porque su enfoque principal es la ejecución de la ruta.                          |
-| **Coordinar con conductores / central**         | **Often – High** → Requiere comunicación constante con el personal operativo para mantener la operación alineada.            | **Often – Medium** → Necesita recibir instrucciones y comunicar avances, dudas o problemas durante el trayecto.                            |
-| **Usar la plataforma o app de manera sencilla** | **Sometimes – Medium** → Valora una interfaz clara, aunque puede adaptarse a herramientas más completas.                     | **Often – High** → Necesita una app simple, rápida y sin complicaciones para no afectar su trabajo en campo.                               |
-| **Trabajar sin conexión (offline)**             | **Sometimes – Medium** → Le importa que la operación no se detenga, aunque no sea quien use directamente el modo offline.    | **Often – High** → Es fundamental porque puede transitar por zonas con poca o nula conectividad.                                           |
-| **Tomar decisiones basadas en datos**           | **Often – High** → Es una de sus principales necesidades para mejorar la eficiencia y reducir pérdidas operativas.           | **Rarely – Low** → Sus decisiones suelen ser más inmediatas y operativas que analíticas.                                                   |
+<table>
+  <thead>
+    <tr>
+      <th><strong>Tarea</strong></th>
+      <th><strong>Carlos Ramirez (Gestor de flota / Jefe de operaciones)</strong></th>
+      <th><strong>Luis Torres (Conductor)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Monitorear vehículos en tiempo real</strong></td>
+      <td><strong>Often – High</strong> → Necesita visibilidad constante de la flota para tomar decisiones rápidas y mantener el control operativo.</td>
+      <td><strong>Rarely – Low</strong> → No necesita monitorear toda la flota, sino seguir su propia ruta y recibir indicaciones claras.</td>
+    </tr>
+    <tr>
+      <td><strong>Revisar alertas de mantenimiento preventivo</strong></td>
+      <td><strong>Often – High</strong> → Es clave para prevenir fallas mecánicas, reducir costos y programar mantenimientos oportunamente.</td>
+      <td><strong>Sometimes – Medium</strong> → Puede recibir avisos básicos o detectar señales del vehículo, pero no gestiona el mantenimiento de toda la flota.</td>
+    </tr>
+    <tr>
+      <td><strong>Gestionar rutas y horarios</strong></td>
+      <td><strong>Often – High</strong> → Debe optimizar rutas, asignaciones y tiempos para mejorar la eficiencia de la operación.</td>
+      <td><strong>Often – High</strong> → Necesita consultar y cumplir las rutas y horarios asignados durante su jornada.</td>
+    </tr>
+    <tr>
+      <td><strong>Registrar inicio y fin de jornada</strong></td>
+      <td><strong>Sometimes – Medium</strong> → Le interesa supervisar el cumplimiento, aunque normalmente no realiza el registro directamente.</td>
+      <td><strong>Often – High</strong> → Es una acción recurrente en su trabajo diario y debe ser rápida, clara y sencilla.</td>
+    </tr>
+    <tr>
+      <td><strong>Reportar incidencias o eventos en ruta</strong></td>
+      <td><strong>Sometimes – High</strong> → Necesita recibir esta información para reaccionar, coordinar soluciones y evitar retrasos mayores.</td>
+      <td><strong>Often – High</strong> → Debe reportar problemas, retrasos o incidencias durante el recorrido de forma simple.</td>
+    </tr>
+    <tr>
+      <td><strong>Consultar reportes operativos</strong></td>
+      <td><strong>Often – High</strong> → Usa reportes para analizar desempeño, costos, cumplimiento y tomar decisiones basadas en datos.</td>
+      <td><strong>Rarely – Low</strong> → No suele requerir reportes analíticos, porque su enfoque principal es la ejecución de la ruta.</td>
+    </tr>
+    <tr>
+      <td><strong>Coordinar con conductores / central</strong></td>
+      <td><strong>Often – High</strong> → Requiere comunicación constante con el personal operativo para mantener la operación alineada.</td>
+      <td><strong>Often – Medium</strong> → Necesita recibir instrucciones y comunicar avances, dudas o problemas durante el trayecto.</td>
+    </tr>
+    <tr>
+      <td><strong>Usar la plataforma o app de manera sencilla</strong></td>
+      <td><strong>Sometimes – Medium</strong> → Valora una interfaz clara, aunque puede adaptarse a herramientas más completas.</td>
+      <td><strong>Often – High</strong> → Necesita una app simple, rápida y sin complicaciones para no afectar su trabajo en campo.</td>
+    </tr>
+    <tr>
+      <td><strong>Trabajar sin conexión (offline)</strong></td>
+      <td><strong>Sometimes – Medium</strong> → Le importa que la operación no se detenga, aunque no sea quien use directamente el modo offline.</td>
+      <td><strong>Often – High</strong> → Es fundamental porque puede transitar por zonas con poca o nula conectividad.</td>
+    </tr>
+    <tr>
+      <td><strong>Tomar decisiones basadas en datos</strong></td>
+      <td><strong>Often – High</strong> → Es una de sus principales necesidades para mejorar la eficiencia y reducir pérdidas operativas.</td>
+      <td><strong>Rarely – Low</strong> → Sus decisiones suelen ser más inmediatas y operativas que analíticas.</td>
+    </tr>
+  </tbody>
+</table
 
 <h3 id="233-empathy-maps">2.3.3 Empathy Maps</h3>
 
@@ -1855,9 +1905,18 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
 
 <h1 id="referencias-bibliograficas">Referencias Bibliográficas</h1>
 
-<p><em>Contenido por desarrollar.</em></p>
-
-Ministerio de la Producción. (2025, 20 de febrero). <em>PRODUCE: Perú cerró el 2024 con 2.34 millones de empresas formales. </em> Plataforma digital única del Estado Peruano. https://www.gob.pe/institucion/produce/noticias/1168972-produce-peru-cerro-el-2024-con-2-34-millones-de-empresas-formales
+- Arvis, J.-F., Ojala, L., Wiederer, C., Shepherd, B., Raj, A., Dairabayeva, K., & Kiiski, T. (2018). *Connecting to compete 2018: Trade logistics in the global economy*. The World Bank. https://openknowledge.worldbank.org/handle/10986/29971
+- Bass, L., Clements, P., & Kazman, R. (2021). *Software architecture in practice* (4th ed.). Addison-Wesley. https://www.informit.com/store/software-architecture-in-practice-9780136886097
+- Chopra, S. (2019). *Supply chain management: Strategy, planning, and operation* (7th ed.). Pearson. https://www.pearson.com/en-us/subject-catalog/p/supply-chain-management-strategy-planning-and-operation/P200000003481
+- Christopher, M. (2016). *Logistics & supply chain management* (5th ed.). Pearson. https://www.pearson.com/en-gb/subject-catalog/p/logistics-and-supply-chain-management/P200000003537
+- Dantzig, G. B., & Ramser, J. H. (1959). The truck dispatching problem. *Management Science, 6*(1), 80-91. https://doi.org/10.1287/mnsc.6.1.80
+- International Organization for Standardization. (2011). *ISO/IEC 25010:2011 Systems and software engineering-Systems and software Quality Requirements and Evaluation (SQuaRE)-System and software quality models*. ISO. https://www.iso.org/standard/35733.html
+- International Organization for Standardization. (2011). *ISO/IEC/IEEE 42010:2011 Systems and software engineering-Architecture description*. ISO. https://www.iso.org/standard/50508.html
+- Laporte, G. (2009). Fifty years of vehicle routing. *Transportation Science, 43*(4), 408-416. https://doi.org/10.1287/trsc.1090.0308
+- Sommerville, I. (2016). *Software engineering* (10th ed.). Pearson. https://www.pearson.com/en-us/subject-catalog/p/software-engineering/P200000003420
+- Toth, P., & Vigo, D. (Eds.). (2014). *Vehicle routing: Problems, methods, and applications* (2nd ed.). SIAM. https://doi.org/10.1137/1.9781611973592
+- Womack, J. P., & Jones, D. T. (2003). *Lean thinking: Banish waste and create wealth in your corporation* (2nd ed.). Free Press. https://www.simonandschuster.com/books/Lean-Thinking/James-P-Womack/9780743249278
+- Yin, R. K. (2018). *Case study research and applications: Design and methods* (6th ed.). SAGE. https://us.sagepub.com/en-us/nam/case-study-research-and-applications/book250150
 
 ---
 
@@ -1878,7 +1937,12 @@ Ministerio de la Producción. (2025, 20 de febrero). <em>PRODUCE: Perú cerró e
 
 <h1 id="links">Links</h1>
 
-<p><em>Contenido por desarrollar.</em></p>
+- **Entrevista 1:** https://youtu.be/kXKhMsL1lxE
+- **Entrevista 2:** https://youtu.be/wGiuLdgBVDE
+- **Entrevista 3:** https://www.youtube.com/watch?v=_6LfNBTjb6s
+- **Entrevista 4:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312109_upc_edu_pe/IQAhhLw1RUJ8RImftOIbigcHASxcjFstmEzSn-OgRNJY0cA
+- **Entrevista 5:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312109_upc_edu_pe/IQCtmBII4NWTRJOd1p_0c5ZHAY46u89SpsQGZTtVzpUvX8c
+- **Entrevista 6:** https://upcedupe-my.sharepoint.com/:v:/r/personal/u202312109_upc_edu_pe/Documents/Entrevistas%20Segmento%202/Entrevista%20%231.mp4
 
 
 ---
