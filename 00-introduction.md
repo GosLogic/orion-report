@@ -90,9 +90,9 @@
   <tbody>
     <tr>
       <td style="padding: 0.5rem;">TB1</td>
-      <td style="padding: 0.5rem;">—</td>
-      <td style="padding: 0.5rem;">Todos los integrantes</td>
-      <td style="padding: 0.5rem;">En elaboración: carátula, estructura del informe, Student Outcome (pendiente), capítulos según plan de curso.</td>
+      <td style="padding: 0.5rem;">15/04/2026</td>
+      <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
+      <td style="padding: 0.5rem;">Completado hasta el Capítulo III: Introducción (Startup Profile, Solution Profile y segmentos objetivo), Requirements & Analysis (competidores, entrevistas y needfinding) y Requirements Specification (To-Be Scenario Mapping, User Stories, Impact Map y Product Backlog).</td>
     </tr>
   </tbody>
 </table>
