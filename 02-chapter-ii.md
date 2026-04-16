@@ -211,7 +211,11 @@ Se estructuraron bloques de preguntas para recopilar datos objetivos (herramient
     <th>Edad</th>
     <td>30</td>
     <th>Distrito</th>
+<<<<<<< HEAD
     <td>Ate</td>
+=======
+    <td>San Juan de Lurigancho</td>
+>>>>>>> a3bfce7e2110286234705b19087c1eaa07c79d43
   </tr>
   <tr>
     <th>Captura de la entrevista: <img src="assets/chapter-II-assets/Entrevista 1 Gestor.jpg" alt="Captura de la entrevista" width="200"></th>
@@ -231,6 +235,43 @@ Se estructuraron bloques de preguntas para recopilar datos objetivos (herramient
    <th>Timing</th>
     <td colspan="3">
         00:00 - 8:59
+    </td>
+  </tr>
+</table>
+
+<table border="1">
+  <tr>
+    <th>Entrevista</th>
+    <td>2</td>
+    <th>Nombre</th>
+    <td>Nathaly Solano Armas</td>
+  </tr>
+  <tr>
+    <th>Edad</th>
+    <td>28</td>
+    <th>Distrito</th>
+    <td>ATE</td>
+  </tr>
+  <tr>
+    <th>Captura de la entrevista: <img src="assets\chapter-ii\Entrevistas\EntrevistaS13.png" alt="Captura de la entrevista" width="200"></th>
+    <td colspan="3">
+      Nathaly Solano, administradora logística, tiene a su cargo el rol de analista de distribución y lidera un equipo que administra 1.200 unidades de distintos tonelajes. Identifica como principal problema crítico de la empresa la existencia de múltiples aplicaciones para gestionar las entregas, lo que dificulta la operación. Además, los reportes de incidencias se realizan por llamadas o mensajes de WhatsApp, sin un formato estandarizado que permita un adecuado registro y seguimiento.
+      El reporte total de pedidos se genera mediante un aplicativo que sincroniza los entregables por unidad, con un promedio de 70 a 80 pedidos por vehículo. Sin embargo, la verificación del proceso sigue siendo manual, a través de guías físicas que luego deben entregarse al área de liquidación. También se presentan incidencias relacionadas con costos: en ocasiones, los puntos de entrega están cerrados y, para no afectar a otros clientes, se continúa con la siguiente entrega, lo que incrementa tiempos y costos operativos por falta de una coordinación efectiva con los clientes.
+      Nathaly considera que la propuesta presentada sería de gran apoyo, ya que permitiría mejorar el orden, ahorrar tiempo y lograr un control más eficiente de las unidades en tiempo real. Señala que el punto más crítico es la falta de capacidad para reaccionar rápidamente ante incidencias y su principal objetivo es optimizar los tiempos de entrega y llevar un control más adecuado de todo el proceso.
+    </td>
+  </tr>
+  <tr>
+    <th>URL de la grabación</th>
+    <td colspan="3">
+      <a href="https://youtu.be/wGiuLdgBVDE">
+        Ver grabación
+      </a>
+    </td>
+  </tr>
+  <tr>
+   <th>Timing</th>
+    <td colspan="3">
+        00:00 - 11:02
     </td>
   </tr>
 </table>
