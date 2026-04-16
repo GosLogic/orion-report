@@ -1,8 +1,8 @@
 # Capítulo II: Requirements  & Analysis
 
-Los `id` coinciden con el índice de `00-introduction.md`.
-
 <h2 id="21-competidores">2.1 Competidores</h2>
+
+## 2.1.2. Análisis Competitivo
 
 <table border="1">
 <thead>
@@ -106,10 +106,52 @@ Los `id` coinciden con el índice de `00-introduction.md`.
 </tbody>
 </table>
 
-<h2 id="22-entrevistas">2.2 Entrevistas</h2>
+## 2.1.2. Estrategias y tácticas frente a competidores
 
-<<<<<<< HEAD
-## 2.2. Entrevistas
+Para competir eficazmente frente a plataformas de última milla consolidadas y soluciones globales de telemática, **Orion** aplicará las siguientes estrategias y tácticas preliminares, considerando nuestras fortalezas y la oportunidad de mercado.
+
+### Modelo de implementación "Software-Only" y bajo costo
+
+**Estrategia:** Eliminar la barrera de inversión en hardware propietario (GPS costosos) permitiendo que cualquier smartphone Android se convierta en un terminal logístico potente.
+
+**Tácticas:**
+* Optimizar la aplicación móvil para un consumo mínimo de batería y recursos, compatible con equipos de gama entrada.
+* Implementar un importador masivo de rutas y clientes desde Excel para reducir el tiempo de *onboarding* de semanas a minutos.
+* Ofrecer un esquema de precios por "unidad activa", permitiendo a las PYMES escalar el costo según su demanda estacional.
+
+### Robustez técnica y disponibilidad (Cloud Native)
+
+**Estrategia:** Garantizar que el sistema soporte picos de tráfico mediante una infraestructura elástica en la nube.
+
+**Tácticas:**
+* Desplegar microservicios en contenedores que permitan escalado horizontal automático ante aumentos de carga.
+* Implementar una política de Aislamiento de Fallos para que una caída en el módulo de analítica no afecte el registro de entregas del conductor.
+
+### Operación en zonas de baja conectividad
+
+**Estrategia:** Asegurar la continuidad operativa en la accidentada geografía peruana donde la señal móvil es inestable.
+
+**Tácticas:**
+* Desarrollar capacidades Offline-First, permitiendo que el conductor registre fotos y firmas sin conexión y se sincronicen automáticamente al recuperar señal.
+* Optimizar la transferencia de datos mediante el envío de paquetes ligeros (JSON) para reducir el gasto de datos móviles del conductor.
+
+### Ecosistema e integraciones ágiles
+
+**Estrategia:** Facilitar el flujo de información entre el conductor, el administrador y el cliente final mediante canales de uso cotidiano.
+
+**Tácticas:**
+* Desarrollar una API RESTful documentada que facilite la integración futura con sistemas de facturación electrónica locales.
+* Implementar notificaciones automáticas vía WhatsApp para informar al administrador sobre incidentes críticos en ruta.
+
+### Adquisición y retención por usabilidad y valor técnico
+
+**Estrategia:** Minimizar la curva de aprendizaje para segmentos con niveles variables de alfabetización digital.
+
+**Tácticas:**
+* Diseñar una interfaz móvil intuitiva con botones de gran tamaño y flujos de máximo 3 pasos para confirmar una entrega.
+* Proporcionar documentación técnica clara y un centro de ayuda con micro-guías visuales para los gestores de flota.
+
+<h2 id="22-entrevistas">2.2 Entrevistas</h2>
 
 ### 2.2.1. Diseño de entrevistas
 
@@ -152,61 +194,10 @@ Se estructuraron bloques de preguntas para recopilar datos objetivos (herramient
 
 6.	¿Qué tan útil le resultaría tener una lista digital donde solo con un botón pueda confirmar la entrega y adjuntar una foto como evidencia? 
 7.	 ¿Preferiría una aplicación que funcione con pocos datos móviles y tenga botones grandes para uso rápido?
-=======
-### 2.2.1. Diseño de entrevistas
-
-### Para cualquier entrevistado
-Obtener los siguientes datos:
-- Nombre Completo
-- Edad
-- Género
-- Nivel de Educación: (Secundaria, Técnico, Universitario, Posgrado)
-- Distrito de Residencia
-- Cargo o Puesto Actual
-- Tiempo de experiencia en el sector logístico/transporte: (Años/Meses)
-
-
-## Segmento Objetivo 1: Gestor de flota / Administrador logístico
-
-### Introducción y Contexto
-1. ¿Cuál es su rol principal y cuántas unidades tiene a su cargo actualmente?
-2. ¿Cómo describe el proceso actual de asignación de rutas y despacho?
-
-### Identificación de Pain Points (Problemas)
-3. ¿Cómo se entera actualmente si un conductor tiene un retraso o una incidencia en ruta?
-4. ¿Cuál es su mayor dificultad al momento de consolidar la información de las entregas al final del día?  
-   (¿Usa Excel, papel, llamadas?).
-5. ¿Ha enfrentado problemas de "kilómetros en vacío" o rutas mal optimizadas que eleven sus costos?
-
-### Validación de la Solución
-6. Si pudiera ver en un solo panel el estado de todas sus unidades y recibir alertas automáticas, ¿cómo cambiaría su gestión diaria?
-7. ¿Qué indicadores (KPIs) son los más críticos para usted?  
-   (Ej. tiempo de entrega, consumo de combustible, satisfacción del cliente).
-
-
-
-## Segmento Objetivo 2: Conductor de vehículo de flota
-
-### Introducción y Contexto
-1. ¿Cuántas paradas o entregas realiza en un día promedio?
-2. ¿Cómo recibe su hoja de ruta cada mañana?
-
-### Identificación de Pain Points (Problemas)
-3. ¿Cuál es la tarea que más tiempo le quita durante el proceso de entrega?  
-   (Llenar formatos, buscar direcciones, esperar confirmación).
-4. ¿Qué sucede cuando llega a un punto y no puede realizar la entrega? ¿Cómo lo reporta?
-5. ¿Qué es lo que más le molesta de las aplicaciones que ha usado anteriormente?  
-   (Ej. consume mucha batería, es lenta, difícil de entender).
-
-### Validación de la Solución (Orion)
-6. ¿Qué tan útil le resultaría tener una lista digital donde solo con un botón pueda confirmar la entrega y adjuntar una foto como evidencia?
-7. ¿Preferiría una aplicación que funcione con pocos datos móviles y tenga botones grandes para uso rápido?
->>>>>>> 35696f7bf5ffaa69c172de7c2a5d510deca461fc
 
 
 ### 2.2.2. Registro de entrevistas
 
-<<<<<<< HEAD
 **Segmento 1: Gestor de flota**
 
 <table border="1">
@@ -220,7 +211,7 @@ Obtener los siguientes datos:
     <th>Edad</th>
     <td>30</td>
     <th>Distrito</th>
-    <td>[Insertar Distrito]</td>
+    <td>Ate</td>
   </tr>
   <tr>
     <th>Captura de la entrevista: <img src="assets/chapter-II-assets/Entrevista 1 Gestor.jpg" alt="Captura de la entrevista" width="200"></th>
@@ -283,85 +274,6 @@ Obtener los siguientes datos:
 
 ### 2.2.3. Análisis de entrevistas
 
-Las entrevistas se realizaron entre el 5 y el 15 de septiembre de 2025 a un total de 4 participantes: dos conductores y dos mecánicos capacitados de Peru y Venezuela. El objetivo fue identificar patrones comunes en sus frustraciones, expectativas y criterios soluciones digitales en aplicaciones móviles.
-
-**Segmento: Propietarios de vehículos**
-
-**Total entrevistados**: 2
-
-**Edades**: 19 y 21 años
-
-**Distritos**: Ate y La Molina
-
-**Universidad**: Estudiantes universitarios de la UPC
-
-**Vehículos**: Honda CRV 2012 (familiar), Nissan Sunny 2001 (propio)
-
-**Fechas**: Entre el 5 y 9 de septiembre
-
-**Características objetivas**
-
-• Tienen dificultades para encontrar mecánicos de confianza con precios justos: 2/2 (100%)
-
-• Usan referencias de terceros / redes sociales (Facebook, recomendaciones boca a boca) para decidir mecánico: 2/2 (100%)
-
-• Prefieren medios de pago digitales o efectivos (Yape, Plin, QR o efectivo): 2/2 (100%)
-
-• Desean un historial digital de mantenimientos de su vehículo: 2/2 (100%)
-
-• Consideran importante comparar precios antes de aceptar el servicio: 2/2 (100%)
-
-• Valoran que la app permita personalizar opciones (mecánico favorito, horarios, precio máximo, repuestos): 2/2 (100%)
-
-**Características subjetivas**
-
-• Desconfianza hacia los talleres locales por precios inflados o falta de transparencia: 2/2 (100%)
-
-• Consideran que la ubicación del mecánico es un factor clave al decidir (cercanía): 1/2 (50%)
-
-• Priorizan la rapidez en la comunicación con el mecánico (chat, llamada, videollamada): 2/2 (100%)
-
-• Prefieren ver el avance del trabajo con fotos o checklist para mayor control: 2/2 (100%)
-
-• Desean que la plataforma incluya valoraciones y comentarios de otros usuarios como guía: 2/2 (100%)
-
-• Muestran disposición a usar una app siempre que sea intuitiva y rápida: 2/2 (100%)
-
-**Segmento: Mecánicos**
-
-**Total entrevistados**: 2
-
-**Edades**: 40 y 45 años
-
-**Distritos**: San Luis  y Surquillo
-
-
-**Experiencia**:
-- José Castillo: Ingeniero en mantenimiento mecánico con experiencia en diagnósticos, mantenimientos preventivos y gestión operativa.
-- Rando Calero: Mecánico especialista en Scania, dueño de taller con 1 año en el mercado.
-
-**Fechas**: Entre el 13 y 15 de septiembre
-
-**Características objetivas**
-
-• Identifican la falta de planificación preventiva como el principal problema de gestión: 2/2 (100%)  
-• Consideran esencial el historial digital de cada vehículo para diagnósticos más rápidos: 2/2 (100%)  
-• Utilizan actualmente métodos básicos de comunicación (WhatsApp, llamadas): 2/2 (100%)  
-• Valoran procesos como registro de solicitudes, seguimiento, alertas y reportes: 2/2 (100%)  
-• Prefieren una interfaz clara e intuitiva, con indicadores y paneles visuales: 2/2 (100%)  
-• Están abiertos a que los clientes dejen valoraciones y comentarios sobre el servicio: 2/2 (100%)  
-• Usan o han considerado usar herramientas digitales complementarias (escáner de vehículos, páginas web, redes sociales): 2/2 (100%)
-
-**Características subjetivas**
-
-• Perciben que la mala comunicación con conductores aumenta costos y retrasa soluciones: 2/2 (100%)  
-• Valoran la organización de solicitudes para evitar confusiones o duplicaciones: 2/2 (100%)  
-• Consideran clave las notificaciones automáticas de mantenimientos: 2/2 (100%)  
-• Desean que la app tenga lenguaje accesible y no excesivamente técnico, para facilitar la adopción: 1/2 (50%)  
-• Piensan que la plataforma debe incluir flujo automatizado de trabajo (inicio, mantenimiento en proceso, finalización): 1/2 (50%)  
-• Ven con buenos ojos la idea de un sistema de membresías o suscripción para cobros recurrentes: 1/2 (50%)  
-• Reconocen que las reseñas negativas pueden dañar la reputación, pero aun así valoran su utilidad para mejorar: 1/2 (50%)
-=======
 | Datos del entrevistado      | Enlace a la entrevista | Captura de la Entrevista |
 |-----------------------------|------------------------|--------------------------|
 | **Jose Luis Pereda**   | [Entrevista (3:43 min)](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312109_upc_edu_pe/IQCtmBII4NWTRJOd1p_0c5ZHAY46u89SpsQGZTtVzpUvX8c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=bH0X03) | <img width="365" height="161" alt="Image" src="assets/chapter-ii/Entrevistas/EntrevistaS21.png" /> |
@@ -488,7 +400,6 @@ Su principal necesidad es contar con una herramienta rápida, clara y práctica 
 ## Entrevista  – Segmento 2
 
 
->>>>>>> 35696f7bf5ffaa69c172de7c2a5d510deca461fc
 
 <h2 id="23-needfinding">2.3 Needfinding</h2>
 
