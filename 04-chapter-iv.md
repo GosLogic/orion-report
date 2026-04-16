@@ -1,6 +1,5 @@
 # Capítulo IV: Product Architecture Design
 
-Los `id` coinciden con el índice de `00-introduction.md`.
 
 <h2 id="41-desing-concepts-viewpoints--er-diagrams">4.1 Desing Concepts, ViewPoints & ER Diagrams</h2>
 

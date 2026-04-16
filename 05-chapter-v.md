@@ -1,7 +1,5 @@
 # Capítulo V: Product Implementation, Validation & Deployment
 
-Los `id` coinciden con el índice de `00-introduction.md`. (Los números 5.2.1… se repiten en el silabo entre SCM y sprints; aquí los `id` son distintos para que no choquen.)
-
 <h2 id="51-testing-suites--general-patterns">5.1 Testing Suites & General Patterns</h2>
 <p><em>Contenido por desarrollar.</em></p>
 
