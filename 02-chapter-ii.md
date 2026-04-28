@@ -484,7 +484,69 @@ En esta imagen, se presenta información relacionada al user persona conductor d
 
 
 <h3 id="232-user-task-matrix">2.3.2 User Task Matrix</h3>
+<h3 id="232-user-task-matrix">2.3.2 User Task Matrix</h3>
 
+<table>
+  <thead>
+    <tr>
+      <th><strong>Tarea</strong></th>
+      <th><strong>Carlos Ramirez (Gestor de flota / Jefe de operaciones)</strong></th>
+      <th><strong>Luis Torres (Conductor)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Monitorear vehículos en tiempo real</strong></td>
+      <td><strong>Often – High</strong> → Necesita visibilidad constante de la flota para tomar decisiones rápidas y mantener el control operativo.</td>
+      <td><strong>Rarely – Low</strong> → No necesita monitorear toda la flota, sino seguir su propia ruta y recibir indicaciones claras.</td>
+    </tr>
+    <tr>
+      <td><strong>Revisar alertas de mantenimiento preventivo</strong></td>
+      <td><strong>Often – High</strong> → Es clave para prevenir fallas mecánicas, reducir costos y programar mantenimientos oportunamente.</td>
+      <td><strong>Sometimes – Medium</strong> → Puede recibir avisos básicos o detectar señales del vehículo, pero no gestiona el mantenimiento de toda la flota.</td>
+    </tr>
+    <tr>
+      <td><strong>Gestionar rutas y horarios</strong></td>
+      <td><strong>Often – High</strong> → Debe optimizar rutas, asignaciones y tiempos para mejorar la eficiencia de la operación.</td>
+      <td><strong>Often – High</strong> → Necesita consultar y cumplir las rutas y horarios asignados durante su jornada.</td>
+    </tr>
+    <tr>
+      <td><strong>Registrar inicio y fin de jornada</strong></td>
+      <td><strong>Sometimes – Medium</strong> → Le interesa supervisar el cumplimiento, aunque normalmente no realiza el registro directamente.</td>
+      <td><strong>Often – High</strong> → Es una acción recurrente en su trabajo diario y debe ser rápida, clara y sencilla.</td>
+    </tr>
+    <tr>
+      <td><strong>Reportar incidencias o eventos en ruta</strong></td>
+      <td><strong>Sometimes – High</strong> → Necesita recibir esta información para reaccionar, coordinar soluciones y evitar retrasos mayores.</td>
+      <td><strong>Often – High</strong> → Debe reportar problemas, retrasos o incidencias durante el recorrido de forma simple.</td>
+    </tr>
+    <tr>
+      <td><strong>Consultar reportes operativos</strong></td>
+      <td><strong>Often – High</strong> → Usa reportes para analizar desempeño, costos, cumplimiento y tomar decisiones basadas en datos.</td>
+      <td><strong>Rarely – Low</strong> → No suele requerir reportes analíticos, porque su enfoque principal es la ejecución de la ruta.</td>
+    </tr>
+    <tr>
+      <td><strong>Coordinar con conductores / central</strong></td>
+      <td><strong>Often – High</strong> → Requiere comunicación constante con el personal operativo para mantener la operación alineada.</td>
+      <td><strong>Often – Medium</strong> → Necesita recibir instrucciones y comunicar avances, dudas o problemas durante el trayecto.</td>
+    </tr>
+    <tr>
+      <td><strong>Usar la plataforma o app de manera sencilla</strong></td>
+      <td><strong>Sometimes – Medium</strong> → Valora una interfaz clara, aunque puede adaptarse a herramientas más completas.</td>
+      <td><strong>Often – High</strong> → Necesita una app simple, rápida y sin complicaciones para no afectar su trabajo en campo.</td>
+    </tr>
+    <tr>
+      <td><strong>Trabajar sin conexión (offline)</strong></td>
+      <td><strong>Sometimes – Medium</strong> → Le importa que la operación no se detenga, aunque no sea quien use directamente el modo offline.</td>
+      <td><strong>Often – High</strong> → Es fundamental porque puede transitar por zonas con poca o nula conectividad.</td>
+    </tr>
+    <tr>
+      <td><strong>Tomar decisiones basadas en datos</strong></td>
+      <td><strong>Often – High</strong> → Es una de sus principales necesidades para mejorar la eficiencia y reducir pérdidas operativas.</td>
+      <td><strong>Rarely – Low</strong> → Sus decisiones suelen ser más inmediatas y operativas que analíticas.</td>
+    </tr>
+  </tbody>
+</table
 <table>
   <thead>
     <tr>
