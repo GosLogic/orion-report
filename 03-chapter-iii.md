@@ -29,7 +29,7 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
 
 <h2 id="32-user-stories">3.2 User Stories</h2>
 
-<p>En esta sección se presentan las épicas del producto Orion, redactadas para organizar los requisitos funcionales y no funcionales que guían el alcance del proyecto.</p>
+<p>En esta sección se presentan las épicas funcionales del producto Orion, redactadas para organizar las User Stories que guían el alcance del proyecto. Los requisitos no funcionales se detallan de forma separada en la sección 3.2.3.</p>
 
 <h3 id="321-epics">3.2.1 Epics</h3>
 
@@ -66,21 +66,6 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
       <td style="padding: 0.5rem;">E05</td>
       <td style="padding: 0.5rem;">App Móvil del Conductor</td>
       <td style="padding: 0.5rem;">Como conductor, quiero registrar mi jornada y reportar incidencias desde la app, para mantener trazabilidad y respuesta rápida en campo.</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">E06</td>
-      <td style="padding: 0.5rem;">Resiliencia y Continuidad</td>
-      <td style="padding: 0.5rem;">Como administrador de infraestructura, quiero que el sistema tolere fallos y se recupere automáticamente, para asegurar continuidad del servicio sin interrupciones críticas.</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">E07</td>
-      <td style="padding: 0.5rem;">Desempeño y Escalabilidad</td>
-      <td style="padding: 0.5rem;">Como responsable técnico, quiero mantener baja latencia y escalar la plataforma ante mayor carga, para sostener el rendimiento con crecimiento de usuarios y eventos.</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">E08</td>
-      <td style="padding: 0.5rem;">Calidad e Integración</td>
-      <td style="padding: 0.5rem;">Como equipo de desarrollo, quiero contar con pruebas automatizadas y APIs estandarizadas, para facilitar mantenimiento e integración con terceros.</td>
     </tr>
   </tbody>
 </table>
@@ -254,49 +239,60 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
       <td style="padding: 0.5rem;">Escenario 1: Sincronizar al recuperar señal<br>DADO que vuelve la conectividad<br>CUANDO inicia el proceso de sincronización<br>ENTONCES la app debe enviar la cola pendiente automáticamente<br><br>Escenario 2: Aplicar backoff exponencial<br>DADO un error temporal del servidor<br>CUANDO falle un intento de envío<br>ENTONCES el sistema debe reintentar con backoff exponencial<br><br>Escenario 3: Evitar duplicados<br>DADO un evento ya confirmado por backend<br>CUANDO finaliza la sincronización<br>ENTONCES no debe reenviarse ni duplicarse<br><br>Escenario 4: Limpiar pendientes enviados<br>DADO que todos los eventos fueron aceptados<br>CUANDO termina el proceso<br>ENTONCES la app debe marcar la cola local como sincronizada</td>
       <td style="padding: 0.5rem;">E05</td>
     </tr>
-    <tr>
-      <td style="padding: 0.5rem;">US23</td>
-      <td style="padding: 0.5rem;">Circuit Breaker</td>
-      <td style="padding: 0.5rem;">Como gestor, quiero que el sistema active un Circuit Breaker si Google Maps falla, para no bloquear la operación.</td>
-      <td style="padding: 0.5rem;">Escenario 1: Abrir circuito por fallas<br>DADO fallas consecutivas del proveedor de mapas<br>CUANDO supera el umbral configurado<br>ENTONCES el sistema debe abrir el Circuit Breaker<br><br>Escenario 2: Operar en modo degradado<br>DADO circuito abierto<br>CUANDO se solicitan funciones dependientes del proveedor<br>ENTONCES el sistema debe responder con fallback sin bloquear operación<br><br>Escenario 3: Intentar recuperación controlada<br>DADO cumplido el tiempo de enfriamiento<br>CUANDO se ejecuta una prueba al proveedor<br>ENTONCES el circuito debe pasar a estado half-open<br><br>Escenario 4: Cerrar circuito por estabilidad<br>DADO respuestas exitosas en estado half-open<br>CUANDO se cumple la política de recuperación<br>ENTONCES el circuito debe volver a estado cerrado</td>
-      <td style="padding: 0.5rem;">E06</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">US24</td>
-      <td style="padding: 0.5rem;">Recuperación ante Caídas</td>
-      <td style="padding: 0.5rem;">Como administrador, quiero que el sistema autorrecupere microservicios caídos, para restaurar la operación en el menor tiempo posible.</td>
-      <td style="padding: 0.5rem;">Escenario 1: Detectar servicio no saludable<br>DADO un microservicio con fallo<br>CUANDO el orquestador ejecuta healthcheck<br>ENTONCES debe identificarlo como no saludable<br><br>Escenario 2: Ejecutar autorecuperación<br>DADO un servicio no saludable<br>CUANDO se activa la política de recuperación<br>ENTONCES el sistema debe reiniciarlo automáticamente<br><br>Escenario 3: Alertar fallo persistente<br>DADO múltiples reinicios fallidos<br>CUANDO se supera el umbral definido<br>ENTONCES el sistema debe generar alerta crítica al equipo técnico</td>
-      <td style="padding: 0.5rem;">E06</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">US25</td>
-      <td style="padding: 0.5rem;">Latencia de Telemetría GPS</td>
-      <td style="padding: 0.5rem;">Como gestor de flota, quiero que la telemetría GPS se procese y visualice con baja latencia, para tomar decisiones operativas en tiempo real.</td>
-      <td style="padding: 0.5rem;">Escenario 1: Medir latencia de punta a punta<br>DADO operación en condiciones nominales<br>CUANDO se mide el tiempo entre la emisión GPS y su visualización en el mapa<br>ENTONCES la latencia p95 debe ser menor a 3 segundos<br><br>Escenario 2: Alertar degradación de rendimiento<br>DADO que la latencia supera el umbral definido<br>CUANDO se ejecuta el monitoreo técnico<br>ENTONCES el sistema debe generar una alerta de rendimiento<br><br>Escenario 3: Priorizar procesamiento de eventos recientes<br>DADO una alta tasa de eventos GPS entrantes<br>CUANDO el sistema procesa la cola de telemetría<br>ENTONCES debe priorizar los eventos más recientes para mantener frescura en el mapa<br><br>Escenario 4: Visualizar métricas históricas<br>DADO que existen mediciones de rendimiento almacenadas<br>CUANDO el equipo técnico consulta el panel de métricas<br>ENTONCES debe visualizar tendencia de latencia por intervalo de tiempo<br><br>Escenario 5: Bloquear release por incumplimiento de latencia<br>DADO que la validación de rendimiento falla en CI<br>CUANDO la latencia no cumple el umbral objetivo<br>ENTONCES el pipeline debe marcar el despliegue como no aprobado</td>
-      <td style="padding: 0.5rem;">E07</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">US26</td>
-      <td style="padding: 0.5rem;">Autoescalado Horizontal de Servicios</td>
-      <td style="padding: 0.5rem;">Como administrador de plataforma, quiero escalar horizontalmente los servicios ante picos de tráfico, para mantener estabilidad y continuidad del sistema.</td>
-      <td style="padding: 0.5rem;">Escenario 1: Escalar ante incremento de carga<br>DADO una carga superior al umbral de operación normal<br>CUANDO el uso promedio de CPU supera el límite configurado<br>ENTONCES el orquestador debe crear nuevas réplicas automáticamente<br><br>Escenario 2: Mantener servicio durante el escalado<br>DADO que se activó el escalamiento<br>CUANDO los usuarios continúan operando<br>ENTONCES el sistema debe mantener disponibilidad sin interrupciones críticas<br><br>Escenario 3: Liberar recursos cuando baja la demanda<br>DADO que el tráfico vuelve a niveles normales<br>CUANDO el uso de recursos se estabiliza<br>ENTONCES el sistema debe reducir réplicas de forma controlada para optimizar costos</td>
-      <td style="padding: 0.5rem;">E07</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">US27</td>
-      <td style="padding: 0.5rem;">Cobertura Mínima de Pruebas</td>
-      <td style="padding: 0.5rem;">Como equipo de QA, quiero validar una cobertura mínima automatizada, para asegurar calidad antes de cada despliegue.</td>
-      <td style="padding: 0.5rem;">Escenario 1: Ejecutar pruebas en pipeline<br>DADO que se inicia una ejecución de CI<br>CUANDO corren las pruebas unitarias e integración<br>ENTONCES el sistema debe generar reporte de cobertura automáticamente<br><br>Escenario 2: Bloquear despliegue por baja cobertura<br>DADO que la cobertura global es menor al 80%<br>CUANDO finaliza la validación de calidad<br>ENTONCES el pipeline debe marcar la build como fallida</td>
-      <td style="padding: 0.5rem;">E08</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">US28</td>
-      <td style="padding: 0.5rem;">API REST Estandarizada para Integración</td>
-      <td style="padding: 0.5rem;">Como integrador externo, quiero consumir APIs REST documentadas, para integrar sistemas de terceros en menor tiempo y con menos errores.</td>
-      <td style="padding: 0.5rem;">Escenario 1: Publicar contrato API<br>DADO que existe un módulo expuesto a terceros<br>CUANDO el equipo publica su especificación OpenAPI<br>ENTONCES los endpoints, esquemas y códigos de respuesta deben quedar documentados<br><br>Escenario 2: Validar autenticación y consumo<br>DADO un tercero con credenciales válidas<br>CUANDO consume los endpoints principales<br>ENTONCES el sistema debe responder según contrato y políticas de seguridad<br><br>Escenario 3: Detectar cambios incompatibles<br>DADO una nueva versión de API<br>CUANDO se ejecutan pruebas de contrato<br>ENTONCES el sistema debe alertar si existe ruptura de compatibilidad con consumidores actuales</td>
-      <td style="padding: 0.5rem;">E08</td>
-    </tr>
 
+  </tbody>
+</table>
+
+<h3 id="323-quality-attribute-requirements">3.2.3 Requisitos No Funcionales (Atributos de Calidad)</h3>
+
+<p>La siguiente tabla consolida los requisitos no funcionales clave del proyecto Orion / GhostRaider, redactados con formato UPC y validados mediante escenarios de calidad medibles.</p>
+
+<table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem;">
+  <thead>
+    <tr>
+      <th style="padding: 0.5rem;">RNF ID</th>
+      <th style="padding: 0.5rem;">Pilar</th>
+      <th style="padding: 0.5rem;">Título</th>
+      <th style="padding: 0.5rem;">Descripción</th>
+      <th style="padding: 0.5rem;">Escenarios de Calidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0.5rem;">RNF01</td>
+      <td style="padding: 0.5rem;">Interoperabilidad</td>
+      <td style="padding: 0.5rem;">Integración Estandarizada con Servicios Externos</td>
+      <td style="padding: 0.5rem;">Como integrador de GosLogic, quiero interoperar con APIs externas de mapas y GPS mediante contratos versionados, para asegurar integración continua con bajo impacto ante cambios de proveedores.</td>
+      <td style="padding: 0.5rem;">Escenario 1: DADO que Orion consume Google Maps y GPS de terceros con contratos OpenAPI versionados, CUANDO se despliega una nueva versión de integración, ENTONCES el 100% de pruebas de contrato debe aprobar y no debe haber rupturas backward-compatible en producción.<br><br>Escenario 2: DADO que un proveedor externo presenta indisponibilidad temporal, CUANDO se superan 5 errores consecutivos en 60 segundos, ENTONCES Orion debe activar modo degradado en menos de 2 segundos y mantener operativas las funciones internas críticas.<br><br>Escenario 3: DADO una actualización mayor de versión en un proveedor externo, CUANDO el equipo ejecuta pruebas de integración en preproducción, ENTONCES el tiempo de adaptación del conector no debe exceder 2 sprints.<br><br>Escenario 4: DADO una operación continua con integraciones activas, CUANDO se monitorean transacciones API por día, ENTONCES al menos el 99% de solicitudes válidas debe completarse exitosamente.</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">RNF02</td>
+      <td style="padding: 0.5rem;">Disponibilidad</td>
+      <td style="padding: 0.5rem;">Continuidad del Monitoreo Operativo</td>
+      <td style="padding: 0.5rem;">Como gestor de flota, quiero que el monitoreo de unidades esté disponible de forma continua, para supervisar la operación y responder a incidencias sin interrupciones críticas.</td>
+      <td style="padding: 0.5rem;">Escenario 1: DADO un periodo mensual de operación 24/7, CUANDO se calcula la disponibilidad del módulo de monitoreo, ENTONCES debe alcanzar al menos 99.5% de uptime mensual.<br><br>Escenario 2: DADO una caída de un servicio de monitoreo en producción, CUANDO el sistema detecta el fallo por health checks, ENTONCES la recuperación automática debe restablecer el servicio en un RTO menor o igual a 5 minutos.<br><br>Escenario 3: DADO una falla de nodo en hora pico, CUANDO el balanceador redirige tráfico a réplicas saludables, ENTONCES la pérdida de solicitudes no debe superar el 1% durante el incidente.<br><br>Escenario 4: DADO una degradación parcial de infraestructura, CUANDO se activa el plan de contingencia, ENTONCES el sistema debe preservar las funciones críticas de monitoreo y alertas en menos de 3 minutos.</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">RNF03</td>
+      <td style="padding: 0.5rem;">Performance</td>
+      <td style="padding: 0.5rem;">Baja Latencia en Telemetría y Alertas</td>
+      <td style="padding: 0.5rem;">Como operador de monitoreo, quiero recibir coordenadas y alertas en tiempo real con latencia mínima, para tomar decisiones operativas oportunas durante la ruta.</td>
+      <td style="padding: 0.5rem;">Escenario 1: DADO una carga nominal de 2000 eventos de telemetría por minuto, CUANDO se mide el tiempo entre emisión de coordenada y visualización en mapa, ENTONCES la latencia p95 debe ser menor o igual a 3 segundos.<br><br>Escenario 2: DADO una alerta de incidente generada por una unidad activa, CUANDO el evento ingresa a la plataforma, ENTONCES la notificación al panel de control debe mostrarse en menos de 2 segundos en el 95% de casos.<br><br>Escenario 3: DADO un pico de carga de 5000 eventos por minuto durante 10 minutos, CUANDO se monitorea el procesamiento de cola, ENTONCES el sistema debe mantener una latencia p95 menor o igual a 5 segundos sin pérdida de eventos.<br><br>Escenario 4: DADO una versión candidata a producción, CUANDO se ejecuta una prueba de stress en CI/CD, ENTONCES el throughput mínimo debe sostener 300 requests por segundo con tasa de error menor al 1%.</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">RNF04</td>
+      <td style="padding: 0.5rem;">Seguridad</td>
+      <td style="padding: 0.5rem;">Protección de Datos Sensibles y Accesos</td>
+      <td style="padding: 0.5rem;">Como administrador de seguridad, quiero proteger los datos sensibles de ubicación y controlar accesos por roles, para prevenir fugas de información y accesos no autorizados.</td>
+      <td style="padding: 0.5rem;">Escenario 1: DADO usuarios autenticados mediante JWT/OAuth con roles definidos, CUANDO intentan acceder a un recurso fuera de su perfil, ENTONCES el sistema debe denegar el acceso con código 403 en el 100% de solicitudes no autorizadas.<br><br>Escenario 2: DADO el flujo de transmisión y almacenamiento de coordenadas de ubicación, CUANDO se ejecutan auditorías de seguridad trimestrales, ENTONCES el 100% de datos sensibles debe mantenerse cifrado en tránsito (TLS 1.2+) y en reposo (AES-256).<br><br>Escenario 3: DADO una sesión autenticada con token JWT, CUANDO el token expira o es inválido, ENTONCES el sistema debe rechazar la solicitud con código 401 en menos de 500 ms.<br><br>Escenario 4: DADO un intento de fuerza bruta sobre autenticación, CUANDO se superan 5 intentos fallidos en 10 minutos por usuario, ENTONCES la cuenta debe bloquearse temporalmente por 15 minutos y generar una alerta de seguridad.</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;">RNF05</td>
+      <td style="padding: 0.5rem;">Usabilidad</td>
+      <td style="padding: 0.5rem;">Operación Simple para Conductores con Modo Offline</td>
+      <td style="padding: 0.5rem;">Como conductor de flota, quiero usar la app de forma simple incluso sin conectividad, para registrar eventos y continuar mi operación sin bloquear mi jornada.</td>
+      <td style="padding: 0.5rem;">Escenario 1: DADO un conductor en zona de baja conectividad, CUANDO registra un incidente o actualización de estado, ENTONCES la app debe guardar la acción offline en menos de 1 segundo y confirmar visualmente el registro local.<br><br>Escenario 2: DADO una cola de eventos almacenados offline, CUANDO se recupera la conectividad, ENTONCES la app debe sincronizar al menos el 95% de eventos pendientes en menos de 60 segundos sin duplicar registros.<br><br>Escenario 3: DADO un conductor que inicia jornada por primera vez, CUANDO completa el flujo principal de registro y reporte, ENTONCES debe finalizarlo en menos de 3 minutos sin asistencia externa en al menos el 90% de pruebas de usabilidad.<br><br>Escenario 4: DADO el uso continuo de la app en ruta, CUANDO el conductor ejecuta acciones frecuentes (reportar incidencia, confirmar estado, revisar ruta), ENTONCES cada acción debe completarse en un maximo de 3 toques en el 95% de los casos.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -475,48 +471,6 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
       <td style="padding: 0.5rem;">Sincronización Inteligente</td>
       <td style="padding: 0.5rem;">Como conductor, quiero que la app sincronice automáticamente los datos pendientes al recuperar señal, para no perder información registrada en modo offline.</td>
       <td style="padding: 0.5rem;">8</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">23</td>
-      <td style="padding: 0.5rem;">US23</td>
-      <td style="padding: 0.5rem;">Circuit Breaker</td>
-      <td style="padding: 0.5rem;">Como gestor, quiero que el sistema active un Circuit Breaker si Google Maps falla, para no bloquear la operación.</td>
-      <td style="padding: 0.5rem;">8</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">24</td>
-      <td style="padding: 0.5rem;">US24</td>
-      <td style="padding: 0.5rem;">Recuperación ante Caídas</td>
-      <td style="padding: 0.5rem;">Como administrador, quiero que el sistema autorrecupere microservicios caídos, para restaurar la operación en el menor tiempo posible.</td>
-      <td style="padding: 0.5rem;">8</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">25</td>
-      <td style="padding: 0.5rem;">US25</td>
-      <td style="padding: 0.5rem;">Latencia de Telemetría GPS</td>
-      <td style="padding: 0.5rem;">Como gestor de flota, quiero que la telemetría GPS se procese y visualice con baja latencia, para tomar decisiones operativas en tiempo real.</td>
-      <td style="padding: 0.5rem;">5</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">26</td>
-      <td style="padding: 0.5rem;">US26</td>
-      <td style="padding: 0.5rem;">Autoescalado Horizontal de Servicios</td>
-      <td style="padding: 0.5rem;">Como administrador de plataforma, quiero escalar horizontalmente los servicios ante picos de tráfico, para mantener estabilidad y continuidad del sistema.</td>
-      <td style="padding: 0.5rem;">8</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">27</td>
-      <td style="padding: 0.5rem;">US27</td>
-      <td style="padding: 0.5rem;">Cobertura Mínima de Pruebas</td>
-      <td style="padding: 0.5rem;">Como equipo de QA, quiero validar una cobertura mínima automatizada, para asegurar calidad antes de cada despliegue.</td>
-      <td style="padding: 0.5rem;">3</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.5rem;">28</td>
-      <td style="padding: 0.5rem;">US28</td>
-      <td style="padding: 0.5rem;">API REST Estandarizada para Integración</td>
-      <td style="padding: 0.5rem;">Como integrador externo, quiero consumir APIs REST documentadas, para integrar sistemas de terceros en menor tiempo y con menos errores.</td>
-      <td style="padding: 0.5rem;">5</td>
     </tr>
   </tbody>
 </table>
