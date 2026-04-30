@@ -262,7 +262,7 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
       <td style="padding: 0.5rem;">RNF01</td>
       <td style="padding: 0.5rem;">Interoperabilidad</td>
       <td style="padding: 0.5rem;">Integración Estandarizada con Servicios Externos</td>
-      <td style="padding: 0.5rem;">Como integrador de GosLogic, quiero interoperar con APIs externas de mapas y GPS mediante contratos versionados, para asegurar integración continua con bajo impacto ante cambios de proveedores.</td>
+      <td style="padding: 0.5rem;">Como integrador de GosLogic, quiero interoperar con APIs externas de mapasx y GPS mediante contratos versionados, para asegurar integración continua con bajo impacto ante cambios de proveedores.</td>
       <td style="padding: 0.5rem;">Escenario 1: DADO que Orion consume Google Maps y GPS de terceros con contratos OpenAPI versionados, CUANDO se despliega una nueva versión de integración, ENTONCES el 100% de pruebas de contrato debe aprobar y no debe haber rupturas backward-compatible en producción.<br><br>Escenario 2: DADO que un proveedor externo presenta indisponibilidad temporal, CUANDO se superan 5 errores consecutivos en 60 segundos, ENTONCES Orion debe activar modo degradado en menos de 2 segundos y mantener operativas las funciones internas críticas.<br><br>Escenario 3: DADO una actualización mayor de versión en un proveedor externo, CUANDO el equipo ejecuta pruebas de integración en preproducción, ENTONCES el tiempo de adaptación del conector no debe exceder 2 sprints.<br><br>Escenario 4: DADO una operación continua con integraciones activas, CUANDO se monitorean transacciones API por día, ENTONCES al menos el 99% de solicitudes válidas debe completarse exitosamente.</td>
     </tr>
     <tr>
