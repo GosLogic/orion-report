@@ -301,7 +301,7 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
 
 <h2 id="34-product-backlog">3.4. Product Backlog.</h2>
 
-<p>En esta sección se presenta el Product Backlog priorizado de Orion, organizado a partir de las User Stories identificadas para el sistema. Cada elemento incluye su orden de prioridad, identificador, título, descripción y estimación en Story Points.</p>
+<p>En esta sección se presenta el Product Backlog priorizado de Orion, organizado a partir de las User Stories funcionales identificadas para el sistema. Cada elemento incluye su orden de prioridad, identificador, título, descripción y estimación en Story Points.</p>
 
 <table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem;">
   <thead>
@@ -470,3 +470,5 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
     </tr>
   </tbody>
 </table>
+
+**Link del Trello:https://trello.com/invite/b/69f432bbe4fbd84d7926aa2c/ATTI61d4b7dffe97b1c335c47c6925e0e96d7AC04AE7/goslogic** 
