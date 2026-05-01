@@ -9,61 +9,67 @@
 <h3 id="411-principles-statements">4.1.1 Principles Statements</h3>
 
 1. **Aislamiento Lógico por Defecto (Seguridad Multi-Tenant)**
-   - **Descripción:** Queda estrictamente prohibida la dependencia en el filtrado manual a nivel de código para la separación de datos. Toda operación de lectura/escritura debe inyectar implícitamente el TenantId desde el API Gateway hasta la capa de persistencia, apoyándose en políticas de base de datos como Row-Level Security (RLS).
-   - **Justificación de Negocio:** Orion opera bajo un modelo SaaS donde conviven datos de empresas de transporte competidoras. Mitigar el riesgo de exposición transversal de la información es innegociable para mantener la confianza comercial y proteger el secreto industrial de los clientes.
+   - **Descripción:** Queda estrictamente prohibida la dependencia en el filtrado manual a nivel de código. Toda operación debe inyectar implícitamente el TenantId desde el API Gateway.
+   - **Justificación de Negocio:** Protege el secreto industrial entre empresas competidoras en el modelo SaaS.
 
-2. **Aislamiento de Proveedores Externos (Interoperabilidad)**
-   - **Descripción:** Las integraciones con servicios de terceros (específicamente proveedores cartográficos y APIs de Google Maps) deberán canalizarse obligatoriamente a través de un patrón de Capa Anticorrupción (Anti-Corruption Layer). Ningún microservicio core debe depender de los contratos de datos externos.
-   - **Justificación de Negocio:** Protege a Orion frente a la evolución técnica o cambios en la estructura de precios de terceros. Encapsular la integración asegura que una futura migración a otro proveedor (ej. OpenStreetMap) no requiera reescribir la lógica central de despacho y ruteo.
+2. **Identidad Centralizada y Desacoplada (Atributo: Seguridad/Mantenibilidad)**
+  - **Descripción**: La autenticación y autorización se delegan exclusivamente a un servicio de IAM (Identity and Access Management) independiente. Los microservicios de negocio (Bounded Contexts) solo consumen tokens validados por el API Gateway.
+  - **Justificación de Negocio:** Permite que el sistema crezca sin replicar lógica de seguridad en cada microservicio y facilita la auditoría de accesos.
 
-3. **Diseño para el Fallo y Degradación Elegante (Resiliencia)**
-   - **Descripción:** El sistema debe impedir activamente la propagación de fallas en cascada (Cascading Failures). Es imperativa la implementación de la táctica de Circuit Breaker en las llamadas a servicios externos. Si el mapa falla, el sistema cortará la petición y operará en modo degradado (retornando la última ubicación en caché).
-   - **Justificación de Negocio:** La gestión de flotas exige continuidad operativa crítica. Cualquier caída de un servicio externo debe mitigarse internamente para que la vista del gestor de flota nunca colapse y la asignación de unidades no se detenga.
+3. **Aislamiento de Proveedores Externos (Interoperabilidad)**
+   - **Descripción:** Las integraciones con servicios de terceros deberán canalizarse obligatoriamente a través de un patrón de Capa Anticorrupción (Anti-Corruption Layer).
+   - **Justificación de Negocio:** Independencia tecnológica y control de costos frente a terceros.
 
-4. **Llamadas Asincrónicas sobre Sincrónicas para Alta Carga (Performance)**
-   - **Descripción:** Queda restringido el uso de llamadas sincrónicas (bloqueantes) para la ingesta de telemetría vehicular. Toda recepción masiva de coordenadas GPS adoptará un patrón Event-Driven mediante un Message Broker (como Kafka o RabbitMQ), encolando los eventos para su procesamiento diferido.
-   - **Justificación de Negocio:** Durante las horas punta, Orion recibirá cientos de coordenadas GPS simultáneas. Desacoplar la recepción del procesamiento absorbe los picos de carga, garantizando que los tableros de control de los gestores mantengan una latencia mínima sin saturar la base de datos transaccional.
+4. **Diseño para el Fallo y Degradación Elegante (Resiliencia)**
+   - **Descripción:** Implementación de Circuit Breaker en llamadas externas. Si el mapa falla, se usa caché.
+   - **Justificación de Negocio:** Continuidad operativa crítica en la gestión de flotas.
 
-5. **Persistencia Local como Estándar Móvil u "Offline-First" (Operatividad)**
-   - **Descripción:** La aplicación móvil guardará todo evento logístico primariamente en un almacenamiento local ligero (ej. SQLite). La transmisión a la nube se delegará a procesos en segundo plano condicionados a la red, aplicando obligatoriamente tácticas de Retry con Backoff Exponencial.
-   - **Justificación de Negocio:** Las rutas de transporte frecuentemente atraviesan zonas de nula conectividad. Este principio garantiza el 100% de la trazabilidad de la jornada del conductor y salvaguarda la vida útil de la batería del dispositivo al evitar intentos de conexión fallidos continuos.
+5. **Llamadas Asincrónicas sobre Sincrónicas para Alta Carga (Performance)**
+   - **Descripción:** Ingesta masiva de GPS mediante Event-Driven Architecture y Message Brokers.
+   - **Justificación de Negocio:** Absorción de picos de carga durante horas punta sin degradar la UI del gestor
+6. **Persistencia Local como Estándar Móvil u "Offline-First" (Operatividad)**
+   - **Descripción:** Almacenamiento local en dispositivos móviles (SQLite) y sincronización con Retry & Backoff
+   - **Justificación de Negocio:** Garantiza trazabilidad en rutas con baja conectividad.
 
 <h3 id="412-approaches-statements-architectural-styles--patterns">4.1.2 Approaches Statements Architectural Styles & Patterns</h3>
 
 <h4>4.1.2.1 Approaches Statements</h4>
 
-<p>Aplicación de Domain-Driven Design (DDD). Para Orion, la aplicación disciplinada de Domain-Driven Design (DDD) es el enfoque obligatorio para articular la solución técnica con los objetivos del negocio logístico. Este enfoque no se utilizará como una simple colección de patrones, sino como el marco principal para modelar las complejidades de la gestión de flotas, ruteo y telemetría.</p>
+Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marco estratégico fundamental para gestionar la complejidad de una plataforma SaaS multi-tenant orientada al sector logístico.
 
-<p><strong>Modelado Basado en el Dominio (Core Domain Focus):</strong> Construiremos modelos explícitos que reflejen los conceptos operativos del sector. Identificaremos y priorizaremos nuestro Core Domain (Despacho Operativo y Telemetría), separándolo de nuestros Generic Subdomains (Gestión de Identidad y Tenants). Cada concepto clave del negocio se traducirá en entidades, agregados y servicios de dominio que preservarán las invariantes operativas, asegurando que las decisiones críticas se tomen con una representación coherente de la realidad logística.</p>
+*   **Modelado Basado en el Dominio:**
+    Priorizamos el desarrollo del Core Domain, compuesto por los contextos de **Dispatch & Routing**, **Telemetry & Tracking** y **Maintenance**. Estos representan la ventaja competitiva y la lógica crítica de Orion. Los aspectos comunes y transversales se delegan al subdominio genérico de **Identity & Tenancy**, permitiendo que la lógica de negocio logística evolucione de forma independiente a la infraestructura de seguridad y gestión de organizaciones.
 
-<p><strong>Límites de Contexto Claros (Bounded Contexts):</strong> La definición de Bounded Contexts en Orion es estrictamente necesaria para evitar la contaminación semántica entre áreas que evolucionan a ritmos distintos. Establecemos límites explícitos tales como:</p>
+*   **Límites de Contexto Estrictos (Bounded Contexts):**
+    Se establecen fronteras explícitas para evitar la contaminación de modelos y asegurar la cohesión. Orion se descompone en seis contextos especializados:
+    *   **Identity & Tenancy:** Responsable único de la jerarquía de organizaciones y la emisión de claims de seguridad mediante tokens JWT.
+    *   **Fleet Management:** Gestiona el inventario de activos físicos y perfiles de conductores, aplicando políticas de **Row-Level Security (RLS)** para el aislamiento de datos.
+    *   **Dispatch & Routing:** Modela la planificación y ejecución de viajes, protegido de la volatilidad de APIs externas mediante una **Anti-Corruption Layer (ACL)**.
+    *   **Telemetry & Tracking:** Contexto optimizado para la ingesta de eventos de alta frecuencia, utilizando un enfoque asíncrono para garantizar la escalabilidad.
+    *   **Maintenance:** Orquesta la salud de la flota y la programación de servicios técnicos a través del consumo de eventos de kilometraje provenientes de telemetría.
+    *   **Alerts & Notifications:** Servicio transversal encargado del despacho de mensajes críticos y operativos hacia los usuarios finales.
 
-<ul>
-  <li><strong>Monitoreo GPS vs. Mantenimiento Preventivo:</strong> En el primero se modelan eventos de ubicación y alertas de geocercas, mientras que el segundo gestiona kilometraje acumulado y órdenes de trabajo. Una modificación en la regla de desgaste de neumáticos no afectará el flujo de alta latencia del GPS.</li>
-  <li><strong>Despacho Operativo vs. Gestión de Tenants:</strong> Mantener el aislamiento multi-tenant separado de la asignación de conductores asegura que una evolución en la política de seguridad no rompa la lógica del ruteo diario.</li>
-</ul>
+*   **Estrategia de Comunicación y Resiliencia:**
+    Adoptamos un enfoque híbrido: comunicaciones sincrónicas vía **REST APIs** para procesos transaccionales y administrativos, y comunicaciones asíncronas basadas en eventos para la telemetría y el motor de alertas. Se implementan tácticas de **Circuit Breaker** en los puntos de integración con servicios de terceros para asegurar que una falla externa no provoque una degradación sistémica de la plataforma.
 
-<p><strong>Lenguaje Ubicuo (Ubiquitous Language):</strong> El uso de un lenguaje omnipresente es un requisito ineludible. Términos clave como Despacho, Telemetría, Tenant, Geocerca y Viaje mantendrán una definición única e indiscutible entre los stakeholders del negocio, los diagramas de arquitectura y el código fuente (clases, eventos, contratos API). Por ejemplo, el concepto de "Viaje" no será ambiguo: en todo el sistema representará "un trayecto asignado a un conductor y un activo vehicular, con inicio, fin y métricas de cumplimiento".</p>
-
-<p>Este enfoque asegura que Orion construya una solución técnica con una base semántica común, reduciendo la fricción entre los equipos de desarrollo y las áreas de operación. La disciplina DDD permite que la complejidad del dominio logístico se traduzca en software coherente, mantenible y alineado con la visión del negocio.</p>
+*   **Lenguaje Ubicuo (Ubiquitous Language):**
+    Se garantiza que términos críticos como **Tenant, Despacho, Geocerca, Viaje y Alerta** mantengan una definición única y consistente desde los requerimientos funcionales hasta la implementación técnica en el código fuente y los contratos de las APIs. Esto elimina la fricción semántica entre los stakeholders del negocio y el equipo de desarrollo.
 
 <h4>4.1.2.2 Architectural Styles & Patterns</h4>
 
-<p>Orion adopta una arquitectura de <strong>Microservicios Cloud-Native</strong> como estilo arquitectónico principal. Este estilo es adecuado para la plataforma porque permite escalar de forma independiente los componentes críticos de monitoreo, despacho y mantenimiento, y soporta la operación de una plataforma SaaS multi-tenant con altos requisitos de disponibilidad y rendimiento.</p>
+**A. Estilos Arquitectónicos**
 
-<p>La comunicación sincrónica entre servicios se implementa mediante un estilo <strong>RESTful API</strong>. Los contratos RESTful se utilizarán para las operaciones de gestión transaccional, consultas de estado y administración de recursos. Este enfoque facilita la integración con clientes web y móviles, y permite exponer endpoints claros para la administración de Tenants, usuarios, rutas y órdenes de trabajo.</p>
+*   **Microservices Architecture:** Se adopta este estilo para permitir el despliegue y escalado independiente de los seis bounded contexts. Esto asegura que la alta carga del servicio de Telemetría no afecte la disponibilidad del módulo de Mantenimiento o Fleet Management.
+*   **Event-Driven Architecture:** Utilizado para el procesamiento asíncrono de coordenadas GPS y generación de alertas. Este estilo permite desacoplar los servicios productores (Telemetry) de los consumidores (Alerts, Maintenance), absorbiendo picos de tráfico sin degradar la experiencia del usuario.
+*   **RESTful API:** Estilo de comunicación predominante para las interacciones sincrónicas entre el frontend (Web/Mobile) y el API Gateway.
 
-<p>Para la ingesta masiva de telemetría, Orion utiliza un estilo de <strong>Event-Driven Architecture</strong>. La recepción de coordenadas GPS y eventos de estado se realiza a través de una canalización basada en eventos que desacopla la captura de datos de su procesamiento posterior. Esto es clave para absorber picos de carga durante las horas punta y mantener la latencia baja en los paneles de control.</p>
+**B. Patrones Arquitectónicos y Tácticas de Diseño**
 
-<p>Los patrones de diseño arquitectónico se seleccionan para soportar explícitamente los drivers de disponibilidad, interoperabilidad, seguridad y operatividad.</p>
-
-<ul>
-  <li><strong>API Gateway Pattern:</strong> El API Gateway actúa como punto de entrada único para todas las solicitudes externas. En Orion, este patrón es responsable de enrutar peticiones, validar centralizadamente el `TenantId`, aplicar políticas de seguridad y administrar el versionado de API. Su uso es indispensable para asegurar el aislamiento multi-tenant y garantizar que solo se permita acceso a los datos del cliente autorizado.</li>
-  <li><strong>Circuit Breaker Pattern:</strong> Se aplica en las llamadas a servicios externos, especialmente a los proveedores cartográficos y APIs de Google Maps. El Circuit Breaker evita que una dependencia externa caída genere fallas en cascada, protegiendo así la continuidad del servicio. En Orion, esto permite que cuando el proveedor de mapas deje de responder, la plataforma degrade su funcionalidad de forma controlada y siga operando con datos en caché.</li>
-  <li><strong>Anti-Corruption Layer (ACL):</strong> Este patrón aísla a Orion de los cambios en los contratos y estructuras de datos de los proveedores de mapas y GPS. La ACL traduce las APIs externas a un modelo interno estable, evitando que variaciones en los servicios de terceros se propaguen al dominio central. Así se protege la lógica de despacho, ruteo y monitoreo de la volatilidad de los sistemas externos.</li>
-</ul>
-
-<p>El conjunto de estos estilos y patrones asegura que Orion sea una plataforma robusta y coherente con su modelo de negocio logístico. La arquitectura microservicios permite la escalabilidad y el aislamiento operacional, las APIs RESTful soportan la interacción administrativa y móvil, y la arquitectura basada en eventos resuelve la ingestión de telemetría de alto volumen. Los patrones clave garantizan la seguridad, la resiliencia y la interoperabilidad que exige una solución SaaS para flotas vehiculares.</p>
+*   **API Gateway Pattern:** Actúa como el punto de entrada único para todos los clientes. Implementa la lógica de enrutamiento hacia los microservicios y actúa como el primer nivel de seguridad al validar tokens JWT en conjunto con el IAM.
+*   **Identity and Access Management (IAM):** Patrón centralizado para la gestión de identidades que garantiza que el `TenantId` sea inyectado en cada petición. Esto asegura que la autenticación sea agnóstica a la lógica de negocio de los microservicios.
+*   **Row-Level Security (RLS):** Táctica de persistencia aplicada en el motor de base de datos SQL para garantizar el aislamiento multi-tenant. Filtra automáticamente los registros basándose en el contexto de sesión, mitigando el riesgo de exposición de datos entre empresas competidoras.
+*   **Anti-Corruption Layer (ACL):** Aplicado en el contexto de Dispatch & Routing para interactuar con proveedores externos de mapas. Traduce los contratos de terceros a un modelo interno estable, protegiendo el Core Domain de cambios externos.
+*   **Circuit Breaker:** Implementado en las integraciones con servicios externos. Previene fallos en cascada al "abrir el circuito" ante errores recurrentes, permitiendo que Orion opere en modo degradado o utilice datos en caché.
 
 <h3 id="413-context-diagram">4.1.3 Context Diagram</h3>
 <p><em>Contenido por desarrollar.</em></p>
