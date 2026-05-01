@@ -295,7 +295,7 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
 <h2 id="33-impact-map">3.3 Impact Map</h2>
 
 <p align="center">
-  <img src="assets/chapter-iii/Impact mapFinal.png"
+  <img src="assets/chapter-iii/Impact%20map%20GosLogic.png"
   alt="TOBE" style="width: 600px;"/>
 </p>
 
