@@ -1,0 +1,62 @@
+@startuml
+' Orion - Maintenance Service Physical ER Diagram
+
+hide circle
+skinparam linetype ortho
+
+' ==== Configuration & Rules ====
+entity maintenance_plans {
+  * id                : BIGINT <<PK>>
+  --
+    * tenant_id        : BIGINT <<FK>>
+    * name             : VARCHAR(100) ' Ej: "Mantenimiento Preventivo Básico"
+    * frequency_km     : DECIMAL(10,2) ' Ej: 5000
+    frequency_months : INT           ' Ej: 6 (Opcional)
+    description      : TEXT
+}
+
+' ==== Tracking & Alerts ====
+entity maintenance_alerts {
+  * id                : BIGINT <<PK>>
+  --
+    * tenant_id        : BIGINT <<FK>>
+    * vehicle_id       : BIGINT      ' FK Lógica a FleetDB
+    * plan_id          : BIGINT <<FK>>
+    * last_service_km  : DECIMAL(15,2)
+    * next_service_km  : DECIMAL(15,2)
+    next_service_date : DATE
+    * status           : ENUM('UP_TO_DATE', 'NEAR_DUE', 'OVERDUE')
+    is_resolved       : BOOLEAN
+}
+
+' ==== Service Execution (History) ====
+entity service_records {
+  * id                : BIGINT <<PK>>
+  --
+    * vehicle_id       : BIGINT      ' FK Lógica a FleetDB
+    * service_type     : ENUM('PREVENTIVE', 'CORRECTIVE')
+    * completion_date  : DATETIME
+    * odometer_at_service : DECIMAL(15,2)
+    * cost             : DECIMAL(10,2)
+    * technician_notes : TEXT         ' Comentario general del servicio
+    performed_by      : VARCHAR(100) ' Nombre del taller o mecánico
+}
+
+' ==== Corrective Maintenance Reports ====
+entity maintenance_requests {
+  * id                : BIGINT <<PK>>
+  --
+    * vehicle_id       : BIGINT
+    * reported_by_id   : BIGINT      ' UserID del conductor o gestor
+    * description      : TEXT         ' Detalle de la falla detectada
+    * severity         : ENUM('LOW', 'MEDIUM', 'HIGH', 'CRITICAL')
+    status            : ENUM('PENDING', 'IN_PROGRESS', 'RESOLVED', 'REJECTED')
+    reported_at       : DATETIME
+}
+
+' ==== Relationships ====
+maintenance_plans ||--o{ maintenance_alerts
+service_records }|--o| maintenance_alerts : "resolves"
+maintenance_requests ||--o{ service_records : "leads to"
+
+@enduml

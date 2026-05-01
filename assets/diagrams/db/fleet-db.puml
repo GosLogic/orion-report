@@ -1,11 +1,60 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+' Orion - Fleet Service Physical ER Diagram
 
-autonumber
+hide circle
+skinparam linetype ortho
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+' ==== Vehicle Categorization ====
+entity vehicle_types {
+  * id                : BIGINT <<PK>>
+  --
+    * name             : VARCHAR(50) ' Camión, Furgoneta, Remolque
+    description      : VARCHAR(255)
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+' ==== Assets Management ====
+entity vehicles {
+  * id                : BIGINT <<PK>>
+  --
+    * tenant_id        : BIGINT <<FK>>
+    * vehicle_type_id  : BIGINT <<FK>>
+    * plate            : VARCHAR(10) <<Unique>>
+    * brand            : VARCHAR(50)
+    * model            : VARCHAR(50)
+    year             : INT
+    * load_capacity_kg : DECIMAL(10,2) ' Capacidad individual
+    * status           : ENUM('AVAILABLE', 'ON_ROUTE', 'MAINTENANCE', 'OUT_OF_SERVICE')
+    virtual_odometer : DECIMAL(15,2)
+    default_driver_id : BIGINT <<FK>> ' Conductor asignado por defecto
+    created_at       : DATETIME
+}
+
+' ==== Legal & Compliance (Peru Context) ====
+entity vehicle_documents {
+  * id                : BIGINT <<PK>>
+  --
+    * vehicle_id       : BIGINT <<FK>>
+    * document_type    : ENUM('SOAT', 'TECHNICAL_REVIEW', 'PROPERTY_CARD')
+    * document_number  : VARCHAR(50)
+    * expiry_date      : DATE
+    status            : ENUM('VALID', 'EXPIRED', 'PENDING')
+}
+
+' ==== Drivers (Extends User) ====
+entity drivers {
+  * id                : BIGINT <<PK>>
+  --
+    * user_id          : BIGINT <<FK>> ' Relación 1:1 con IAM User
+    * tenant_id        : BIGINT <<FK>>
+    * license_number   : VARCHAR(20) <<Unique>>
+    * license_category : VARCHAR(10) ' A-IIIc, etc.
+    license_expiry    : DATE
+    * status           : ENUM('AVAILABLE', 'ON_VACATION', 'INACTIVE')
+}
+
+' ==== Relationships ====
+vehicle_types ||--o{ vehicles
+vehicles ||--o{ vehicle_documents
+drivers ||--o{ vehicles : "is default driver for"
+
 @enduml
