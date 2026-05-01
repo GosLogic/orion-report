@@ -294,10 +294,26 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
 
 <h2 id="33-impact-map">3.3 Impact Map</h2>
 
+En esta sección se presentan los mapas de impacto correspondientes a cada uno de los segmentos objetivo definidos en el proyecto. El propósito de estos mapas es establecer una relación clara entre los objetivos del negocio, los usuarios involucrados y los cambios de comportamiento que se espera generar a partir de la solución propuesta. Asimismo, permiten identificar de manera estructurada los entregables necesarios para lograr dichos objetivos, asegurando que el desarrollo del sistema esté alineado con las necesidades reales de los usuarios.
+
+<b> Segmento Objetivo 1: Gestor de Flota </b>
+
 <p align="center">
-  <img src="assets/chapter-iii/Impact%20map%20GosLogic.png"
+  <img src="assets/chapter-iii/Impact_map1.png"" 
+  alt="TOBE1" style="width: 600px;"/>
+</p>
+
+El mapa de impacto del gestor de flota permitió identificar cómo las funcionalidades del sistema contribuyen directamente a mejorar la gestión operativa. A través de este análisis, se definieron comportamientos clave como el monitoreo constante de los vehículos, la anticipación de fallas mediante alertas y la optimización en la asignación de recursos. Esto permitió establecer una conexión clara entre las necesidades del usuario y los entregables del sistema, orientando el desarrollo hacia una solución más eficiente y enfocada en la toma de decisiones en tiempo real.
+
+<b> Segmento Objetivo 2: Conductor de Flota </b>
+
+<p align="center">
+  <img src="assets/chapter-iii/Impact_map2.png"" 
   alt="TOBE" style="width: 600px;"/>
 </p>
+
+El mapa de impacto del conductor de flota permitió comprender mejor su rol dentro de la operación y las mejoras que la solución puede aportar en su trabajo diario. Mediante este enfoque, se identificaron comportamientos importantes como el seguimiento claro de rutas, el registro sencillo de su jornada y la comunicación eficiente ante incidencias. Esto facilitó la definición de entregables centrados en la simplicidad de uso y en la continuidad operativa, asegurando una mejor experiencia para el usuario en campo.
+
 
 <h2 id="34-product-backlog">3.4. Product Backlog.</h2>
 
