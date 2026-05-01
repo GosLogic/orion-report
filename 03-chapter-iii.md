@@ -1,7 +1,5 @@
 # Capítulo III: Requirements Specification
 
-Los `id` coinciden con el índice de `00-introduction.md`.
-
 <h2 id="31-to-be-scenario-mapping">3.1 To-Be Scenario Mapping</h2>
 
 En el To-Be Scenario Map se representa la experiencia del usuario considerando la implementación de la solución propuesta. Este mapa se construye a partir del análisis del AS-IS, con el objetivo de evidenciar cómo el sistema puede mejorar las actividades y procesos que realiza cada user persona en su día a día.
