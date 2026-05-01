@@ -245,8 +245,6 @@ Al comparar ambos mapas, se observa una mejora en la experiencia del conductor d
 
 <h3 id="323-quality-attribute-requirements">3.2.3 Requisitos No Funcionales (Atributos de Calidad)</h3>
 
-<p>La siguiente tabla consolida los requisitos no funcionales clave del proyecto Orion / GhostRaider, redactados con formato UPC y validados mediante escenarios de calidad medibles.</p>
-
 <table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem;">
   <thead>
     <tr>
