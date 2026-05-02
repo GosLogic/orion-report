@@ -83,79 +83,18 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
 
 Para complementar la visión estática de la arquitectura, se han elaborado diagramas de comportamiento que detallan la dinámica operativa de Orion.
 
-### Diagramas Complementarios de la Arquitectura
+Diagrama de contenedores
+<p align="center">
+  <img src="assets/chapter-iv/c4/containers-diagram.jpg"
+  alt="Containers Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+</p>
 
-#### 1. Diagrama de Contenedores
-
-<div align="center">
-  <img 
-    src="assets/chapter-iv/c4-I/containers.png" 
-    alt="Containers Diagram" 
-    style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"
-  />
-  <br/>
-  <em>Diagrama de Contenedores de la plataforma Orion.<br />
-  </em>
-</div>
-
----
-
-#### 2. Diagramas de Actividades
-
-<ul>
-  <li>
-    <strong>Gestión de incidente y mantenimiento correctivo</strong><br/>
-    <img 
-      src="assets/chapter-iv/complementary-diagrams/activity-corrective_maintenance.png" 
-      alt="Diagrama de Actividad - Incidente y Mantenimiento" 
-      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
-    />
-    <em></em>
-  </li>
-  <li>
-    <strong>Procesamiento de telemetría</strong><br/>
-    <img 
-      src="assets/chapter-iv/complementary-diagrams/activity-ingesta_telemetria.png" 
-      alt="Diagrama de Actividad - Procesamiento de Telemetría" 
-      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
-    />
-    <em></em>
-  </li>
-  <li>
-    <strong>Creación y asignación de hoja de ruta</strong><br/>
-    <img 
-      src="assets/chapter-iv/complementary-diagrams/activity-routesheet.png" 
-      alt="Diagrama de Actividad - Creación y asignación de hoja de ruta" 
-      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
-    />
-    <em></em>
-  </li>
-</ul>
-
----
-
-#### 3. Diagramas de Estado
-
-<ul>
-  <li>
-    <strong>Ciclo de vida del vehículo</strong><br/>
-    <img 
-      src="assets/chapter-iv/complementary-diagrams/state-vehicle_lifecycle.png" 
-      alt="Diagrama de Estados - Ciclo de Vida del Vehículo" 
-      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
-    />
-    <em></em>
-  </li>
-  <li>
-    <strong>Parada en hoja de ruta</strong><br/>
-    <img 
-      src="assets/chapter-iv/complementary-diagrams/state-stop_status.png" 
-      alt="Diagrama de Estados - Parada en Hoja de Ruta" 
-      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
-    />
-    <em></em>
-  </li>
-</ul>
+Diagramas de actividades
+  - Gestión de incidente y mantenimiento correctivo
+  - Procesamiento de telemetría
+Diagramas de estado:
+  - Ciclo de vida del vehículo
+  - Parada en hoja de ruta
   
 <h3 id="415-relationalnon-relational-database-diagram">4.1.5 Relational/Non Relational Database Diagram</h3>
 
@@ -797,7 +736,81 @@ A cada elemento instanciado se le ha asignado una responsabilidad cohesionada y 
 </table>
 
 <h4 id="4316-sketch-views-c4--uml-and-record-design-decisions">4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+Diseño inicial de la arquitectura de Orion:
+<p align="center">
+  <img src="assets/chapter-iv/c4-I/context.png"
+  alt="Context Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Context Diagram de la arquitectura de Orion.<br />
+  </em>
+</p>
+
+Diagrama de contenedores:
+<p align="center">
+  <img src="assets/chapter-iv/c4-I/containers.png"
+  alt="Containers Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Containers Diagram de la arquitectura de Orion.<br />
+  </em>
+</p>
+
+Diagramas de componentes:
+
+<h5 id="iam-component">IAMService (Identity & Access Management)</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/iam-component.png"
+    alt="IAMService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="telemetry-component">TelemetryService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/telemetry-component.png"
+    alt="TelemetryService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="fleet-component">FleetService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/fleet-component.png"
+    alt="FleetService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="dispatch-component">DispatchService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/dispatch-component.png"
+    alt="DispatchService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="maintenance-component">MaintenanceService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/maintenance-component.png"
+    alt="MaintenanceService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="notification-component">NotificationService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/notification-component.png"
+    alt="NotificationService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
 
 <h4 id="4317-analysis-of-current-design-and-review-iteration-goal-kanban-board">4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)</h4>
 
