@@ -22,7 +22,7 @@ entity vehicles {
     * brand            : VARCHAR(50)
     * model            : VARCHAR(50)
     year             : INT
-    * load_capacity_kg : DECIMAL(10,2) ' Capacidad individual
+    * load_capacity_tn : DECIMAL(10,2) ' Capacidad individual
     * status           : ENUM('AVAILABLE', 'ON_ROUTE', 'MAINTENANCE', 'OUT_OF_SERVICE')
     virtual_odometer : DECIMAL(15,2)
     default_driver_id : BIGINT <<FK>> ' Conductor asignado por defecto

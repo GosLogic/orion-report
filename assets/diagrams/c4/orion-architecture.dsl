@@ -1,149 +1,207 @@
 workspace "Orion - Fleet Management Platform" "C4 Architecture Model" {
     
     model {
-        # ==========================================
-        # PERSONAS / ACTORES
-        # ==========================================
+        
+        #Actores
         fleetManager = person "Gestor Flota" "Usuario administrativo que gestiona rutas y monitorea la flota en tiempo real"
         driver = person "Conductor" "Usuario en campo que conduce el vehículo y reporta su ubicación mediante GPS"
         
-        # ==========================================
-        # SISTEMAS EXTERNOS
-        # ==========================================
+        # External Systems
         googleMapsAPI = softwareSystem "Google Maps API" "Sistema cartográfico de terceros para geocodificación inversa y consultas de mapas" {
             tags "External"
         }
         
-        identityProvider = softwareSystem "Identity Provider" "Sistema externo para emisión y validación de tokens JWT (Auth0/Cognito)" {
+        emailService = softwareSystem "SendGrid" "Servicio externo para el envío  de correos electrónicos transaccionales" {
             tags "External"
         }
         
-        # ==========================================
-        # SISTEMA PRINCIPAL: ORION
-        # ==========================================
+        
         orion = softwareSystem "Orion" "Plataforma SaaS Cloud-Native y Multi-Tenant para gestión logística, ruteo y telemetría de flotas vehiculares con alta disponibilidad y performance" {
             tags "Orion"
             
-            # ========== CONTENEDORES DEL SISTEMA ==========
-            
-            # Frontend Web
-            fleetManagerSPA = container "FleetManagerSPA" "Portal web para el Gestor de Flota con dashboards de monitoreo y gestión de rutas" "Single-Page Application (React/Angular/Vue)" {
+            fleetManagerSPA = container "FleetManagerSPA" "Portal web para el Gestor de Flota con dashboards de monitoreo y gestión de rutas" "Single-Page Application (Angular)" {
                 tags "Web"
             }
             
-            # Frontend Mobile
-            mobileApp = container "MobileApp" "Aplicación nativa Offline-First para el Conductor con sincronización automática" "Mobile App (iOS/Android)" {
+            mobileApp = container "MobileApp" "Aplicación nativa Offline-First para el Conductor con sincronización automática" "Flutter" {
                 tags "Mobile"
             }
-            
-            # ========== COMPONENTES DE PERFORMANCE & DISPONIBILIDAD ==========
             
             loadBalancer = container "LoadBalancer" "Distribuye el tráfico entrante para garantizar alta disponibilidad mediante redundancia activa y health checks" "Load Balancer (NGINX/HAProxy)" {
                 tags "Performance"
             }
-            
-            messageBroker = container "MessageBroker" "Encola masivamente eventos de telemetría GPS para introducir concurrencia y desacoplamiento" "Message Broker (Apache Kafka)" {
+            messageBroker = container "MessageBroker" "Encola masivamente eventos de telemetría GPS para introducir concurrencia y desacoplamiento" "ActiveMQ)" {
                 tags "Performance"
             }
             
-            # ========== COMPONENTES DE ENRUTAMIENTO & ORQUESTACIÓN ==========
-            
-            apiGateway = container "ApiGateway" "Punto de entrada único que enruta requests, inyecta TenantId, rate limiting y autenticación" "API Gateway (Kong/Spring Cloud Gateway)" {
+            apiGateway = container "ApiGateway" "Punto de entrada único que enruta requests, inyecta TenantId, rate limiting y autenticación" "API Gateway (Spring Cloud Gateway)" {
                 tags "Gateway"
             }
             
-            # ========== MICROSERVICIOS DE NEGOCIO ==========
+            #  BASES DE DATOS 
             
-            tenantService = container "TenantService" "Gestiona el aislamiento lógico de los clientes SaaS con políticas de Row-Level Security" "Microservice (Spring Boot/Node.js)" {
-                tags "Service"
-                tenantController = component "TenantController" "REST Controller que expone endpoints para el onboarding de nuevas empresas (Tenants)" "REST Controller"
-                tenantBusinessService = component "TenantBusinessService" "Contiene la lógica de creación de espacios de trabajo aislados" "Service Layer"
-                securityPolicyEnforcer = component "SecurityPolicyEnforcer" "Valida que las peticiones cumplan con el aislamiento lógico basado en TenantId" "Security Component"
-                tenantRepository = component "TenantRepository" "Persiste la configuración de la empresa en la base de datos" "Data Access"
+            iamDB = container "IamDB" "Datos de usuarios y tenants" "PostgreSQL" { 
+                tags "Database" 
+            }
+            fleetDB = container "FleetDB" "Inventario de vehículos y conductores con RLS" "PostgreSQL" { 
+                tags "Database"
+            }
+            dispatchDB = container "DispatchDB" "Rutas y asignaciones de viajes" "PostgreSQL" { 
+                tags "Database"
             }
             
-            fleetDispatchService = container "FleetDispatchService" "Orquesta asignaciones inteligentes de vehículos, optimización de rutas y logística de última milla" "Microservice (Spring Boot/Node.js)" {
-                tags "Service"
-                dispatchController = component "DispatchController" "REST Controller que expone endpoints para asignar rutas y vehículos" "REST Controller"
-                fleetAssignmentService = component "FleetAssignmentService" "Lógica de negocio central que orquesta la asignación logística y disponibilidad" "Service Layer"
-                maintenanceChecker = component "MaintenanceChecker" "Verifica si el vehículo está en condiciones óptimas para operar o si tiene alertas preventivas pendientes" "Business Component"
-                fleetRepository = component "FleetRepository" "Patrón repositorio encargado de persistir las asignaciones en la base de datos relacional CoreDB" "Data Access"
+            telemetryDB = container "TelemetryDB" "Histórico masivo de posiciones GPS" "TimescaleDB" { 
+                tags "Database" 
+            }
+            maintenanceDB = container "MaintenanceDB" "Programas de salud y alertas preventivas" "PostgreSQL" { 
+                tags "Database"
             }
             
-            telemetryMapsService = container "TelemetryMapsService" "Procesa ubicaciones GPS en tiempo real, integración con Google Maps y Circuit Breaker para resiliencia" "Microservice (Spring Boot/Node.js)" {
+            #Services
+            
+            iamService = container "Iam Service" "Gestiona la identidad, autenticación y el aislamiento lógico de los clientes SaaS (Multi-tenancy)" "Spring Boot" {
+                tags "Service"
+                
+                # Componentes internos
+                authController = component "AuthController" "Expone endpoints para login, registro y validación de tokens" "REST Controller"
+                tenantController = component "TenantController" "Endpoints para el onboarding y gestión de empresas (Tenants)" "REST Controller"
+                identityService = component "IdentityService" "Gestiona usuarios, roles y permisos dentro de cada tenant" "Service Layer"
+                tenantService = component "TenantService" "Lógica para la creación y configuración de espacios aislados" "Service Layer"
+                tokenProvider = component "TokenProvider" "Genera y valida JWT inyectando el TenantId y claims de seguridad" "Security Component"
+                iamRepository = component "IamRepository" "Acceso a datos de identidades y configuración de tenants" "Data Access"
+
+                # Relaciones internas
+                authController -> identityService "Solicita validación de credenciales"
+                authController -> tokenProvider "Solicita generación de JWT con TenantId"
+                tenantController -> tenantService "Inicia proceso de onboarding"
+                
+                identityService -> iamRepository "Consulta/Persiste usuarios"
+                tenantService -> iamRepository "Persiste configuración de empresa"
+                
+                iamRepository -> iamDB "Operaciones CRUD" "JDBC/TypeORM"
+            }
+            
+            fleetService = container "FleetService" "Gestión del inventario de activos: vehículos y conductores" "Spring Boot" {
                 tags "Service"
 
-                telemetryMessageListener = component "TelemetryMessageListener" "Controller / Event Handler que escucha eventos asíncronos que llegan del Message Broker" "Controller / Event Handler"
-                mapQueryController = component "MapQueryController" "REST Controller que expone endpoints sincrónicos para que el API Gateway consulte datos de ubicación" "REST Controller"
-                telemetryBusinessService = component "TelemetryBusinessService" "Servicio de negocio que valida coordenadas, calcula distancias y evalúa geocercas" "Service Layer"
-                telemetryRepository = component "TelemetryRepository" "Repositorio de acceso a datos que aísla la persistencia hacia la base de datos Time-Series" "Data Access"
-                mapIntegrationAdapter = component "MapIntegrationAdapter" "Adaptador ACL que encapsula la comunicación con la API de Google Maps implementando Circuit Breaker" "Anti-Corruption Layer"
+                fleetController = component "FleetController" "CRUD de vehículos y conductores" "REST Controller"
+                assetManagerService = component "AssetManagerService" "Lógica de alta, baja y estado de disponibilidad de activos" "Service Layer"
+                #reacciona a otros servicios
+                assetStatusSynchronizer = component "AssetStatusSynchronizer" "Sincroniza el estado (disponible/ocupado/taller) basado en eventos externos" "Event Handler"
+                fleetRepository = component "FleetRepository" "Persistencia de activos en FleetDB" "Data Access"
+                # Relaciones internas
+                fleetController -> assetManagerService "Gestiona flota"
+                assetManagerService -> fleetRepository "Persiste activos"
+                assetStatusSynchronizer -> assetManagerService "Actualiza estados por eventos"
+                fleetRepository -> fleetDB "JDBC"
             }
             
-            # ========== BASES DE DATOS ==========
-            
-            coreDB = container "CoreDB" "Almacena datos transaccionales (usuarios, flotas, rutas) con Row-Level Security y transacciones ACID" "Relational Database (PostgreSQL 14+)" {
-                tags "Database"
+            dispatchService = container "DispatchService" "Planificación, optimización y asignación de viajes logísticos" "Spring Boot" { 
+                tags "Service"
+
+                dispatchController = component "DispatchController" "Expone endpoints para la creación, consulta y gestión del ciclo de vida de los viajes" "REST Controller"
+                routingEngine = component "RoutingEngine" "Algoritmo encargado de calcular las rutas óptimas basándose en tiempo, distancia y tráfico" "Business Component"
+                dispatchBusinessService = component "DispatchBusinessService" "Orquesta la lógica de asignación de viajes, vinculando conductores, vehículos y rutas" "Service Layer"
+                fleetClient = component "FleetClient" "Cliente API interno para consultar disponibilidad y detalles de activos al FleetService" "Internal API Client"
+                dispatchRepository = component "DispatchRepository" "Gestiona la persistencia de los planes de ruta y estados de viaje en DispatchDB" "Data Access"
+
+                # Relaciones internas
+                dispatchController -> dispatchBusinessService "Solicita gestión de viajes"
+                dispatchBusinessService -> routingEngine "Solicita cálculo de ruta óptima"
+                 dispatchBusinessService -> fleetClient "Consulta activos disponibles para asignar"
+                dispatchBusinessService -> dispatchRepository "Persiste el viaje y la ruta"
+                
+                dispatchRepository -> dispatchDB "Operaciones CRUD" "JBDC"
             }
             
-            telemetryDB = container "TelemetryDB" "Almacena el log histórico masivo de posiciones GPS con compresión y retención automática" "Time-Series Database (TimescaleDB/InfluxDB)" {
-                tags "Database"
+            telemetryService = container "TelemetryService" "Procesa ingesta masiva de GPS, integración cartográfica y análisis de geocercas en tiempo real" "Spring Boot " {
+                tags "Service"
+
+                telemetryMessageListener = component "TelemetryMessageListener" "Suscriptor encargado de consumir ráfagas de coordenadas desde el Message Broker" "Event Handler"
+                telemetryController = component "TelemetryController" "Endpoints para consultas de última ubicación y recorridos históricos" "REST Controller"
+                telemetryBusinessService = component "TelemetryBusinessService" "Lógica de validación, cálculo de distancias, excesos de velocidad y detección de entrada/salida de geocercas" "Service Layer"
+                geoFenceManager = component "GeoFenceManager" "Componente especializado en el procesamiento espacial y validación de perímetros permitidos" "Business Component"
+                telemetryRepository = component "TelemetryRepository" "Gestiona la persistencia optimizada hacia la base de datos de series temporales (TelemetryDB)" "Data Access"
+                mapIntegrationAdapter = component "MapIntegrationAdapter" "Adaptador ACL para Google Maps con resiliencia basada en Circuit Breaker" "Anti-Corruption Layer"
+
+                # Relaciones internas
+                telemetryMessageListener -> telemetryBusinessService "Envía coordenadas para procesamiento"
+                telemetryController -> telemetryBusinessService "Solicita datos de ubicación"
+                telemetryBusinessService -> geoFenceManager "Valida posición contra geocercas"
+                telemetryBusinessService -> telemetryRepository "Persiste histórico de posiciones"
+                telemetryBusinessService -> mapIntegrationAdapter "Solicita geocodificación inversa"
+                telemetryRepository -> telemetryDB "Inserciones de alta frecuencia" "TCP/Driver"
+                mapIntegrationAdapter -> googleMapsAPI "Consulta APIs externas" "HTTPS"
             }
+            
+            maintenanceService = container "MaintenanceService" "Gestión de alertas preventivas basadas en kilometraje GPS y tiempo" "Spring boot" {
+                tags "Service"
+
+                maintenanceController = component "MaintenanceController" "Endpoints para gestionar planes preventivos e historial de servicios" "REST Controller"
+                maintenanceBusinessService = component "MaintenanceBusinessService" "Calcula el próximo servicio basado en el odómetro virtual y fechas de expiración" "Service Layer"
+                gpsDistanceListener = component "GpsDistanceListener" "Escucha el kilometraje calculado por el TelemetryService para actualizar el uso del activo" "Event Handler"
+                maintenanceRepository = component "MaintenanceRepository" "Persistencia de planes y registros técnicos" "Data Access"
+
+                # Relaciones internas
+                maintenanceController -> maintenanceBusinessService "Consulta estados de mantenimiento"
+                gpsDistanceListener -> maintenanceBusinessService "Notifica distancia recorrida acumulada"
+                maintenanceBusinessService -> maintenanceRepository "Actualiza alertas preventivas"
+                
+                maintenanceRepository -> maintenanceDB "JDBC"
+            }
+            
+            notificationService = container "NotificationService" "Orquestador de alertas y comunicaciones vía email" "Spring Boot" {
+                tags "Service"
+
+                notificationListener = component "NotificationListener" "Escucha eventos críticos (alertas de geocerca, mantenimiento) desde el Message Broker" "Event Handler"
+                
+                templateManager = component "TemplateManager" "Gestiona las plantillas HTML de los correos personalizadas por cada Tenant" "Business Component"
+                
+                notificationDispatcher = component "NotificationDispatcher" "Orquesta la lógica de despacho de mensajes" "Service Layer"
+                
+                emailAdapter = component "EmailAdapter" "Adaptador que encapsula la API del proveedor externo de correo" "Infrastructure Adapter"
+
+                # Relaciones internas
+                notificationListener -> notificationDispatcher "Solicita envío de alerta"
+                notificationDispatcher -> templateManager "Solicita renderizado de plantilla"
+                notificationDispatcher -> emailAdapter "Envía comando de despacho"
+                
+                emailAdapter -> emailService "Envía petición de correo" "HTTPS / REST API"
+            }
+            
         }
         
-        # ==========================================
-        # RELACIONES ENTRE COMPONENTES
-        # ==========================================
+        
+        #RELATIONSHIPS
         
         # Actores con Aplicaciones
-        fleetManager -> fleetManagerSPA "Utiliza el portal web" "Browser/HTTPS"
-        driver -> mobileApp "Utiliza la app móvil" "Native App"
+        fleetManager -> loadBalancer "Utiliza el portal web" "Browser/HTTPS"
+        loadBalancer -> fleetManagerSPA "Sirve la aplicación"
+        driver -> mobileApp "Utiliza la app móvil"
         
-        # Aplicaciones con Load Balancer
-        fleetManagerSPA -> loadBalancer "Realiza peticiones HTTP/REST" "HTTPS"
-        mobileApp -> loadBalancer "Realiza peticiones sincrónicas HTTP/REST" "HTTPS"
-        
-        # Load Balancer con API Gateway (enrutamiento)
-        loadBalancer -> apiGateway "Enruta el tráfico HTTP hacia la puerta de entrada" "HTTPS/REST"
+        mobileApp -> apiGateway "Sincroniza datos de entrega" "HTTPS/JSON"
+        fleetManagerSPA -> apiGateway "Realiza peticiones" "HTTPS/JSON"
         
         # Mobile App publica eventos en Message Broker (asíncrono)
         mobileApp -> messageBroker "Publica eventos de telemetría GPS" "MQTT/Asíncrono"
         
-        # API Gateway valida tokens con Identity Provider
-        apiGateway -> identityProvider "Valida tokens JWT emitidos por el proveedor" "HTTPS/REST"
-        
         # Enrutamiento hacia componentes de servicios críticos
-        apiGateway -> tenantController "Enruta peticiones HTTP hacia el controlador de tenants" "HTTPS/REST"
-        apiGateway -> dispatchController "Enruta peticiones HTTP hacia el controlador de despacho" "HTTPS/REST"
-        apiGateway -> mapQueryController "Enruta peticiones HTTP hacia el controlador de mapas" "HTTPS/REST"
-        messageBroker -> telemetryMessageListener "Envía coordenadas asíncronas hacia el listener de telemetría" "AMQP"
+        apiGateway -> tenantController "Valida credenciales e inyecta TenantId" "HTTPS/JSON"
+        apiGateway -> authController ""
+        apiGateway -> fleetController "Gestiona vehículos y conductores" "HTTPS/JSON"
+        apiGateway -> dispatchController "Gestiona Hojas de Ruta" "HTTPS/REST"
+        apiGateway -> telemetryController "Enruta peticiones HTTP hacia el controlador de mapas" "HTTPS/REST"
+        apiGateway -> maintenanceController "Consulta alertas preventivas" "" 
+        messageBroker -> telemetryMessageListener "Consume ráfagas de GPS" "AMQP"
         
-        # Componentes internos de TenantService
-        tenantController -> tenantBusinessService "Envía datos de onboarding para procesamiento" "Llamada a método"
-        tenantBusinessService -> securityPolicyEnforcer "Valida políticas de aislamiento lógico" "Llamada a método"
-        tenantBusinessService -> tenantRepository "Persiste configuración de tenant" "Llamada a método"
-        tenantRepository -> coreDB "Lee y escribe configuración de tenant" "JDBC"
+        telemetryBusinessService -> messageBroker "Publica alertas de geocerca" "AMQP"
+        messageBroker -> gpsDistanceListener "Notifica distancia recorrida" "AMQP"
+        messageBroker -> notificationListener "Escucha alertas críticas" "AMQP"
         
-        # Componentes internos de FleetDispatchService
-        dispatchController -> fleetAssignmentService "Solicita asignaciones logísticas" "Llamada a método"
-        fleetAssignmentService -> maintenanceChecker "Consulta estado de mantenimiento del vehículo" "Llamada a método"
-        fleetAssignmentService -> fleetRepository "Persiste asignaciones logísticas" "Llamada a método"
-        fleetRepository -> coreDB "Lee y escribe asignaciones de flota" "JDBC"
-        
-        # Enrutamiento específico hacia componentes de TelemetryMapsService
-        telemetryMessageListener -> telemetryBusinessService "Envía datos validados para procesamiento" "Llamada a método"
-        mapQueryController -> telemetryBusinessService "Solicita procesamiento y datos de negocio" "Llamada a método"
-        telemetryBusinessService -> telemetryRepository "Persiste datos de telemetría" "Llamada a método"
-        telemetryBusinessService -> mapIntegrationAdapter "Solicita datos cartográficos con Circuit Breaker" "Llamada a método"
-        telemetryRepository -> telemetryDB "Lee y escribe datos históricos de posiciones GPS" "TCP/Driver"
-        mapIntegrationAdapter -> googleMapsAPI "Consulta geocodificación y mapas" "HTTPS"
     }
     
     views {
         
-        # ==========================================
-        # VISTA: DIAGRAMA DE CONTEXTO (C4 NIVEL 1)
-        # ==========================================
         systemContext orion {
             include *
             autolayout lr
@@ -151,137 +209,92 @@ workspace "Orion - Fleet Management Platform" "C4 Architecture Model" {
             description "Vista de alto nivel de Orion y sus interacciones con actores y sistemas externos"
         }
         
-        # ==========================================
-        # VISTA: DIAGRAMA DE CONTENEDORES (C4 NIVEL 2)
-        # ==========================================
         container orion {
             include *
             autolayout tb
             title "Orion - Diagrama de Contenedores (C4 Nivel 2)"
             description "Descomposición de Orion en contenedores: aplicaciones, servicios, brokers y bases de datos"
         }
-
-        component telemetryMapsService "ComponentDiagram" {
+        
+        #Components
+        
+        component telemetryService "ComponentDiagram" {
             include *
             autolayout tb
             title "Orion - Diagrama de Componentes (C4 Nivel 3): Telemetry & Maps Service"
             description "Componentes internos del microservicio de telemetría implementando ACL y Circuit Breaker."
         }
 
-        component fleetDispatchService "FleetDispatchComponentDiagram" {
+        component fleetService "FleetComponentDiagram" {
             include *
             autolayout tb
             title "Orion - Nivel 3: Fleet & Dispatch Service"
             description "Componentes internos del servicio de despacho logístico."
         }
 
-        component tenantService "TenantComponentDiagram" {
+        component iamService "IamComponentDiagram" {
             include *
             autolayout tb
-            title "Orion - Nivel 3: Tenant Management Service"
+            title "Orion - Nivel 3: IAM Service"
+            description "Componentes internos encargados del aislamiento SaaS."
+        }
+        component notificationService "NotificationComponentDiagram" {
+            include *
+            autolayout tb
+            title "Orion - Nivel 3: Notification Service"
+            description "Componentes internos encargados del aislamiento SaaS."
+        }
+        component maintenanceService "MaintenanceComponentDiagram" {
+            include *
+            autolayout tb
+            title "Orion - Nivel 3: Maintenance Service"
+            description "Componentes internos encargados del aislamiento SaaS."
+        }
+        component dispatchService "DispatchComponentDiagram" {
+            include *
+            autolayout tb
+            title "Orion - Nivel 3: Dispatch Service"
             description "Componentes internos encargados del aislamiento SaaS."
         }
         
-        # ==========================================
-        # ESTILOS Y COLORES
-        # ==========================================
+        theme default
         styles {
             
-            # Estilos para Actores/Personas
             element "Person" {
                 shape Person
-                background #08427b
-                color #ffffff
-                fontSize 13
-                icon https://structurizr.com/static/img/shapes/person.png
             }
             
-            # Estilos para el Sistema Principal Orion (AZUL)
-            element "Orion" {
-                background #438dd5
-                color #ffffff
-                fontSize 14
-                shape Box
-            }
-            
-            # Estilos para Sistemas Externos (GRIS)
             element "External" {
                 background #999999
-                color #ffffff
-                fontSize 11
-                shape Box
             }
             
-            # Estilos para LoadBalancer y MessageBroker (VERDE - Componentes tácticos de Performance)
             element "Performance" {
                 background #228B22
-                color #ffffff
-                fontSize 12
                 shape Box
-                border Solid
-                opacity 100
             }
             
-            # Estilos para Aplicaciones Web
             element "Web" {
+                shape WebBrowser
                 background #438dd5
-                color #ffffff
-                fontSize 11
-                shape Box
             }
             
-            # Estilos para Aplicaciones Móviles
             element "Mobile" {
-                background #438dd5
-                color #ffffff
-                fontSize 11
-                shape Box
+                shape MobileDeviceLandscape
             }
             
-            # Estilos para API Gateway
             element "Gateway" {
                 background #438dd5
-                color #ffffff
-                fontSize 11
-                shape Box
             }
             
-            # Estilos para Microservicios
             element "Service" {
                 background #438dd5
-                color #ffffff
-                fontSize 11
-                shape Box
             }
             
-            # Estilos para Componentes
-            element "Component" {
-                shape Component
-                background #85bbf0
-                color #000000
-                fontSize 11
-            }
-            
-            # Estilos para Bases de Datos (CILINDRO)
             element "Database" {
                 background #438dd5
-                color #ffffff
-                fontSize 11
                 shape Cylinder
             }
             
-            # Estilos para Relaciones
-            relationship "Usa" {
-                fontSize 9
-                color #666666
-                routing Direct
-            }
-            
-            relationship "Consulta" {
-                fontSize 9
-                color #666666
-                routing Direct
-            }
         }
     }
 }
