@@ -1,0 +1,21 @@
+@startuml
+title Actividad: Creación y Asignación de Hoja de Ruta
+
+start
+:Gestor define puntos de entrega;
+:Solicitar cálculo de ruta óptima (Google Maps);
+:Consultar conductores/vehículos disponibles (FleetClient);
+if (¿Hay recursos disponibles?) then (No)
+    :Marcar como "Pendiente de Asignación";
+else (Sí)
+    :Asignar Driver y Vehicle;
+    :Verificar alertas de mantenimiento;
+    if (¿Tiene alertas OVERDUE?) then (Sí)
+        :Mostrar advertencia al Gestor;
+        :Confirmar asignación bajo riesgo;
+    endif
+    :Publicar Hoja de Ruta;
+endif
+:Notificar al conductor asignado;
+stop
+@enduml

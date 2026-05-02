@@ -1,0 +1,19 @@
+@startuml
+title Estados: Parada en Hoja de Ruta (Stop Status)
+
+[*] --> Pendiente : Hoja de Ruta creada
+
+Pendiente --> En_Curso : Conductor inicia trayecto a parada
+En_Curso --> Arribado : GPS detecta entrada a geocerca
+
+state Arribado {
+    [*] --> Descargando
+    Descargando --> Completado : Firma/Foto de entrega (Proof of Delivery)
+    Descargando --> Fallido : Cliente ausente / Problema logístico
+}
+
+Completado --> [*]
+Fallido --> Pendiente : Reprogramar para final del día
+Fallido --> Omitido : Cancelación definitiva
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+title Actividad: Procesamiento de Telemetría y Alertas
+
+start
+:Captura coordenadas GPS (App Móvil);
+:Publicar evento en Message Broker;
+partition "Telemetry Service" {
+    :Recibir ráfaga de coordenadas;
+    :Validar si es "Mock Location";
+    if (¿Es ubicación falsa?) then (Sí)
+        :Marcar como fraudulento;
+        :Generar alerta de seguridad;
+    else (No)
+        :Persistir en TelemetryDB (TimescaleDB);
+        :Verificar Geocercas circulares;
+    endif
+}
+partition "Maintenance Service" {
+    :Actualizar Odómetro Virtual;
+    if (¿Supera umbral de Plan Preventivo?) then (Sí)
+        :Cambiar estado a "OVERDUE";
+        :Notificar a Gestor de Flota;
+    endif
+}
+stop
+@enduml

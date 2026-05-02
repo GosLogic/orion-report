@@ -1,0 +1,21 @@
+@startuml
+title Estados: Ciclo de Vida del Vehículo
+
+[*] --> Disponible : Registro inicial
+
+state Disponible {
+    [*] --> StandBy
+    StandBy --> En_Ruta : Asignación de Hoja de Ruta
+}
+
+En_Ruta --> Disponible : Finaliza Hoja de Ruta
+En_Ruta --> En_Mantenimiento : Reporte de falla (Correctivo)
+
+Disponible --> En_Mantenimiento : Alerta de mantenimiento (Preventivo)
+En_Mantenimiento --> Disponible : Servicio técnico completado
+
+En_Mantenimiento --> Fuera_de_Servicio : Falla crítica / Baja de activo
+Fuera_de_Servicio --> En_Mantenimiento : Reparación mayor
+Fuera_de_Servicio --> [*] : Eliminación del sistema
+
+@enduml
