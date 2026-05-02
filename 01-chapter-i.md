@@ -44,7 +44,7 @@ A largo plazo, la visión de GosLogic es convertirse en un aliado estratégico p
 
 <h3 id="121-nombre-del-producto">1.2.1 Nombre del producto</h3>
 
-<p>El producto de software que desarrollaremos como startup es <strong>Orion</strong></p>
+<p>El producto de software que desarrollaremos como startup es <strong>Orion</strong>. Orion es una plataforma SaaS (Software as a Service) multi-tenant orientada a la gestión logística y monitoreo de flotas en tiempo real, desarrollada bajo una arquitectura de microservicios y principios de Domain-Driven Design (DDD)</p>
 
 <h3 id="122-antecedentes-y-problemática">1.2.2 Antecedentes y problemática</h3>
 
