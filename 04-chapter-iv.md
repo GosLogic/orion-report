@@ -83,18 +83,79 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
 
 Para complementar la visión estática de la arquitectura, se han elaborado diagramas de comportamiento que detallan la dinámica operativa de Orion.
 
-Diagrama de contenedores
-<p align="center">
-  <img src="assets/chapter-iv/c4/containers-diagram.jpg"
-  alt="Containers Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
-</p>
+### Diagramas Complementarios de la Arquitectura
 
-Diagramas de actividades
-  - Gestión de incidente y mantenimiento correctivo
-  - Procesamiento de telemetría
-Diagramas de estado:
-  - Ciclo de vida del vehículo
-  - Parada en hoja de ruta
+#### 1. Diagrama de Contenedores
+
+<div align="center">
+  <img 
+    src="assets/chapter-iv/c4-I/containers.png" 
+    alt="Containers Diagram" 
+    style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"
+  />
+  <br/>
+  <em>Diagrama de Contenedores de la plataforma Orion.<br />
+  </em>
+</div>
+
+---
+
+#### 2. Diagramas de Actividades
+
+<ul>
+  <li>
+    <strong>Gestión de incidente y mantenimiento correctivo</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-corrective_maintenance.png" 
+      alt="Diagrama de Actividad - Incidente y Mantenimiento" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Procesamiento de telemetría</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-ingesta_telemetria.png" 
+      alt="Diagrama de Actividad - Procesamiento de Telemetría" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Creación y asignación de hoja de ruta</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-routesheet.png" 
+      alt="Diagrama de Actividad - Creación y asignación de hoja de ruta" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+</ul>
+
+---
+
+#### 3. Diagramas de Estado
+
+<ul>
+  <li>
+    <strong>Ciclo de vida del vehículo</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/state-vehicle_lifecycle.png" 
+      alt="Diagrama de Estados - Ciclo de Vida del Vehículo" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Parada en hoja de ruta</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/state-stop_status.png" 
+      alt="Diagrama de Estados - Parada en Hoja de Ruta" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+</ul>
   
 <h3 id="415-relationalnon-relational-database-diagram">4.1.5 Relational/Non Relational Database Diagram</h3>
 
