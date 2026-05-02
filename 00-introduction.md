@@ -18,7 +18,7 @@
 </p>
 
 <p align="center" style="margin: 0; font-size: 1.05rem; font-weight: 500;">
-  <span style="display: block; margin-bottom: 0.35rem;">Periodo: 2025-20</span>
+  <span style="display: block; margin-bottom: 0.35rem;">Periodo: 2026-10</span>
   <span style="display: block; margin-bottom: 0.35rem;">1ASI0657 | Fundamentos de Arquitectura de Software</span>
   <span style="display: block; margin-bottom: 0.35rem;">NRC: 17949</span>
   <span style="display: block;">Docente: Jorge Luis Delgado Vite</span>
@@ -68,7 +68,7 @@
 </div>
 
 <p align="center" style="margin: 1.75rem 0 0; font-size: 1.05rem; font-weight: 600;">
-  Septiembre, 2025
+  Mayo, 2026
 </p>
 
 </div>
@@ -93,6 +93,14 @@
       <td style="padding: 0.5rem;">15/04/2026</td>
       <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
       <td style="padding: 0.5rem;">Completado hasta el Capítulo III: Introducción (Startup Profile, Solution Profile y segmentos objetivo), Requirements & Analysis (competidores, entrevistas y needfinding) y Requirements Specification (To-Be Scenario Mapping, User Stories, Impact Map y Product Backlog).</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="padding: 0.5rem;">TB2</td>
+      <td style="padding: 0.5rem;">01/05/2026</td>
+      <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
+      <td style="padding: 0.5rem;">Completado hasta el Capítulo IV: Product Architecture Design y realizadas correciones al Capitulo I: Lean UX Process y Capitulo III: Impact Map y Product Backlog.</td>
     </tr>
   </tbody>
 </table>
@@ -245,13 +253,52 @@ El curso contribuye al cumplimiento del **Student Outcome ABET**:
   <tbody>
     <tr>
       <td style="padding: 0.5rem; vertical-align: top;">Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de ingeniería de software.</td>
-      <td style="padding: 0.5rem; vertical-align: top;"><strong>TB1</strong><br><br><strong>Cossar Sánchez, Eduardo José:</strong><br>· Lean UX Canvas<br>· User Task Matrix<br>· Product Backlog<br>· Entrevistas<br><br><strong>Gonzales Castillo, Angel Martin:</strong><br>· User Personas<br>· Empathy Maps<br>· Entrevistas<br>· As-is Scenario Mapping<br>· To-Be Scenario Mapping<br><br><strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Descripción de la Startup<br>· Nombre del producto<br>· Antecedentes y problemática<br>· Segmentos objetivo<br>· Competidores<br><br><strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Lean UX Canvas<br>· Impact Map<br>· Entrevistas<br>· User Stories<br><br><strong>Solano Armas, Angelo Hector:</strong><br>· Lean UX Problem Statement<br>· Lean UX Assumptions<br>· Lean UX Hypothesis<br>· Entrevistas<br>· User Stories</td>
-      <td style="padding: 0.5rem; vertical-align: top;">Durante el TB1, el equipo actualizó y aplicó conocimientos de Lean UX, análisis de requerimientos y especificación de soluciones en el desarrollo del proyecto Orion. La asignación de responsabilidades por integrante permitió transformar conceptos teóricos en entregables verificables, evidenciando dominio progresivo y aplicación pertinente de fundamentos de ingeniería de software.</td>
+      <td style="padding: 0.5rem; vertical-align: top;">
+        <strong>TB1</strong><br><br>
+        <strong>Cossar Sánchez, Eduardo José:</strong><br>· Lean UX Canvas<br>· User Task Matrix<br>· Product Backlog<br>· Entrevistas<br><br>
+        <strong>Gonzales Castillo, Angel Martin:</strong><br>· User Personas<br>· Empathy Maps<br>· Entrevistas<br>· As-is Scenario Mapping<br>· To-Be Scenario Mapping<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Descripción de la Startup<br>· Nombre del producto<br>· Antecedentes y problemática<br>· Segmentos objetivo<br>· Competidores<br><br>
+        <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Lean UX Canvas<br>· Impact Map<br>· Entrevistas<br>· User Stories<br><br>
+        <strong>Solano Armas, Angelo Hector:</strong><br>· Lean UX Problem Statement<br>· Lean UX Assumptions<br>· Lean UX Hypothesis<br>· Entrevistas<br>· User Stories
+        <br><br>
+        <strong>TB2</strong><br><br>
+        <strong>Cossar Sánchez, Eduardo José:</strong><br>· Corrección Impact Map<br>· Corrección Product Backlog<br>· Design Purpose<br>· Primary Functionality<br><br>
+        <strong>Gonzales Castillo, Angel Martin:</strong><br>· Corrección del Impact Map<br>· Corrección del Lean UX Process<br>· Principles Statements<br>· Approaches Statements (Architectural Styles & Patterns)<br>·             Tactics<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Design Patterns<br>· Relational/Non Relational Database Diagram<br>· Architectural Concerns<br>· ADD Iteration 1<br>· Context Diagram<br><br>
+        <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Corrección Impact Map<br>· Corrección Product Backlog<br>· Quality Attribute Scenarios<br>· Constraints<br><br>
+        <strong>Solano Armas, Angelo Hector:</strong><br>· Context Diagram<br>· Approach Driven ViewPoints Diagrams<br>· Relational/Non Relational Database Diagram<br>· Design Patterns
+      </td>
+      <td style="padding: 0.5rem; vertical-align: top;">
+<strong>TB1</strong><br><br>
+Durante el TB1, el equipo actualizó y aplicó conocimientos de Lean UX, análisis de requerimientos y especificación de soluciones en el desarrollo del proyecto Orion. La asignación de responsabilidades por integrante permitió transformar conceptos teóricos en entregables verificables, evidenciando dominio progresivo y aplicación pertinente de fundamentos de ingeniería de software.
+<br><br>
+<strong>TB2</strong><br><br>
+Durante el TB2, el equipo actualizó y aplicó conocimientos en diseño arquitectónico, atributos de calidad y modelado de soluciones en el desarrollo del proyecto Orion. Actividades como la corrección del Impact Map, Product Backlog y el proceso Lean UX, junto con la elaboración de artefactos como Design Purpose, diagramas, patrones y las iteraciones ADD, permitieron transformar conceptos teóricos en entregables estructurados, evidenciando un dominio progresivo y una aplicación adecuada de los fundamentos de ingeniería de software.
+</td>
     </tr>
     <tr>
       <td style="padding: 0.5rem; vertical-align: top;">Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software.</td>
-      <td style="padding: 0.5rem; vertical-align: top;"><strong>TB1</strong><br><br><strong>Cossar Sánchez, Eduardo José:</strong><br>· Lean UX Canvas<br>· User Task Matrix<br>· Product Backlog<br>· Entrevistas<br><br><strong>Gonzales Castillo, Angel Martin:</strong><br>· User Personas<br>· Empathy Maps<br>· Entrevistas<br>· As-is Scenario Mapping<br>· To-Be Scenario Mapping<br><br><strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Descripción de la Startup<br>· Nombre del producto<br>· Antecedentes y problemática<br>· Segmentos objetivo<br>· Competidores<br><br><strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Lean UX Canvas<br>· Impact Map<br>· Entrevistas<br>· User Stories<br><br><strong>Solano Armas, Angelo Hector:</strong><br>· Lean UX Problem Statement<br>· Lean UX Assumptions<br>· Lean UX Hypothesis<br>· Entrevistas<br>· User Stories</td>
-      <td style="padding: 0.5rem; vertical-align: top;">El trabajo colaborativo del TB1 evidenció una práctica constante de aprendizaje continuo, ya que el equipo investigó, adaptó y aplicó nuevas estrategias según las necesidades del proyecto. La mejora iterativa en artefactos como User Stories, escenarios AS-IS/TO-BE e Impact Map demostró la capacidad de autoformación y actualización permanente para el desempeño profesional.</td>
+      <td style="padding: 0.5rem; vertical-align: top;">
+        <strong>TB1</strong><br><br>
+        <strong>Cossar Sánchez, Eduardo José:</strong><br>· Lean UX Canvas<br>· User Task Matrix<br>· Product Backlog<br>· Entrevistas<br><br>
+        <strong>Gonzales Castillo, Angel Martin:</strong><br>· User Personas<br>· Empathy Maps<br>· Entrevistas<br>· As-is Scenario Mapping<br>· To-Be Scenario Mapping<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Descripción de la Startup<br>· Nombre del producto<br>· Antecedentes y problemática<br>· Segmentos objetivo<br>· Competidores<br><br>
+        <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Lean UX Canvas<br>· Impact Map<br>· Entrevistas<br>· User Stories<br><br>
+        <strong>Solano Armas, Angelo Hector:</strong><br>· Lean UX Problem Statement<br>· Lean UX Assumptions<br>· Lean UX Hypothesis<br>· Entrevistas<br>· User Stories
+        <br><br>
+        <strong>TB2</strong><br><br>
+        <strong>Cossar Sánchez, Eduardo José:</strong><br>· Corrección Impact Map<br>· Corrección Product Backlog<br>· Design Purpose<br>· Primary Functionality<br><br>
+        <strong>Gonzales Castillo, Angel Martin:</strong><br>· Corrección del Impact Map<br>· Corrección del Lean UX Process<br>· Principles Statements<br>· Approaches Statements (Architectural Styles & Patterns)<br>·             Tactics<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Design Patterns<br>· Relational/Non Relational Database Diagram<br>· Architectural Concerns<br>· ADD Iteration 1<br>· Context Diagram<br><br>
+        <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Corrección Impact Map<br>· Corrección Product Backlog<br>· Quality Attribute Scenarios<br>· Constraints<br><br>
+        <strong>Solano Armas, Angelo Hector:</strong><br>· Context Diagram<br>· Approach Driven ViewPoints Diagrams<br>· Relational/Non Relational Database Diagram<br>· Design Patterns
+      <td style="padding: 0.5rem; vertical-align: top;">
+        <strong>TB1</strong><br><br>
+          El trabajo colaborativo del TB1 evidenció una práctica constante de aprendizaje continuo, ya que el equipo investigó, adaptó y aplicó nuevas estrategias según las necesidades del proyecto. La mejora iterativa en             artefactos como User Stories, escenarios AS-IS/TO-BE e Impact Map demostró la capacidad de autoformación y actualización permanente para el desempeño profesional.
+            <br><br>
+        <strong>TB2</strong><br><br>
+          Durante el TB2, el equipo reafirmó la necesidad del aprendizaje permanente mediante la profundización en temas de diseño arquitectónico, atributos de calidad y patrones de software. La aplicación de metodologías           como ADD, junto con la elaboración de diversos artefactos técnicos, permitió consolidar conocimientos más avanzados, evidenciando una evolución continua en su preparación profesional y en el desarrollo de                   soluciones de ingeniería de software.
+      </td>
     </tr>
   </tbody>
 </table>
