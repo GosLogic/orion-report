@@ -841,4 +841,12 @@ A cada elemento instanciado se le ha asignado una responsabilidad cohesionada y 
 
 <p>Para preservar la trazabilidad entre el modelo arquitectónico y la ejecución operativa, hemos actualizado en el tablero ágil del equipo las historias de usuario asociadas y los refinamientos pendientes. De este modo, el seguimiento de las tareas de diseño de esta y las futuras iteraciones se gestiona de forma transparente.</p>
 
-<p><strong>[INSERTAR AQUÍ ENLACE / CAPTURA DEL KANBAN BOARD (TRELLO/JIRA/GITHUB PROJECTS)]</strong></p>
+Enlace de trello: https://trello.com/invite/b/69f56589e0cac55f7b1a3608/ATTI3155f3901eeb23694ea9a16fa5d2a589076C55C5/architectural-design-backlog-1-goslogic
+
+<p align="center">
+    <img 
+      src="assets/chapter-iv/Kanban%20Board.png" 
+      alt="Kanban-Board" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+</p>
