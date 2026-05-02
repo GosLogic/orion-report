@@ -81,11 +81,32 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
 <p><em>Contenido por desarrollar.</em></p>
 
 <h3 id="416-design-patterns">4.1.6 Design Patterns</h3>
-<p><em>Contenido por desarrollar.</em></p>
+
+Para la construcción de Orion, se ha decidido implementar un conjunto de patrones de diseño de software basados en los lineamientos de GoF y arquitecturas empresariales que garantizan el desacoplamiento, la mantenibilidad y el aislamiento de dominios en un entorno Multi-Tenant. Los patrones seleccionados para el contexto específico de este proyecto son los siguientes:
+
+#### **1. Repository Pattern - Patrón Repositorio**
+*   **Propósito**: Actuar como un intermediario entre la capa de dominio y la capa de persistencia de datos, ocultando los detalles técnicos del acceso a las distintas bases de datos.
+*   **Aplicación en el proyecto**: Es crítico para gestionar la persistencia políglota del sistema. Se utiliza para encapsular consultas complejas en PostgreSQL  y, especialmente, para manejar las funciones de agregación de tiempo en TimescaleDB dentro del microservicio de Telemetría. Esto permite que la lógica de negocio permanezca intacta si se decide cambiar el ORM o la estructura de las tablas en el futuro.
+
+#### **2. Adapt Pattern - Patrón adaptador**
+*   **Propósito**: Convertir la interfaz de una clase en otra interfaz que el cliente espera, permitiendo que clases con interfaces incompatibles trabajen juntas.
+*   **Aplicación en el proyecto**: Se implementa para la integración con servicios externos como la API de Google Maps. Esto garantiza que si el proveedor externo cambia su contrato o si se decide migrar a otra plataforma como Mapbox, solo se deba modificar el adaptador, manteniendo el núcleo del backend intacto.
+
+#### **3. Observer Pattern (Patrón Observador)**
+*   **Propósito**: Definir una dependencia de uno-a-muchos entre objetos, de forma que cuando el objeto principal cambie su estado, todos sus dependientes sean notificados automáticamente.
+*   **Aplicación en el proyecto**: Es el motor de la arquitectura *Event-Driven* de Orion. Cuando el `TelemetryService` procesa una coordenada y detecta un evento, actúa como el sujeto que publica un mensaje en el **Message Broker**. Los microservicios de Notification y Dispatch actúan como observadores que reaccionan de forma desacoplada para actualizar el estado de la entrega o enviar alertas al gestor en tiempo real.
+
+#### **4. Strategy Pattern (Patrón Estrategia)**
+*   **Propósito**: Definir una familia de algoritmos, encapsular cada uno y hacerlos intercambiables en tiempo de ejecución, permitiendo que el algoritmo varíe independientemente de los clientes que lo utilizan.
+*   **Aplicación en el proyecto**: Se utiliza para el cálculo del Próximo Servicio de Mantenimiento. Dependiendo del tipo de vehículo o de las políticas específicas de cada Tenant, el sistema inyecta una estrategia de cálculo diferente (basada en kilometraje acumulado, tiempo transcurrido o reglas personalizadas), permitiendo que el microservicio de mantenimiento sea altamente flexible ante nuevos requerimientos de negocio
+
+#### **5. Dependency Injection (Inyección de Dependencias)**
+*   **Propósito**: Externalizar la creación y gestión de las dependencias de una clase, pasándolas dinámicamente en tiempo de ejecución en lugar de instanciarlas manualmente.
+*   **Aplicación en el proyecto**: Es el eje central de los frameworks utilizados en el Backend. El contenedor de Inversión de Control (IoC) inyecta automáticamente los repositorios y adaptadores necesarios según el contexto. Esto es fundamental para cumplir con el atributo de calidad de testeabilidad, ya que permite inyectar Mocks o simulaciones durante las pruebas unitarias de la lógica de ruteo y telemetría sin depender de bases de datos o APIs externas activas.
 
 <h3 id="417-tactics">4.1.7 Tactics</h3>
 
-<p>En la taxonomía del Software Engineering Institute (SEI), una <strong>táctica arquitectónica</strong> es una decisión de diseño atomizable que modifica la estructura del sistema para controlar de manera predecible la respuesta ante un estímulo que tensiona un atributo de calidad determinado. A diferencia de un patrón de diseño —que suele resolver un problema recurrente de composición con mayor alcance semántico—, la táctica se formula como un encadenamiento deliberado de mecanismos estructurales y de comportamiento más elementales; agrupadas, constituyen la <em>estrategia</em> mediante la cual la arquitectura satisface drivers conflictivos sin recurrir a especulaciones implementativas prematuras. La tabla siguiente documenta, para Orion, las tácticas elegidas explícitamente para los cuatro Architectural Drivers priorizados, indicando en cada caso el artefacto principal tal como aparece en la vista de contenedores del modelo C4.</p>
+Según la taxonomía del SEI, una táctica arquitectónica es una decisión de diseño atómica destinada a controlar la respuesta del sistema ante estímulos que afectan sus atributos de calidad. Mientras que los patrones resuelven problemas de composición global, las tácticas son mecanismos específicos que, en conjunto, forman la estrategia para satisfacer los architectural drivers de Orion. La siguiente tabla detalla las tácticas seleccionadas, vinculándolas directamente con los componentes definidos en el modelo C4.
 
 <table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem;">
   <thead>
@@ -105,15 +126,15 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Disponibilidad</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Excepciones / Degradación Controlada</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>TelemetryMapsService</strong></td>
-      <td style="padding: 0.55rem; vertical-align: top;">Se aplica el patrón <em>Circuit Breaker</em> sobre las invocaciones a la API de Google Maps: ante latencia extrema o errores sostenidos, el circuito abre y el sistema evita propagar la falla en cascada, operando en modo degradado (p. ej., sirviendo últimas respuestas válidas desde caché) para preservar la disponibilidad percibida del monitoreo cartográfico.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Degradación Controlada</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>TelemetryService</strong></td>
+      <td style="padding: 0.55rem; vertical-align: top;">Se aplica  <em>Circuit Breaker</em> sobre las invocaciones a la API de Google Maps: ante latencia extrema o errores sostenidos, el circuito abre y el sistema evita propagar la falla en cascada, operando en modo degradado para preservar la disponibilidad percibida del monitoreo cartográfico.</td>
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Performance</td>
       <td style="padding: 0.55rem; vertical-align: top;">Introducir Concurrencia (<em>Introduce Concurrency</em>)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>Message Broker</strong> (Apache Kafka / RabbitMQ)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">La ingesta masiva de telemetría GPS se desacopla del procesamiento síncrono: los productores publican eventos en el broker y los consumidores los procesan concurrentemente. Ello absorbe picos de carga y evita que el camino crítico bloquee la aplicación móvil o los servicios de consulta bajo alta concurrencia.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>Message Broker</strong></td>
+      <td style="padding: 0.55rem; vertical-align: top;">La ingesta masiva de telemetría GPS se procesa asíncronamente. Los productores publican eventos en el broker y los consumidores los procesan concurrentemente. Ello absorbe picos de carga y evita la degradación de respuessta bajo alta concurrencia.</td>
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Performance</td>
@@ -123,7 +144,7 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Interoperabilidad</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Uso de un Intermediario (<em>Use an Intermediary</em>)</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Uso de un Intermediario</td>
       <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>API Gateway</strong></td>
       <td style="padding: 0.55rem; vertical-align: top;">El gateway actúa como fachada única de entrada: centraliza enrutamiento, políticas transversales (autenticación, límites de tasa, versionado) y uniformidad de contratos hacia los microservicios internos, facilitando que clientes heterogéneos y sistemas externos interactúen con Orion sin conocer la topología fina del backend.</td>
     </tr>
@@ -137,12 +158,12 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
       <td style="padding: 0.55rem; vertical-align: top;">Usabilidad</td>
       <td style="padding: 0.55rem; vertical-align: top;">Iniciativa del Sistema (<em>System Initiative</em>)</td>
       <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>MobileApp</strong> (cliente)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">La aplicación adopta un modelo <em>offline-first</em> con persistencia local en SQLite: ante pérdida de conectividad, el sistema conserva autónomamente los eventos de jornada y reintenta la sincronización en segundo plano mediante <em>retry</em> con backoff exponencial al restablecerse la red, reduciendo la carga cognitiva del conductor y manteniendo continuidad operativa sin intervención manual.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">La aplicación adopta un modelo <em>offline-first</em> con persistencia local en SQLite. Al recuperar la conexión, el sistema inicia la sincronización sin que el conductor deba reintentar manualmente.
     </tr>
   </tbody>
 </table>
 
-<p>La conjugación coherente de las tácticas anteriores define la estrategia arquitectónica <strong>Cloud-Native</strong> de Orion: redundancia y degradación controlada aseguran servicio continuo; concurrencia mediada por broker y caché distribuida sostienen el rendimiento bajo picos de telemetría; intermediación y traducción explícita de interfaces habilitan integraciones empresariales predecibles; y la iniciativa del sistema en el cliente móvil cierra la brecha de usabilidad en entornos de conectividad débil. En conjunto, constituyen el andamiaje técnico que hace viable el despliegue multi-tenant del producto en modalidad SaaS.</p>
+<p>La conjugación coherente de las tácticas anteriores define la estrategia arquitectónica de Orion: la redundancia y degradación controlada aseguran un servicio continuo; la concurrencia mediada por broker y la persistencia especializada en series temporales sostienen el rendimiento bajo picos de telemetría; la intermediación a través del Gateway garantiza el aislamiento lógico de datos por Tenant y habilita integraciones empresariales predecibles; finalmente, la iniciativa del sistema en el cliente móvil cierra la brecha de usabilidad en entornos de conectividad débil. En conjunto, estas decisiones constituyen el cimiento técnico que hace viable el despliegue escalable y seguro del producto.</p>
 
 <h2 id="42-architectural-drivers">4.2 Architectural Drivers</h2>
 
