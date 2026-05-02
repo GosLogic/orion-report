@@ -72,13 +72,140 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
 *   **Circuit Breaker:** Implementado en las integraciones con servicios externos. Previene fallos en cascada al "abrir el circuito" ante errores recurrentes, permitiendo que Orion opere en modo degradado o utilice datos en caché.
 
 <h3 id="413-context-diagram">4.1.3 Context Diagram</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>El <strong>Context Diagram</strong> ilustra las principales entidades externas, sistemas y usuarios que interactúan con la plataforma Orion, así como sus canales de integración y límites de contexto clave. Este diagrama ayuda a comprender el alcance del sistema y su relación con el entorno organizacional y tecnológico.</p>
+
+<p align="center">
+  <img src="assets/chapter-iv/c4-I/context.png"
+  alt="Context Diagram " style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+</p>
 
 <h3 id="414-approach-driven-viewpoints-diagrams">4.1.4 Approach driven ViewPoints Diagrams</h3>
-<p><em>Contenido por desarrollar.</em></p>
 
+Para complementar la visión estática de la arquitectura, se han elaborado diagramas de comportamiento que detallan la dinámica operativa de Orion.
+
+### Diagramas Complementarios de la Arquitectura
+
+#### 1. Diagrama de Contenedores
+
+<div align="center">
+  <img 
+    src="assets/chapter-iv/c4-I/containers.png" 
+    alt="Containers Diagram" 
+    style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"
+  />
+  <br/>
+  <em>Diagrama de Contenedores de la plataforma Orion.<br />
+  </em>
+</div>
+
+---
+
+#### 2. Diagramas de Actividades
+
+<ul>
+  <li>
+    <strong>Gestión de incidente y mantenimiento correctivo</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-corrective_maintenance.png" 
+      alt="Diagrama de Actividad - Incidente y Mantenimiento" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Procesamiento de telemetría</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-ingesta_telemetria.png" 
+      alt="Diagrama de Actividad - Procesamiento de Telemetría" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Creación y asignación de hoja de ruta</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-routesheet.png" 
+      alt="Diagrama de Actividad - Creación y asignación de hoja de ruta" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+</ul>
+
+---
+
+#### 3. Diagramas de Estado
+
+<ul>
+  <li>
+    <strong>Ciclo de vida del vehículo</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/state-vehicle_lifecycle.png" 
+      alt="Diagrama de Estados - Ciclo de Vida del Vehículo" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Parada en hoja de ruta</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/state-stop_status.png" 
+      alt="Diagrama de Estados - Parada en Hoja de Ruta" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+</ul>
+  
 <h3 id="415-relationalnon-relational-database-diagram">4.1.5 Relational/Non Relational Database Diagram</h3>
-<p><em>Contenido por desarrollar.</em></p>
+
+#### **I. Argumentación de la decisión tecnológica**
+
+Para nuestra plataforma, se ha decidido implementar una arquitectura de persistencia políglota basada en **PostgreSQL** y su extensión **TimescaleDB**, descartando soluciones puramente NoSQL debido a la complejidad de las relaciones y la necesidad de integridad transaccional.
+
+Esta decisión se basa en los siguientes aspectos: 
+
+*   **Integridad Multi-Tenant**: El sistema exige vínculos estrictos e inquebrantables entre la empresa (Tenant), sus activos y los datos de despacho. El modelo relacional garantiza esta integridad referencial mediante llaves foráneas (FK), asegurando que los datos de un cliente nunca se filtren a otro.
+*   **Tratamiento de Series Temporales**: A diferencia de una base de datos relacional estándar, el uso de **TimescaleDB** permite manejar la telemetría masiva mediante *hypertables*. Esto ofrece el rendimiento de una base de datos NoSQL para escrituras, manteniendo la potencia de las consultas SQL para el historial de rutas.
+*   **Cómputo Geoespacial Eficiente**: La gestión de geocercas y el monitoreo de arribos se resuelven de forma nativa mediante **PostGIS**. Esto permite calcular si un camión entró en su zona de entrega directamente en la base de datos, optimizando el rendimiento antes de procesar alertas en el backend.
+*   **Agregación Analítica para Logística**: La generación de reportes (kilómetros recorridos por flota, cumplimiento de mantenimiento y eficiencia de conductores) se beneficia de las capacidades de agregación complejas que ofrece el lenguaje SQL, cruciales para la toma de decisiones del Gestor de Flota.
+
+#### **II. Diagramas de Base de Datos**
+
+##### IAM database diagram
+
+<p align="center">
+  <img src="assets/chapter-iv/database-diagrams/iam-db.png"
+  alt="IAM Database Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+</p>
+
+##### Fleet database diagram
+
+<p align="center">
+  <img src="assets/chapter-iv/database-diagrams/fleet-db.png"
+  alt="Fleet Database Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+</p>
+
+##### Dispatch database diagram
+
+<p align="center">
+  <img src="assets/chapter-iv/database-diagrams/dispatch-db.png"
+  alt="Dispatch Database Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+</p>
+
+##### Maintenance database diagram
+
+<p align="center">
+  <img src="assets/chapter-iv/database-diagrams/maintenance-db.png"
+  alt="Maintenance Database Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+</p>
+
+##### Telemetry database diagram
+
+<p align="center">
+  <img src="assets/chapter-iv/database-diagrams/telemetry-db.png"
+  alt="Telemetry Database Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+</p>
 
 <h3 id="416-design-patterns">4.1.6 Design Patterns</h3>
 
@@ -230,7 +357,7 @@ En conclusión, el propósito de este diseño trasciende la simple elaboración 
   </tbody>
 </table>
 
-<p><strong>Conclusión:</strong> En conjunto, estas cuatro funcionalidades primarias conforman el núcleo operativo de Orion y justifican la elección de un estilo arquitectónico basado en Microservicios Cloud-Native. Las necesidades estrictas de desempeño asíncrono, resiliencia ante proveedores externos, integración limpia con terceros y soporte operativo sin conexión hacen inviable la elección de una arquitectura monolítica tradicional.</p>
+<p><strong>Conclusión:</strong> En conjunto, estas cuatro funcionalidades primarias conforman el núcleo operativo de Orion y justifican la elección de un estilo arquitectónico basado en Microservicios. Las necesidades estrictas de desempeño asíncrono, resiliencia ante proveedores externos, integración limpia con terceros y soporte operativo sin conexión hacen inviable la elección de una arquitectura monolítica tradicional.</p>
 
 <h2 id="4110-quality-attribute-scenarios">4.1.10 Quality Attribute Scenarios</h2>
 

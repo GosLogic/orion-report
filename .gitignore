@@ -1,3 +1,4 @@
 development/
 export/
 *.pdf
+.idea/
