@@ -18,7 +18,7 @@
 </p>
 
 <p align="center" style="margin: 0; font-size: 1.05rem; font-weight: 500;">
-  <span style="display: block; margin-bottom: 0.35rem;">Periodo: 2025-20</span>
+  <span style="display: block; margin-bottom: 0.35rem;">Periodo: 2026-10</span>
   <span style="display: block; margin-bottom: 0.35rem;">1ASI0657 | Fundamentos de Arquitectura de Software</span>
   <span style="display: block; margin-bottom: 0.35rem;">NRC: 17949</span>
   <span style="display: block;">Docente: Jorge Luis Delgado Vite</span>
@@ -68,7 +68,7 @@
 </div>
 
 <p align="center" style="margin: 1.75rem 0 0; font-size: 1.05rem; font-weight: 600;">
-  Septiembre, 2025
+  Mayo, 2026
 </p>
 
 </div>
@@ -93,6 +93,14 @@
       <td style="padding: 0.5rem;">15/04/2026</td>
       <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
       <td style="padding: 0.5rem;">Completado hasta el Capítulo III: Introducción (Startup Profile, Solution Profile y segmentos objetivo), Requirements & Analysis (competidores, entrevistas y needfinding) y Requirements Specification (To-Be Scenario Mapping, User Stories, Impact Map y Product Backlog).</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="padding: 0.5rem;">TB2</td>
+      <td style="padding: 0.5rem;">01/05/2026</td>
+      <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
+      <td style="padding: 0.5rem;">Completado hasta el Capítulo IV: Product Architecture Design y realizadas correciones al Capitulo I: Lean UX Process y Capitulo III: Impact Map y Product Backlog.</td>
     </tr>
   </tbody>
 </table>
