@@ -499,11 +499,9 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
 
 <h2 id="4112-architectural-concerns">4.1.12 Architectural Concerns</h2>
 
-Según la teoría que sistematiza el Software Engineering Institute (SEI), una **architectural concern** (*preocupación arquitectónica*) es un interés del arquitecto con **alto impacto** en la forma del sistema: el **primer lugar** en el que el **problema** (requisitos, contexto, restricciones) y la **solución** (abstracciones arquitectónicas, estilos, descomposición en contenedores) se articulan de manera explícita. No se trata de un comentario accesorio, sino del eje donde decidimos **qué** tensiona el diseño y **cómo** lo abordamos.
+<p>Para el SEI, una <em>architectural concern</em> (preocupación arquitectónica) es un tema que condiciona de forma directa la forma del sistema: enlaza requisitos, contexto y restricciones con decisiones de diseño (vistas, estilos, contenedores). En Orion, las vistas, las tácticas y la asignación de responsabilidades a contenedores son la respuesta explícita a cada preocupación que identificamos.</p>
 
-En nuestro trabajo hemos incorporado esas preocupaciones **dentro del diseño de la arquitectura**: cada decisión documentada en vistas, tácticas y asignación de responsabilidades a contenedores constituye la respuesta deliberada a una preocupación reconocida.
-
-Un **riesgo** surge cuando **aceptamos formalmente** convivir con una preocupación que, de materializarse sin contramedida, tendría **impacto negativo** en metas y requisitos (p. ej. confianza del cliente, continuidad del servicio o costo operativo). El diseño no borra el riesgo: lo **explicita** y le asocia **mitigaciones** arquitectónicas que podemos inspeccionar y verificar.
+<p>Un <strong>riesgo</strong> es la posibilidad de que una preocupación se materialice y perjudique objetivos o requisitos (por ejemplo, confianza del cliente, disponibilidad o coste operativo) si no hay contramedida. El diseño no elimina el riesgo: lo deja documentado y asocia mitigaciones que el equipo puede revisar y verificar.</p>
 
 <table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem; margin-bottom: 1rem;">
   <thead>
