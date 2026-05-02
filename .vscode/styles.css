@@ -10,6 +10,18 @@ body {
     display: block;
     margin: 0.5em auto;
   }
+
+  /* Fotos de la tabla de integrantes — límites explícitos para PDF */
+img.integrante-foto {
+  max-width: 130px;
+  max-height: 170px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+  margin: 0.25em auto;
+  display: block;
+}
   
   pre, code {
     white-space: pre-wrap;
