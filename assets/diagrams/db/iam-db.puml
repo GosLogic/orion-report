@@ -1,0 +1,78 @@
+@startuml
+' Orion - IAM Service Physical ER Diagram (With Login Logs)
+
+hide circle
+skinparam linetype ortho
+
+' ==== Multi-tenancy Core ====
+entity tenants {
+  * id                : BIGINT <<PK>>
+  --
+    * name             : VARCHAR(100)
+    * ruc              : VARCHAR(11)
+    status            : ENUM('ACTIVE', 'INACTIVE')
+    created_at        : DATETIME
+    updated_at        : DATETIME
+}
+
+' ==== User Management ====
+entity users {
+  * id                : BIGINT <<PK>>
+  --
+    * tenant_id        : BIGINT <<FK>>
+    * email            : VARCHAR(150)
+    * password_hash    : VARCHAR(255)
+    first_name       : VARCHAR(100)
+    last_name        : VARCHAR(100)
+    is_active        : BOOLEAN
+    created_at       : DATETIME
+}
+
+' ==== RBAC (Predefined Roles & Generic Permissions) ====
+entity roles {
+  * id                : BIGINT <<PK>>
+  --
+    * name             : VARCHAR(50) ' ADMIN, FLEET MANAGER, DRIVER
+    description      : VARCHAR(255)
+}
+
+entity permissions {
+  * id                : BIGINT <<PK>>
+  --
+    * resource         : VARCHAR(50)  ' FLEET, TRIPS, ALERTS
+    * access_level     : ENUM('NO_ACTION', 'READ', 'WRITE', 'MASTER')
+}
+
+' ==== Login Audit Log ====
+entity login_logs {
+  * id                : BIGINT <<PK>>
+  --
+    * user_id          : BIGINT <<FK>>
+    * tenant_id        : BIGINT <<FK>> ' Importante para filtrar por empresa
+    login_at          : DATETIME
+    ip_address        : VARCHAR(45)
+    user_agent        : TEXT
+    status            : ENUM('SUCCESS', 'FAILED')
+}
+
+' ==== Intermediate Tables ====
+entity user_roles {
+  * user_id          : BIGINT <<FK>>
+  * role_id          : BIGINT <<FK>>
+}
+
+entity role_permissions {
+  * role_id          : BIGINT <<FK>>
+  * permission_id    : BIGINT <<FK>>
+}
+
+' ==== Relationships ====
+tenants ||--o{ users
+users ||--o{ login_logs
+tenants ||--o{ login_logs
+users ||--o{ user_roles
+roles ||--o{ user_roles
+roles ||--o{ role_permissions
+permissions ||--o{ role_permissions
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+' Orion - Notification Service Physical ER Diagram
+
+hide circle
+skinparam linetype ortho
+
+entity notification_history {
+  * id                : BIGINT <<PK>>
+  --
+    * user_id          : BIGINT      ' FK Lógica a IAM
+    * tenant_id        : BIGINT      ' FK Lógica a IAM
+    * title            : VARCHAR(100)
+    * message          : TEXT
+    * type             : ENUM('ALARM', 'INFO', 'SUCCESS', 'WARNING')
+    * channel          : ENUM('PUSH', 'EMAIL', 'SMS')
+    * is_read          : BOOLEAN
+    sent_at           : DATETIME
+    read_at           : DATETIME
+}
+
+entity user_notification_settings {
+  * id                : BIGINT <<PK>>
+  --
+    * user_id          : BIGINT
+    * notification_type: VARCHAR(50) ' Ej: "TRIP_ASSIGNED", "MAINTENANCE_DUE"
+    * channel_enabled  : ENUM('PUSH', 'EMAIL', 'BOTH', 'NONE')
+}
+
+@enduml

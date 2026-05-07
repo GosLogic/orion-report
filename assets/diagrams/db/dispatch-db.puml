@@ -1,0 +1,70 @@
+@startuml
+' Orion - Dispatch Service Physical ER Diagram (Hoja de Ruta & Entregas)
+
+hide circle
+skinparam linetype ortho
+
+' ==== Route Header (Hoja de Ruta) ====
+entity route_sheets {
+  * id                : BIGINT <<PK>>
+  --
+    * tenant_id        : BIGINT <<FK>>
+    * date             : DATE
+    * vehicle_id       : BIGINT      ' FK Lógica a FleetDB
+    * driver_id        : BIGINT      ' FK Lógica a FleetDB
+    * status           : ENUM('DRAFT', 'ASSIGNED', 'IN_PROGRESS', 'COMPLETED')
+    created_at         : DATETIME
+}
+
+' ==== Stops (Paradas en la Hoja de Ruta) ====
+entity trip_stops {
+  * id                : BIGINT <<PK>>
+  --
+    * route_sheet_id   : BIGINT <<FK>>
+    * location_id      : BIGINT <<FK>>
+    * stop_order       : INT         ' Orden de la parada en el día
+    * status           : ENUM('PENDING', 'ARRIVED', 'COMPLETED', 'SKIPPED')
+    arrival_time      : DATETIME
+    departure_time    : DATETIME
+    estimated_arrival : DATETIME
+}
+
+' ==== Locations (Directorio de Puntos) ====
+entity locations {
+  * id                : BIGINT <<PK>>
+  --
+    * tenant_id        : BIGINT <<FK>>
+    * name             : VARCHAR(100)
+    * address          : VARCHAR(255)
+    * latitude         : DOUBLE
+    * longitude        : DOUBLE
+}
+
+' ==== Deliveries (Carga por Parada) ====
+entity deliveries {
+  * id                : BIGINT <<PK>>
+  --
+    * stop_id          : BIGINT <<FK>>
+    * description      : VARCHAR(255) ' Ej: "3 Cajas de repuestos"
+    * status           : ENUM('PENDING', 'DELIVERED', 'FAILED')
+    proof_of_delivery  : TEXT         ' URL de la imagen o firma digital
+    notes              : VARCHAR(255)
+}
+
+' ==== Incident Logs ====
+entity incidents {
+  * id                : BIGINT <<PK>>
+  --
+    * stop_id          : BIGINT <<FK>>
+    * type             : ENUM('TRAFFIC', 'VEHICLE_FAILURE', 'CLIENT_ABSENT', 'OTHER')
+    description       : TEXT
+    reported_at       : DATETIME
+}
+
+' ==== Relationships ====
+route_sheets ||--o{ trip_stops
+trip_stops ||--o{ deliveries
+trip_stops ||--o{ incidents
+locations ||--o{ trip_stops
+
+@enduml

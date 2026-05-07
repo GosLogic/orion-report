@@ -1,0 +1,44 @@
+@startuml
+' Orion - Telemetry Service Physical ER Diagram (TimescaleDB)
+
+hide circle
+skinparam linetype ortho
+
+' ==== Time-Series Data (La Hypertable) ====
+entity vehicle_positions {
+  * time              : TIMESTAMPTZ <<PK>> ' Tiempo es el eje principal
+  * vehicle_id        : BIGINT      <<PK>>
+  --
+    latitude         : DOUBLE PRECISION
+    longitude        : DOUBLE PRECISION
+    speed_kmh        : DECIMAL(5,2)
+    heading          : INT           ' 0-359 grados (hacia dónde apunta el camión)
+    route_sheet_id   : BIGINT <<FK>> ' Opcional: vincula la posición a un viaje activo
+    is_mocked        : BOOLEAN       ' Flag para detectar GPS falso
+}
+
+' ==== Geofencing Metadata (Relational) ====
+entity geofences {
+  * id                : BIGINT <<PK>>
+  --
+    * tenant_id        : BIGINT
+    * name             : VARCHAR(100)
+    * center_latitude  : DOUBLE PRECISION
+    * center_longitude : DOUBLE PRECISION
+    * radius_meters    : DOUBLE PRECISION
+    is_active          : BOOLEAN
+}
+
+' ==== Tracking Events (Historial de alertas) ====
+entity geofence_alerts {
+  * id                : BIGINT <<PK>>
+  --
+    * vehicle_id       : BIGINT
+    * geofence_id      : BIGINT <<FK>>
+    * event_type       : ENUM('ENTER', 'EXIT')
+    * timestamp        : TIMESTAMPTZ
+}
+
+' ==== Relationships ====
+geofences ||--o{ geofence_alerts
+@enduml

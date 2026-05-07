@@ -1,0 +1,32 @@
+@startuml
+title Actividad: Gestión de Incidente y Mantenimiento Correctivo
+
+start
+:Conductor detecta falla (ej. ruido en motor);
+:Reportar Incidente (App Móvil);
+partition "Maintenance Service" {
+    :Registrar Maintenance Request;
+    :Asignar severidad (Baja/Media/Alta/Crítica);
+}
+partition "Fleet Service" {
+    if (¿Severidad es Crítica?) then (Sí)
+        :Cambiar estado de vehículo a "MAINTENANCE";
+        :Notificar a Dispatch para reasignar ruta;
+    else (No)
+        :Generar alerta informativa para el Gestor;
+    endif
+}
+partition "Gestor de Flota" {
+    :Revisar reporte en Dashboard;
+    :Autorizar ingreso a taller;
+}
+partition "Maintenance Service" {
+    :Registrar Service Record (Comentario general);
+    :Cerrar Maintenance Request;
+}
+partition "Fleet Service" {
+    :Restablecer estado a "AVAILABLE";
+}
+:Notificar a Gestor: Vehículo operativo;
+stop
+@enduml
