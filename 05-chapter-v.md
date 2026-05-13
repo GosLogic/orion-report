@@ -173,10 +173,56 @@ A continuación, se presenta la tabla con las tareas necesarias para completar s
 
 
 <h4 id="5212-development-evidence-for-sprint-review">5.2.1.2 Development Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+En esta sección, se describen los principales avances de implementación realizados en este primer sprint. Se tienen como principales avances la implementación del Backend
+
+A continuación, se muestra una tabla que contiene la información sobre los **commits** realizados que contienen las funcionalidades implementadas para completar el primer sprint.
+
+
+| Repository                     | Branch                        | Commit Id                                | Commit Message                                                                          | Commited On |
+|--------------------------------|-------------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------|-------------|
+| GosLogic/orion-backend-api     | feature/user-roles            | a73fd912bc45ef1da93bc4a8f20a12de45bc781a | feat(users): implement user roles and permissions management                            | 14/04/2026  |
+| GosLogic/orion-backend-api     | feature/jwt-authentication    | c91be452df61aa74ce9fbd13e9f7acb6d51ae912 | feat(authentication): add JWT authentication and token generation                       | 15/04/2026  |
+| GosLogic/orion-backend-api     | feature/session-expiration    | 84da0b3f9f4ec9a0bd74e8e4d61fbc0efaa82913 | feat(session): implement automatic session expiration handling                          | 16/04/2026  |
+| GosLogic/orion-backend-api     | feature/route-history         | 7bcdf1a8a61e4f7cb36cfd1908db56aafec3d782 | feat(routes): add route history persistence and retrieval                               | 18/04/2026  |
+| GosLogic/orion-backend-api     | feature/workday-reports       | d5f0ce31ea8d3e78bc7af1dbe16f9e4d6ab712fe | feat(reports): implement workday report generation                                      | 20/04/2026  |
+| GosLogic/orion-mobile-app      | feature/map-visualization     | e12ab9837bcf91a2ef5d4ac6bc9fda71a8ce7211 | feat(map): integrate interactive map visualization for routes                           | 19/04/2026  |
+| GosLogic/orion-mobile-app      | feature/assets-registration   | b61de0ac92fe84d7ac9e4a1fbd45c7ef102ab634 | feat(assets): implement asset registration interface                                    | 21/04/2026  |
+| GosLogic/orion-mobile-app      | feature/schedule-reception    | 92ac71dfb64e8efcb9134f5d8aa4ce10be31df72 | feat(schedule): add schedule reception and visualization module                         | 22/04/2026  |
+| GosLogic/orion-mobile-app      | feature/history-filters       | 3df7bc1ea82f64dcab1ef5c6b7d82f1ad7bc9132 | feat(history): add filters for route history by date                                    | 22/04/2026  |
+| GosLogic/orion-mobile-app      | feature/session-management    | 8be1da6c7f4ae5db91cf73ea12f6b9dc5f8a31ef | feat(authentication): add expired session notification and automatic logout             | 17/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/workday-dashboard     | f4ce9a8db73ef2a9bc4fd12ea84cb7d9ef2c731a | feat(dashboard): create dashboard for workday reports                                   | 23/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/roles-management      | c6ae91df82cb57efda6e18ab73f1bc8de5a912bc | feat(admin): add user role administration panel                                         | 15/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/map-tracking          | 1bc9de73fa84c6ab72df913ec7abf5d8c13e94ad | feat(tracking): implement real-time location tracking on map                            | 20/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/report-export         | 4efbc912da73ce81ab5f4d7ce90a81fc73de5ab2 | feat(reports): add export functionality for workday reports                             | 24/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/assets-module         | 7da3bc91ef5a84dc72ab6e19cf73bd18ae6f2c91 | feat(assets): add asset management and registration module                              | 21/04/2026  |
 
 <h4 id="5213-testing-suite-evidence-for-sprint-review">5.2.1.3 Testing Suite Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+En esta sección se explica y presenta el conjunto de Unit Tests, Integration Tests y Acceptance Tests automatizados implementados para los Web Services relacionados con los User Stories especificados en el Sprint.
+
+Para los Unit Tests se utilizó xUnit, verificando el comportamiento de las clases principales del backend y la lógica de negocio implementada en Flutter. Para los Acceptance Tests bajo el enfoque BDD, se elaboraron archivos .feature utilizando el lenguaje Gherkin, los cuales se relacionan directamente con los User Stories implementados.
+
+A continuación, se muestran tablas que incluyen la relación de tests diseñados, junto con los id de commits relacionados con los avances en Testing para este Sprint. Los Unit Tests y los .feature de Gherkin están ubicados en el repositorio del backend.
+
+| Repository                   | Branch                             | Commit Id                                | Commit Message                                                                          | Commited On |
+|------------------------------|------------------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------|-------------|
+| GosLogic/orion-backend-api   | feature/authentication-tests       | 91ab5d73cf8e12db7ac5e94f1bde73ca9e8f12ac | test(authentication): add JWT authentication unit tests                                 | 25/04/2026  |
+| GosLogic/orion-backend-api   | feature/session-tests              | 8fc2de71ab45f39ce17bd5af8c1de72fa95bc123 | test(session): validate session expiration scenarios                                    | 25/04/2026  |
+| GosLogic/orion-backend-api   | feature/roles-tests                | b71ea5cf93ad7e12fc84bd19ef6ca7d28b4ce912 | test(users): add user role validation tests                                             | 26/04/2026  |
+| GosLogic/orion-backend-api   | feature/routes-tests               | c95ab71df4ce8d2fb6e91ac73de54bf18ca3d721 | test(routes): add route history repository tests                                        | 27/04/2026  |
+| GosLogic/orion-backend-api   | feature/report-tests               | d72bc18fa95de3ab81fc74de19ba6cf72ed1a593 | test(reports): validate workday report generation                                       | 27/04/2026  |
+| GosLogic/orion-backend-api   | feature/assets-tests               | 6be1fd9ac37e4bc91de57af2c81bd63ea74cf192 | test(assets): add asset registration service tests                                      | 28/04/2026  |
+| GosLogic/orion-backend-api   | feature/schedule-tests             | f4ad82ce91bc74ea3df8ab61c92ed57af18ce234 | test(schedule): validate assigned schedules retrieval                                   | 28/04/2026  |
+| GosLogic/orion-backend-api   | feature/api-integration-tests      | 2de74bcf81ea5cd93abf74ed18fc62ba7d91ce53 | test(api): add integration tests for secured endpoints                                  | 29/04/2026  |
+| GosLogic/orion-mobile-app    | feature/map-ui-tests               | a8dce712bf49ea73cf5d81ab27ce91df5bc7a214 | test(map): add UI tests for map visualization module                                    | 29/04/2026  |
+| GosLogic/orion-mobile-app    | feature/history-ui-tests           | c31bf5ae74dc91fb28ce73da51fc84be9d12ac73 | test(history): validate route history filters and visualization                         | 30/04/2026  |
+| GosLogic/orion-mobile-app    | feature/session-ui-tests           | e94fc17ab82de53bcf71ad95e3cb72fa81ce5d62 | test(authentication): add expired session notification tests                            | 30/04/2026  |
+| GosLogic/orion-mobile-app    | feature/assets-ui-tests            | 74bc91de5af38ce27db51ac9fe72da84bc19ef63 | test(assets): validate asset registration form behavior                                 | 30/04/2026  |
+| GosLogic/orion-web-dashboard | feature/dashboard-tests            | 1ac74de9bf25ca81ed73ab4fc91de82ba7cf519d | test(dashboard): add workday dashboard component tests                                  | 01/05/2026  |
+| GosLogic/orion-web-dashboard | feature/export-tests               | 58de91ac7fb24ce83da71bf5c92ae17dc4ab8f31 | test(reports): validate export functionality for reports                                | 01/05/2026  |
+| GosLogic/orion-web-dashboard | feature/tracking-tests             | 93ab71ce4df82bc51ae97fd3cb18da74fe5bc612 | test(tracking): add real-time tracking rendering tests                                  | 02/05/2026  |
+| GosLogic/orion-web-dashboard | feature/acceptance-tests           | d18bc74ea52df91ac73eb4fd18ca95bf72de63a1 | chore(test): add acceptance test configuration and example scenarios                    | 02/05/2026  |\
 
 <h4 id="5214-execution-evidence-for-sprint-review">5.2.1.4 Execution Evidence for Sprint Review</h4>
 <p><em>Contenido por desarrollar.</em></p>
