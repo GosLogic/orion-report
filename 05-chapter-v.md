@@ -93,18 +93,19 @@
 
 <h4 id="5223-official-links">Enlaces oficiales del proyecto</h4>
 <p>A continuación detallamos el acceso a nuestro espacio de trabajo centralizado. Mientras los repositorios se mantengan privados por políticas académicas y de protección de código, se garantiza que los miembros del jurado y docentes cuentan con el alcance de acceso necesario para auditar la evidencia de commits adjunta en este informe.</p>
-<table>
+<p>El presente informe y sus capítulos en Markdown se versionan en el repositorio <a href="https://github.com/GosLogic/orion-report">https://github.com/GosLogic/orion-report</a>. La landing pública del producto se encuentra en <a href="https://github.com/GosLogic/orion-landing-page">https://github.com/GosLogic/orion-landing-page</a>.</p>
+<table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem;">
 <thead>
-<tr><th>Componente / Módulo</th><th>Enlace del repositorio (GitHub)</th></tr>
+<tr><th style="padding: 0.5rem;">Componente / Módulo</th><th style="padding: 0.5rem;">Enlace del repositorio (GitHub)</th></tr>
 </thead>
 <tbody>
-<tr><td>Organización general (Orion)</td><td>[Insertar enlace de la organización de GitHub aquí]</td></tr>
-<tr><td>IAM Service (Backend)</td><td>[Insertar enlace del repo aquí]</td></tr>
-<tr><td>Fleet Service (Backend)</td><td>[Insertar enlace del repo aquí]</td></tr>
-<tr><td>Dispatch Service (Backend)</td><td>[Insertar enlace del repo aquí]</td></tr>
-<tr><td>Telemetry Service (Backend)</td><td>[Insertar enlace del repo aquí]</td></tr>
-<tr><td>Mobile App (Flutter)</td><td>[Insertar enlace del repo aquí]</td></tr>
-<tr><td>FleetManager SPA (Web)</td><td>[Insertar enlace del repo aquí]</td></tr>
+<tr><td style="padding: 0.5rem;">Organización general (Orion)</td><td style="padding: 0.5rem;"><a href="https://github.com/GosLogic">https://github.com/GosLogic</a></td></tr>
+<tr><td style="padding: 0.5rem;">IAM Service (Backend)</td><td style="padding: 0.5rem;"><a href="https://github.com/GosLogic/orion-backend">https://github.com/GosLogic/orion-backend</a></td></tr>
+<tr><td style="padding: 0.5rem;">Fleet Service (Backend)</td><td style="padding: 0.5rem;"><a href="https://github.com/GosLogic/orion-backend">https://github.com/GosLogic/orion-backend</a></td></tr>
+<tr><td style="padding: 0.5rem;">Dispatch Service (Backend)</td><td style="padding: 0.5rem;"><a href="https://github.com/GosLogic/orion-backend">https://github.com/GosLogic/orion-backend</a></td></tr>
+<tr><td style="padding: 0.5rem;">Telemetry Service (Backend)</td><td style="padding: 0.5rem;"><a href="https://github.com/GosLogic/orion-backend">https://github.com/GosLogic/orion-backend</a></td></tr>
+<tr><td style="padding: 0.5rem;">Mobile App (Flutter)</td><td style="padding: 0.5rem;"><a href="https://github.com/GosLogic/orion-mobile-app">https://github.com/GosLogic/orion-mobile-app</a></td></tr>
+<tr><td style="padding: 0.5rem;">FleetManager SPA (Web)</td><td style="padding: 0.5rem;"><a href="https://github.com/GosLogic/orion-web-portal">https://github.com/GosLogic/orion-web-portal</a></td></tr>
 </tbody>
 </table>
 
@@ -257,7 +258,25 @@ Durante el desarrollo de este sprint no se realizaron actividades relacionadas c
 
 <h4 id="5217-team-collaboration-insights-during-sprint">5.2.1.7 Team Collaboration Insights during Sprint</h4>
 
+Durante el Sprint 1 hemos adoptado de forma deliberada un enfoque de **monolito modular** dentro de un **repositorio unificado**, como decisión técnica de transición hacia la arquitectura objetivo de Orion. Esta elección nos permitió acelerar la puesta en marcha del núcleo de seguridad (IAM), la propagación consistente del **TenantId** y los flujos transversales de autenticación, sin asumir de inicio la complejidad operativa de orquestar múltiples contenedores, pipelines y contratos distribuidos entre servicios aún inestables. Así redujimos el riesgo de retrabajo y concentramos el esfuerzo en invariantes de dominio y calidad (aislamiento lógico, validación de tokens, políticas de acceso) que serán portables cuando escindamos límites de despliegue. La **separación física** hacia una arquitectura **puramente basada en microservicios** quedó **planificada para el Sprint siguiente**, una vez consolidados los cimientos del código y las interfaces internas que hoy conviven modularizadas en el mismo artefacto ejecutable.
 
+En cuanto a la dinámica colaborativa, el equipo participó de manera activa en la implementación: repartimos el trabajo mediante nuestro **tablero Kanban** (priorización, límite de trabajo en curso y visibilidad del estado de cada ítem) y convergimos el código en la rama **`develop`** de **GitHub** mediante **Pull Requests** abiertos, revisados y aprobados por pares antes de integrarse. Este flujo fomentó la alineación técnica, la detección temprana de defectos y la trazabilidad de decisiones (comentarios, checks y historial de cambios), coherente con una cultura de inspección continua propia de un equipo que combina rigor de arquitectura con disciplina Scrum.
+
+<p align="center">
+  <img src="assets/chapter-v/GITHUB_INSIGHTS.png"
+    alt="GitHub Insights del repositorio Orion (Sprint 1)"
+    style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Figura: GitHub Insights (contribuciones y actividad del repositorio durante el Sprint 1).</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-v/COMMITS_DEL_EQUIPO.png"
+    alt="Gráfica de commits del equipo en GitHub"
+    style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Figura: Historial y distribución de commits del equipo en la rama de integración.</em>
+</p>
 
 <h4 id="5218-kanban-board">5.2.1.8 Kanban Board</h4>
 
