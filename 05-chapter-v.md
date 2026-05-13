@@ -226,10 +226,27 @@ A continuación, se muestran tablas que incluyen la relación de tests diseñado
 
 <h4 id="5214-execution-evidence-for-sprint-review">5.2.1.4 Execution Evidence for Sprint Review</h4>
 
-En esta sección, se presenta la evidencia de ejecución de los productos implementados en este sprint. Los logros incluyen el desarrollo y despliegue del Landing Page y la aplicación nativa para Android
+En esta sección, se presenta la evidencia de ejecución de los productos implementados en este sprint. Los logros incluyen el desarrollo y despliegue del Landing Page y la aplicación web.
 
 A continuación, se muestran las capturas de pantalla y enlaces de acceso a cada producto implementado. Estas evidencias reflejan el progreso realizado en el sprint y sirven como comprobante del trabajo completado.
 
+Landing Page <br>
+
+Link: https://github.com/GosLogic/orion-landing-page
+
+<p align="center">
+  <img src="https://i.imgur.com/Y0tEeHD.png" 
+  alt="sprint_backlog_1"/>
+</p>
+
+Web Application <br>
+
+Link: https://github.com/GosLogic/orion-web-portal
+
+<p align="center">
+  <img src="https://i.imgur.com/0HCr0z1.png" 
+  alt="sprint_backlog_1"/>
+</p>
 
 <h4 id="5215-microservices-documentation-evidence-for-sprint-review">5.2.1.5 Microservices Documentation Evidence for Sprint Review</h4>
 Durante el desarrollo de este sprint no se realizaron actividades relacionadas con la implementación o documentación de microservicios, debido a que el alcance del sprint estuvo enfocado en funcionalidades de autenticación, gestión de usuarios, visualización de rutas y reportes del sistema.
@@ -244,7 +261,16 @@ Durante el desarrollo de este sprint no se realizaron actividades relacionadas c
 
 <h4 id="5218-kanban-board">5.2.1.8 Kanban Board</h4>
 
+Durante el Sprint 1 se utilizó un Kanban Board en Trello para organizar y monitorear las actividades relacionadas con el desarrollo de las funcionalidades principales del sistema Orion. El tablero permitió visualizar el progreso de las tareas mediante columnas como To Do, In Progress, To Review y Done, facilitando el seguimiento continuo del avance del equipo.
 
+Las tareas fueron organizadas de acuerdo con las user stories definidas para el sprint, incluyendo funcionalidades como gestión de usuarios y roles, autenticación JWT, expiración de sesión, visualización de rutas en mapa, historial de rutas, registro de activos, recepción de horarios y generación de reportes de jornada. Asimismo, se incluyeron actividades relacionadas con testing, integración de APIs, validaciones de seguridad, configuración de endpoints y actualización de evidencias técnicas y documentación del proyect
+
+Link del kanboard: https://trello.com/invite/b/69fe7cf4bc5c526cc5863c3e/ATTIb39ebbace93d6e6d898771ab5d5213121563F916/sprint-backlog-1-fundamentos-de-arquitectura
+
+<p align="center">
+  <img src="https://i.imgur.com/KgYONeN.png" 
+  alt="sprint_backlog_1"/>
+</p>
 
 <h3 id="522-sprint-2">5.2.2 Sprint 2</h3>
 <p><em>Contenido por desarrollar.</em></p>
