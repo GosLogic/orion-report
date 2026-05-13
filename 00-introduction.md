@@ -102,6 +102,12 @@
       <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
       <td style="padding: 0.5rem;">Completado hasta el Capítulo IV: Product Architecture Design y realizadas correciones al Capitulo I: Lean UX Process y Capitulo III: Impact Map y Product Backlog.</td>
     </tr>
+    <tr>
+      <td style="padding: 0.5rem;">TP1</td>
+      <td style="padding: 0.5rem;">12/05/2026</td>
+      <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
+      <td style="padding: 0.5rem;">Entrega del Capítulo V (Product Implementation, Validation &amp; Deployment): evidencias de testing suites y patrones backend, gestión de configuración de software, implementación de microservicios (Sprint 1, backlog, evidencias de testing, ejecución, documentación y despliegue), tablero Kanban e insights de colaboración en sprint, según responsabilidades por integrante.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -267,6 +273,13 @@ El curso contribuye al cumplimiento del **Student Outcome ABET**:
         <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Design Patterns<br>· Relational/Non Relational Database Diagram<br>· Architectural Concerns<br>· ADD Iteration 1<br>· Context Diagram<br><br>
         <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Corrección Impact Map<br>· Corrección Product Backlog<br>· Quality Attribute Scenarios<br>· Constraints<br><br>
         <strong>Solano Armas, Angelo Hector:</strong><br>· Context Diagram<br>· Approach Driven ViewPoints Diagrams<br>· Relational/Non Relational Database Diagram<br>· Design Patterns
+        <br><br>
+        <strong>TP1</strong><br><br>
+        <strong>Cossar Sánchez, Eduardo José:</strong><br>· Testing Suites &amp; General Patterns<br>· Backend Application Core Testing Suite<br>· Kanban Board<br>· Team Collaboration Insights during Sprint<br><br>
+        <strong>Gonzales Castillo, Angel Martin:</strong><br>· Software Deployment Evidence for Sprint Review<br>· Microservices Documentation Evidence for Sprint Review<br>· Execution Evidence for Sprint Review<br>· Testing Suite Evidence for Sprint Review<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Pattern Based Backend Application(s)<br>· Framework Pattern Driven Refactoring Report<br>· Software Deployment Configuration<br><br>
+        <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Microservices Implementation<br>· Testing Suite Evidence for Sprint Review<br>· Sprint Backlog 1<br>· Kanban Board<br><br>
+        <strong>Solano Armas, Angelo Hector:</strong><br>· Software Configuration Management<br>· Source Code Style Guide &amp; Conventions<br>· Software Development Environment Configuration
       </td>
       <td style="padding: 0.5rem; vertical-align: top;">
 <strong>TB1</strong><br><br>
@@ -274,6 +287,9 @@ Durante el TB1, el equipo actualizó y aplicó conocimientos de Lean UX, anális
 <br><br>
 <strong>TB2</strong><br><br>
 Durante el TB2, el equipo actualizó y aplicó conocimientos en diseño arquitectónico, atributos de calidad y modelado de soluciones en el desarrollo del proyecto Orion. Actividades como la corrección del Impact Map, Product Backlog y el proceso Lean UX, junto con la elaboración de artefactos como Design Purpose, diagramas, patrones y las iteraciones ADD, permitieron transformar conceptos teóricos en entregables estructurados, evidenciando un dominio progresivo y una aplicación adecuada de los fundamentos de ingeniería de software.
+<br><br>
+<strong>TP1</strong><br><br>
+En el TP1, el equipo aplicó conocimientos de implementación, pruebas, gestión de configuración y despliegue sobre la arquitectura definida para Orion. Las evidencias del Sprint 1 (backlog, testing, ejecución, documentación y despliegue de microservicios), junto con tablero Kanban y reflexión de colaboración, muestran la traducción del diseño en software verificable y operativo.
 </td>
     </tr>
     <tr>
@@ -292,12 +308,23 @@ Durante el TB2, el equipo actualizó y aplicó conocimientos en diseño arquitec
         <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Design Patterns<br>· Relational/Non Relational Database Diagram<br>· Architectural Concerns<br>· ADD Iteration 1<br>· Context Diagram<br><br>
         <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Corrección Impact Map<br>· Corrección Product Backlog<br>· Quality Attribute Scenarios<br>· Constraints<br><br>
         <strong>Solano Armas, Angelo Hector:</strong><br>· Context Diagram<br>· Approach Driven ViewPoints Diagrams<br>· Relational/Non Relational Database Diagram<br>· Design Patterns
+        <br><br>
+        <strong>TP1</strong><br><br>
+        <strong>Cossar Sánchez, Eduardo José:</strong><br>· Testing Suites &amp; General Patterns<br>· Backend Application Core Testing Suite<br>· Kanban Board<br>· Team Collaboration Insights during Sprint<br><br>
+        <strong>Gonzales Castillo, Angel Martin:</strong><br>· Software Deployment Evidence for Sprint Review<br>· Microservices Documentation Evidence for Sprint Review<br>· Execution Evidence for Sprint Review<br>· Testing Suite Evidence for Sprint Review<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Pattern Based Backend Application(s)<br>· Framework Pattern Driven Refactoring Report<br>· Software Deployment Configuration<br><br>
+        <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Microservices Implementation<br>· Testing Suite Evidence for Sprint Review<br>· Sprint Backlog 1<br>· Kanban Board<br><br>
+        <strong>Solano Armas, Angelo Hector:</strong><br>· Software Configuration Management<br>· Source Code Style Guide &amp; Conventions<br>· Software Development Environment Configuration
+      </td>
       <td style="padding: 0.5rem; vertical-align: top;">
         <strong>TB1</strong><br><br>
           El trabajo colaborativo del TB1 evidenció una práctica constante de aprendizaje continuo, ya que el equipo investigó, adaptó y aplicó nuevas estrategias según las necesidades del proyecto. La mejora iterativa en             artefactos como User Stories, escenarios AS-IS/TO-BE e Impact Map demostró la capacidad de autoformación y actualización permanente para el desempeño profesional.
             <br><br>
         <strong>TB2</strong><br><br>
           Durante el TB2, el equipo reafirmó la necesidad del aprendizaje permanente mediante la profundización en temas de diseño arquitectónico, atributos de calidad y patrones de software. La aplicación de metodologías           como ADD, junto con la elaboración de diversos artefactos técnicos, permitió consolidar conocimientos más avanzados, evidenciando una evolución continua en su preparación profesional y en el desarrollo de                   soluciones de ingeniería de software.
+        <br><br>
+        <strong>TP1</strong><br><br>
+        El TP1 requirió aprender sobre la marcha herramientas y prácticas de integración continua, pruebas automatizadas, convenciones de código y despliegue de microservicios. La iteración en sprint y el uso del Kanban refuerzan el aprendizaje permanente como hábito de equipo para entregar valor de forma sostenida en Orion.
       </td>
     </tr>
   </tbody>

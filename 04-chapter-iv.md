@@ -80,13 +80,26 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
   alt="Context Diagram " style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
 </p>
 
+<p>El diagrama de contenedores (C4 nivel 2) y los diagramas de componentes por servicio (C4 nivel 3), junto con diagramas de actividad y de estado, se agrupan en la <a href="#414-approach-driven-viewpoints-diagrams">sección 4.1.4</a>.</p>
+
 <h3 id="414-approach-driven-viewpoints-diagrams">4.1.4 Approach driven ViewPoints Diagrams</h3>
 
-Para complementar la visión estática de la arquitectura, se han elaborado diagramas de comportamiento que detallan la dinámica operativa de Orion.
+<p>Esta sección agrupa las vistas estáticas del modelo <strong>C4</strong> (contexto, contenedores y componentes por servicio) junto con diagramas UML complementarios de actividad y de estado que detallan la dinámica operativa de Orion.</p>
 
-### Diagramas Complementarios de la Arquitectura
+### Diagramas complementarios de la arquitectura
 
-#### 1. Diagrama de Contenedores
+#### 1. Context Diagram (C4 nivel 1)
+
+<p align="center">
+  <img src="assets/chapter-iv/c4-I/context.png"
+  alt="Context Diagram de Orion" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Context Diagram: sistema Orion y sus actores e integraciones externas.</em>
+</p>
+
+---
+
+#### 2. Diagrama de Contenedores (C4 nivel 2)
 
 <div align="center">
   <img 
@@ -95,13 +108,72 @@ Para complementar la visión estática de la arquitectura, se han elaborado diag
     style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"
   />
   <br/>
-  <em>Diagrama de Contenedores de la plataforma Orion.<br />
-  </em>
+  <em>Diagrama de Contenedores de la plataforma Orion.</em>
 </div>
 
 ---
 
-#### 2. Diagramas de Actividades
+#### 3. Diagramas de componentes (C4 nivel 3)
+
+<p>Desglose interno de los principales contenedores backend en componentes lógicos (interfaces, aplicación, dominio, infraestructura e integraciones). Cada figura corresponde a un microservicio del perímetro Orion.</p>
+
+<h5 id="414-c4-iam-component">IAMService (Identity &amp; Access Management)</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/iam-component.png"
+    alt="IAMService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — IAMService.</em>
+</p>
+
+<h5 id="414-c4-telemetry-component">TelemetryService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/telemetry-component.png"
+    alt="TelemetryService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — TelemetryService.</em>
+</p>
+
+<h5 id="414-c4-fleet-component">FleetService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/fleet-component.png"
+    alt="FleetService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — FleetService.</em>
+</p>
+
+<h5 id="414-c4-dispatch-component">DispatchService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/dispatch-component.png"
+    alt="DispatchService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — DispatchService.</em>
+</p>
+
+<h5 id="414-c4-maintenance-component">MaintenanceService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/maintenance-component.png"
+    alt="MaintenanceService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — MaintenanceService.</em>
+</p>
+
+<h5 id="414-c4-notification-component">NotificationService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/notification-component.png"
+    alt="NotificationService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — NotificationService.</em>
+</p>
+
+---
+
+#### 4. Diagramas de Actividades
 
 <ul>
   <li>
@@ -135,7 +207,7 @@ Para complementar la visión estática de la arquitectura, se han elaborado diag
 
 ---
 
-#### 3. Diagramas de Estado
+#### 5. Diagramas de Estado
 
 <ul>
   <li>
