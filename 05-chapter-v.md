@@ -284,10 +284,10 @@ Durante el Sprint 1 se utilizó un Kanban Board en Trello para organizar y monit
 
 Las tareas fueron organizadas de acuerdo con las user stories definidas para el sprint, incluyendo funcionalidades como gestión de usuarios y roles, autenticación JWT, expiración de sesión, visualización de rutas en mapa, historial de rutas, registro de activos, recepción de horarios y generación de reportes de jornada. Asimismo, se incluyeron actividades relacionadas con testing, integración de APIs, validaciones de seguridad, configuración de endpoints y actualización de evidencias técnicas y documentación del proyect
 
-Link del kanboard: https://trello.com/invite/b/69fe7cf4bc5c526cc5863c3e/ATTIb39ebbace93d6e6d898771ab5d5213121563F916/sprint-backlog-1-fundamentos-de-arquitectura
+Link del kanboard: https://trello.com/invite/b/6a03fab82d0765a96ee66257/ATTI5e21adea2ae8e7375a552fdd68945d79F3376522/kanban-board
 
 <p align="center">
-  <img src="https://i.imgur.com/KgYONeN.png" 
+  <img src="https://i.imgur.com/J9bF9nv.png" 
   alt="sprint_backlog_1"/>
 </p>
 
