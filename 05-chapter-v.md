@@ -225,19 +225,26 @@ A continuación, se muestran tablas que incluyen la relación de tests diseñado
 | GosLogic/orion-web-dashboard | feature/acceptance-tests           | d18bc74ea52df91ac73eb4fd18ca95bf72de63a1 | chore(test): add acceptance test configuration and example scenarios                    | 02/05/2026  |\
 
 <h4 id="5214-execution-evidence-for-sprint-review">5.2.1.4 Execution Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+En esta sección, se presenta la evidencia de ejecución de los productos implementados en este sprint. Los logros incluyen el desarrollo y despliegue del Landing Page y la aplicación nativa para Android
+
+A continuación, se muestran las capturas de pantalla y enlaces de acceso a cada producto implementado. Estas evidencias reflejan el progreso realizado en el sprint y sirven como comprobante del trabajo completado.
+
 
 <h4 id="5215-microservices-documentation-evidence-for-sprint-review">5.2.1.5 Microservices Documentation Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+Durante el desarrollo de este sprint no se realizaron actividades relacionadas con la implementación o documentación de microservicios, debido a que el alcance del sprint estuvo enfocado en funcionalidades de autenticación, gestión de usuarios, visualización de rutas y reportes del sistema.
 
 <h4 id="5216-software-deployment-evidence-for-sprint-review">5.2.1.6 Software Deployment Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+
 
 <h4 id="5217-team-collaboration-insights-during-sprint">5.2.1.7 Team Collaboration Insights during Sprint</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+
 
 <h4 id="5218-kanban-board">5.2.1.8 Kanban Board</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+
 
 <h3 id="522-sprint-2">5.2.2 Sprint 2</h3>
 <p><em>Contenido por desarrollar.</em></p>
