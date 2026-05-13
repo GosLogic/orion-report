@@ -18,25 +18,26 @@ A largo plazo, la visión de GosLogic es convertirse en un aliado estratégico p
 
 <table border="1">
   <tr>
-      <td style="text-align:center;"><img alt="Angelo Solano" src="assets/chapter-i/FotoAngelo.png" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Angelo Solano" src="assets/chapter-i/FotoAngelo.png"  /></td>
       <td><strong>Angelo Solano - u20231B775</strong><br>Mi nombre es Angelo Solano, soy estudiante de Ingeniería de Software en la UPC. Me apasiona la tecnología y todo lo relacionado con el desarrollo de software. Me gusta enfrentarme a desafíos complejos y encontrar soluciones creativas. Estoy en constante aprendizaje, siempre buscando mejorar mis habilidades en programación y análisis de sistemas. Me considero una persona comprometida con mis proyectos y con ganas de crecer tanto profesionalmente como personalmente. Disfruto trabajar en equipo y siempre trato de aportar lo mejor de mí en todo lo que hago.</td>
   </tr>
   <tr>
-      <td style="text-align:center;"><img alt="Sergio Iglesias " src="assets/chapter-i/FotoSergio.png" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Sergio Iglesias " src="assets/chapter-i/FotoSergio.png" /></td>
       <td><strong>Sergio Iglesias - u202316118</strong><br>Mi nombre es Sergio Iglesias, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Soy una persona proactiva, creativa y con gran pasión por la tecnología. Me destaco por mi capacidad de resolver problemas de manera eficiente y mi habilidad para trabajar colaborativamente en proyectos complejos. Estoy comprometido con el aprendizaje continuo y siempre busco aplicar las mejores prácticas en el desarrollo de software. Mi objetivo es contribuir significativamente al éxito de este proyecto y crecer profesionalmente en el campo de la ingeniería de software.</td>
   </tr>
   <tr>
-      <td style="text-align:center;"><img alt="Martin Gonzales " src="assets/chapter-i/Foto_Martin.jpeg" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Martin Gonzales " src="assets/chapter-i/Foto_Martin.jpeg" /></td>
       <td><strong>Martin Gonzales - u202319724</strong><br>Mi nombre es Martin Gonzales, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Me caracterizo por mi interés en la programación, la tecnología y el aprendizaje continuo. Tengo una actitud analítica y organizada, lo que me permite desarrollar proyectos académicos y prácticos con dedicación, buscando siempre aplicar los conocimientos adquiridos de manera efectiva.</td>
   </tr>
     <tr>
-      <td style="text-align:center;"><img alt="Eduardo Cossar " src="assets/chapter-i/FotoEduardo.png" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Eduardo Cossar " src="assets/chapter-i/FotoEduardo.png" /></td>
       <td><strong>Eduardo Cossar - u202312109</strong><br>Mi nombre es Eduardo Cossar. Soy estudiante de la carrera de Ingeniería de Software, tengo 20 años y actualmente estoy cursando el septimo ciclo en la UPC. Me considero una persona responsable y comprometida con un gran interés por la tecnología. Como integrante de este equipo, me comprometo a brindar todo mi apoyo y participación activa para afrontar los desafíos que se presenten y dar lo mejor de mí para lograr el éxito de este proyecto.</td>
   </tr>
-
   <tr>
-      <td style="text-align:center;"><img alt="Maria Fernanda Mostajo " src="assets/chapter-i/FotoMariaFernanda.png" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Maria Fernanda Mostajo " src="assets/chapter-i/FotoMariaFernanda.png" /></td>
       <td><strong>Maria Fernanda Mostajo - u202312874</strong><br>Mi nombre es Maria Fernanda Mostajo, estoy estudiando la carrera de Ingeniería de Software en la UPC, tengo conocimientos en los lenguajes de programación C++, Python, HTML, CSS, JavaScript y SQL. Además, cuento con habilidades de trabajo en equipo, el cual me permitira realizar un buen trabajo y cumplir con los objetivos planteados en el tiempo establecido.
+    </td>
+  </tr>
 </table>
 
 <h2 id="12-solution-profile">1.2 Solution Profile</h2>
@@ -44,7 +45,7 @@ A largo plazo, la visión de GosLogic es convertirse en un aliado estratégico p
 
 <h3 id="121-nombre-del-producto">1.2.1 Nombre del producto</h3>
 
-<p>El producto de software que desarrollaremos como startup es <strong>Orion</strong></p>
+<p>El producto de software que desarrollaremos como startup es <strong>Orion</strong>. Orion es una plataforma SaaS (Software as a Service) multi-tenant orientada a la gestión logística y monitoreo de flotas en tiempo real, desarrollada bajo una arquitectura de microservicios y principios de Domain-Driven Design (DDD)</p>
 
 <h3 id="122-antecedentes-y-problemática">1.2.2 Antecedentes y problemática</h3>
 

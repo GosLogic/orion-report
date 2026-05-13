@@ -1,5 +1,12 @@
 <h1 id="links">Links</h1>
 
+<h2 id="trello">Trello</h2>
+
+- **Product Backlog (Capítulo III — Goslogic):** https://trello.com/invite/b/69f432bbe4fbd84d7926aa2c/ATTI61d4b7dffe97b1c335c47c6925e0e96d7AC04AE7/goslogic
+- **Architectural Design Backlog (Capítulo IV):** https://trello.com/invite/b/69f56589e0cac55f7b1a3608/ATTI3155f3901eeb23694ea9a16fa5d2a589076C55C5/architectural-design-backlog-1-goslogic
+
+<h2 id="entrevistas">Entrevistas</h2>
+
 - **Entrevista 1:** https://youtu.be/kXKhMsL1lxE
 - **Entrevista 2:** https://youtu.be/wGiuLdgBVDE
 - **Entrevista 3:** https://www.youtube.com/watch?v=_6LfNBTjb6s

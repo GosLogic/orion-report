@@ -560,11 +560,9 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
 
 <h2 id="4112-architectural-concerns">4.1.12 Architectural Concerns</h2>
 
-Según la teoría que sistematiza el Software Engineering Institute (SEI), una **architectural concern** (*preocupación arquitectónica*) es un interés del arquitecto con **alto impacto** en la forma del sistema: el **primer lugar** en el que el **problema** (requisitos, contexto, restricciones) y la **solución** (abstracciones arquitectónicas, estilos, descomposición en contenedores) se articulan de manera explícita. No se trata de un comentario accesorio, sino del eje donde decidimos **qué** tensiona el diseño y **cómo** lo abordamos.
+<p>Para el SEI, una <em>architectural concern</em> (preocupación arquitectónica) es un tema que condiciona de forma directa la forma del sistema: enlaza requisitos, contexto y restricciones con decisiones de diseño (vistas, estilos, contenedores). En Orion, las vistas, las tácticas y la asignación de responsabilidades a contenedores son la respuesta explícita a cada preocupación que identificamos.</p>
 
-En nuestro trabajo hemos incorporado esas preocupaciones **dentro del diseño de la arquitectura**: cada decisión documentada en vistas, tácticas y asignación de responsabilidades a contenedores constituye la respuesta deliberada a una preocupación reconocida.
-
-Un **riesgo** surge cuando **aceptamos formalmente** convivir con una preocupación que, de materializarse sin contramedida, tendría **impacto negativo** en metas y requisitos (p. ej. confianza del cliente, continuidad del servicio o costo operativo). El diseño no borra el riesgo: lo **explicita** y le asocia **mitigaciones** arquitectónicas que podemos inspeccionar y verificar.
+<p>Un <strong>riesgo</strong> es la posibilidad de que una preocupación se materialice y perjudique objetivos o requisitos (por ejemplo, confianza del cliente, disponibilidad o coste operativo) si no hay contramedida. El diseño no elimina el riesgo: lo deja documentado y asocia mitigaciones que el equipo puede revisar y verificar.</p>
 
 <table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem; margin-bottom: 1rem;">
   <thead>
@@ -797,7 +795,81 @@ A cada elemento instanciado se le ha asignado una responsabilidad cohesionada y 
 </table>
 
 <h4 id="4316-sketch-views-c4--uml-and-record-design-decisions">4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+Diseño inicial de la arquitectura de Orion:
+<p align="center">
+  <img src="assets/chapter-iv/c4-I/context.png"
+  alt="Context Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Context Diagram de la arquitectura de Orion.<br />
+  </em>
+</p>
+
+Diagrama de contenedores:
+<p align="center">
+  <img src="assets/chapter-iv/c4-I/containers.png"
+  alt="Containers Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Containers Diagram de la arquitectura de Orion.<br />
+  </em>
+</p>
+
+Diagramas de componentes:
+
+<h5 id="iam-component">IAMService (Identity & Access Management)</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/iam-component.png"
+    alt="IAMService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="telemetry-component">TelemetryService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/telemetry-component.png"
+    alt="TelemetryService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="fleet-component">FleetService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/fleet-component.png"
+    alt="FleetService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="dispatch-component">DispatchService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/dispatch-component.png"
+    alt="DispatchService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="maintenance-component">MaintenanceService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/maintenance-component.png"
+    alt="MaintenanceService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
+<h5 id="notification-component">NotificationService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/notification-component.png"
+    alt="NotificationService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em></em>
+</p>
+
 
 <h4 id="4317-analysis-of-current-design-and-review-iteration-goal-kanban-board">4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)</h4>
 
@@ -841,4 +913,12 @@ A cada elemento instanciado se le ha asignado una responsabilidad cohesionada y 
 
 <p>Para preservar la trazabilidad entre el modelo arquitectónico y la ejecución operativa, hemos actualizado en el tablero ágil del equipo las historias de usuario asociadas y los refinamientos pendientes. De este modo, el seguimiento de las tareas de diseño de esta y las futuras iteraciones se gestiona de forma transparente.</p>
 
-<p><strong>[INSERTAR AQUÍ ENLACE / CAPTURA DEL KANBAN BOARD (TRELLO/JIRA/GITHUB PROJECTS)]</strong></p>
+Enlace de trello: https://trello.com/invite/b/69f56589e0cac55f7b1a3608/ATTI3155f3901eeb23694ea9a16fa5d2a589076C55C5/architectural-design-backlog-1-goslogic
+
+<p align="center">
+    <img 
+      src="assets/chapter-iv/Kanban%20Board.png" 
+      alt="Kanban-Board" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+</p>
