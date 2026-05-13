@@ -102,6 +102,12 @@
       <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
       <td style="padding: 0.5rem;">Completado hasta el Capítulo IV: Product Architecture Design y realizadas correciones al Capitulo I: Lean UX Process y Capitulo III: Impact Map y Product Backlog.</td>
     </tr>
+    <tr>
+      <td style="padding: 0.5rem;">TP1</td>
+      <td style="padding: 0.5rem;">12/05/2026</td>
+      <td style="padding: 0.5rem;">Todos los integrantes del grupo aportaron</td>
+      <td style="padding: 0.5rem;">Entrega del Capítulo V (Product Implementation, Validation &amp; Deployment): evidencias de testing suites y patrones backend, gestión de configuración de software, implementación de microservicios (Sprint 1, backlog, evidencias de testing, ejecución, documentación y despliegue), tablero Kanban e insights de colaboración en sprint, según responsabilidades por integrante.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -267,6 +273,13 @@ El curso contribuye al cumplimiento del **Student Outcome ABET**:
         <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Design Patterns<br>· Relational/Non Relational Database Diagram<br>· Architectural Concerns<br>· ADD Iteration 1<br>· Context Diagram<br><br>
         <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Corrección Impact Map<br>· Corrección Product Backlog<br>· Quality Attribute Scenarios<br>· Constraints<br><br>
         <strong>Solano Armas, Angelo Hector:</strong><br>· Context Diagram<br>· Approach Driven ViewPoints Diagrams<br>· Relational/Non Relational Database Diagram<br>· Design Patterns
+        <br><br>
+        <strong>TP1</strong><br><br>
+        <strong>Cossar Sánchez, Eduardo José:</strong><br>· Testing Suites &amp; General Patterns<br>· Backend Application Core Testing Suite<br>· Kanban Board<br>· Team Collaboration Insights during Sprint<br><br>
+        <strong>Gonzales Castillo, Angel Martin:</strong><br>· Software Deployment Evidence for Sprint Review<br>· Microservices Documentation Evidence for Sprint Review<br>· Execution Evidence for Sprint Review<br>· Testing Suite Evidence for Sprint Review<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Pattern Based Backend Application(s)<br>· Framework Pattern Driven Refactoring Report<br>· Software Deployment Configuration<br><br>
+        <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Microservices Implementation<br>· Testing Suite Evidence for Sprint Review<br>· Sprint Backlog 1<br>· Kanban Board<br><br>
+        <strong>Solano Armas, Angelo Hector:</strong><br>· Software Configuration Management<br>· Source Code Style Guide &amp; Conventions<br>· Software Development Environment Configuration
       </td>
       <td style="padding: 0.5rem; vertical-align: top;">
 <strong>TB1</strong><br><br>
@@ -274,6 +287,9 @@ Durante el TB1, el equipo actualizó y aplicó conocimientos de Lean UX, anális
 <br><br>
 <strong>TB2</strong><br><br>
 Durante el TB2, el equipo actualizó y aplicó conocimientos en diseño arquitectónico, atributos de calidad y modelado de soluciones en el desarrollo del proyecto Orion. Actividades como la corrección del Impact Map, Product Backlog y el proceso Lean UX, junto con la elaboración de artefactos como Design Purpose, diagramas, patrones y las iteraciones ADD, permitieron transformar conceptos teóricos en entregables estructurados, evidenciando un dominio progresivo y una aplicación adecuada de los fundamentos de ingeniería de software.
+<br><br>
+<strong>TP1</strong><br><br>
+En el TP1, el equipo aplicó conocimientos de implementación, pruebas, gestión de configuración y despliegue sobre la arquitectura definida para Orion. Las evidencias del Sprint 1 (backlog, testing, ejecución, documentación y despliegue de microservicios), junto con tablero Kanban y reflexión de colaboración, muestran la traducción del diseño en software verificable y operativo.
 </td>
     </tr>
     <tr>
@@ -292,12 +308,23 @@ Durante el TB2, el equipo actualizó y aplicó conocimientos en diseño arquitec
         <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Design Patterns<br>· Relational/Non Relational Database Diagram<br>· Architectural Concerns<br>· ADD Iteration 1<br>· Context Diagram<br><br>
         <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Corrección Impact Map<br>· Corrección Product Backlog<br>· Quality Attribute Scenarios<br>· Constraints<br><br>
         <strong>Solano Armas, Angelo Hector:</strong><br>· Context Diagram<br>· Approach Driven ViewPoints Diagrams<br>· Relational/Non Relational Database Diagram<br>· Design Patterns
+        <br><br>
+        <strong>TP1</strong><br><br>
+        <strong>Cossar Sánchez, Eduardo José:</strong><br>· Testing Suites &amp; General Patterns<br>· Backend Application Core Testing Suite<br>· Kanban Board<br>· Team Collaboration Insights during Sprint<br><br>
+        <strong>Gonzales Castillo, Angel Martin:</strong><br>· Software Deployment Evidence for Sprint Review<br>· Microservices Documentation Evidence for Sprint Review<br>· Execution Evidence for Sprint Review<br>· Testing Suite Evidence for Sprint Review<br><br>
+        <strong>Iglesias Pérez, Sergio Sebastián:</strong><br>· Pattern Based Backend Application(s)<br>· Framework Pattern Driven Refactoring Report<br>· Software Deployment Configuration<br><br>
+        <strong>Mostajo Orosco, Maria Fernanda:</strong><br>· Microservices Implementation<br>· Testing Suite Evidence for Sprint Review<br>· Sprint Backlog 1<br>· Kanban Board<br><br>
+        <strong>Solano Armas, Angelo Hector:</strong><br>· Software Configuration Management<br>· Source Code Style Guide &amp; Conventions<br>· Software Development Environment Configuration
+      </td>
       <td style="padding: 0.5rem; vertical-align: top;">
         <strong>TB1</strong><br><br>
           El trabajo colaborativo del TB1 evidenció una práctica constante de aprendizaje continuo, ya que el equipo investigó, adaptó y aplicó nuevas estrategias según las necesidades del proyecto. La mejora iterativa en             artefactos como User Stories, escenarios AS-IS/TO-BE e Impact Map demostró la capacidad de autoformación y actualización permanente para el desempeño profesional.
             <br><br>
         <strong>TB2</strong><br><br>
           Durante el TB2, el equipo reafirmó la necesidad del aprendizaje permanente mediante la profundización en temas de diseño arquitectónico, atributos de calidad y patrones de software. La aplicación de metodologías           como ADD, junto con la elaboración de diversos artefactos técnicos, permitió consolidar conocimientos más avanzados, evidenciando una evolución continua en su preparación profesional y en el desarrollo de                   soluciones de ingeniería de software.
+        <br><br>
+        <strong>TP1</strong><br><br>
+        El TP1 requirió aprender sobre la marcha herramientas y prácticas de integración continua, pruebas automatizadas, convenciones de código y despliegue de microservicios. La iteración en sprint y el uso del Kanban refuerzan el aprendizaje permanente como hábito de equipo para entregar valor de forma sostenida en Orion.
       </td>
     </tr>
   </tbody>
@@ -330,25 +357,26 @@ A largo plazo, la visión de GosLogic es convertirse en un aliado estratégico p
 
 <table border="1">
   <tr>
-      <td style="text-align:center;"><img alt="Angelo Solano" src="assets/chapter-i/FotoAngelo.png" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Angelo Solano" src="assets/chapter-i/FotoAngelo.png"  /></td>
       <td><strong>Angelo Solano - u20231B775</strong><br>Mi nombre es Angelo Solano, soy estudiante de Ingeniería de Software en la UPC. Me apasiona la tecnología y todo lo relacionado con el desarrollo de software. Me gusta enfrentarme a desafíos complejos y encontrar soluciones creativas. Estoy en constante aprendizaje, siempre buscando mejorar mis habilidades en programación y análisis de sistemas. Me considero una persona comprometida con mis proyectos y con ganas de crecer tanto profesionalmente como personalmente. Disfruto trabajar en equipo y siempre trato de aportar lo mejor de mí en todo lo que hago.</td>
   </tr>
   <tr>
-      <td style="text-align:center;"><img alt="Sergio Iglesias " src="assets/chapter-i/FotoSergio.png" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Sergio Iglesias " src="assets/chapter-i/FotoSergio.png" /></td>
       <td><strong>Sergio Iglesias - u202316118</strong><br>Mi nombre es Sergio Iglesias, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Soy una persona proactiva, creativa y con gran pasión por la tecnología. Me destaco por mi capacidad de resolver problemas de manera eficiente y mi habilidad para trabajar colaborativamente en proyectos complejos. Estoy comprometido con el aprendizaje continuo y siempre busco aplicar las mejores prácticas en el desarrollo de software. Mi objetivo es contribuir significativamente al éxito de este proyecto y crecer profesionalmente en el campo de la ingeniería de software.</td>
   </tr>
   <tr>
-      <td style="text-align:center;"><img alt="Martin Gonzales " src="assets/chapter-i/Foto_Martin.jpeg" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Martin Gonzales " src="assets/chapter-i/Foto_Martin.jpeg" /></td>
       <td><strong>Martin Gonzales - u202319724</strong><br>Mi nombre es Martin Gonzales, tengo 20 años y estoy cursando mi 7to ciclo de la carrera de Ingeniería de Software en la UPC. Me caracterizo por mi interés en la programación, la tecnología y el aprendizaje continuo. Tengo una actitud analítica y organizada, lo que me permite desarrollar proyectos académicos y prácticos con dedicación, buscando siempre aplicar los conocimientos adquiridos de manera efectiva.</td>
   </tr>
     <tr>
-      <td style="text-align:center;"><img alt="Eduardo Cossar " src="assets/chapter-i/FotoEduardo.png" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Eduardo Cossar " src="assets/chapter-i/FotoEduardo.png" /></td>
       <td><strong>Eduardo Cossar - u202312109</strong><br>Mi nombre es Eduardo Cossar. Soy estudiante de la carrera de Ingeniería de Software, tengo 20 años y actualmente estoy cursando el septimo ciclo en la UPC. Me considero una persona responsable y comprometida con un gran interés por la tecnología. Como integrante de este equipo, me comprometo a brindar todo mi apoyo y participación activa para afrontar los desafíos que se presenten y dar lo mejor de mí para lograr el éxito de este proyecto.</td>
   </tr>
-
   <tr>
-      <td style="text-align:center;"><img alt="Maria Fernanda Mostajo " src="assets/chapter-i/FotoMariaFernanda.png" /></td>
+      <td style="text-align:center;"><img class="integrante-foto" alt="Maria Fernanda Mostajo " src="assets/chapter-i/FotoMariaFernanda.png" /></td>
       <td><strong>Maria Fernanda Mostajo - u202312874</strong><br>Mi nombre es Maria Fernanda Mostajo, estoy estudiando la carrera de Ingeniería de Software en la UPC, tengo conocimientos en los lenguajes de programación C++, Python, HTML, CSS, JavaScript y SQL. Además, cuento con habilidades de trabajo en equipo, el cual me permitira realizar un buen trabajo y cumplir con los objetivos planteados en el tiempo establecido.
+    </td>
+  </tr>
 </table>
 
 <h2 id="12-solution-profile">1.2 Solution Profile</h2>
@@ -400,7 +428,7 @@ La ineficiencia eleva los costos logísticos hasta un 21.1% sobre las ventas (fr
 
 <h4 id="1231-lean-ux-problem-statement">1.2.3.1 Lean UX Problem Statement</h4>
 
-Nuestra solución busca proveer una plataforma SaaS multi-tenant que permita centralizar la gestión operativa y el ciclo de vida vehicular, integrando telemetría en tiempo real y mantenimiento preventivo.
+Orion se plantea como una plataforma SaaS multi-tenant orientada a la gestión y telemetría de flotas vehiculares; las capacidades concretas que la materializan frente a los pain points del gestor de flota y del conductor se especifican en las Ideas de Solución que siguen a los planteamientos de problema.
 
 Hemos observado que las empresas de transporte sufren altos costos operativos debido a fallas mecánicas imprevistas y la falta de visibilidad en tiempo real de sus vehículos, lo que repercute en la disponibilidad de sus activos.
 
@@ -417,6 +445,20 @@ Nuestra solución busca proveer una herramienta móvil con enfoque offline-first
 Hemos observado que los conductores suelen transitar por zonas sin cobertura, lo que ocasiona la pérdida de registros críticos de jornada, ubicación y eventos de mantenimiento.
 
 ¿Cómo podemos garantizar que el registro de datos sea continuo y resiliente en zonas con conectividad intermitente?
+
+**Lean UX: Solution Ideas**
+
+Las siguientes funcionalidades traducen el alcance de Orion en entregables verificables y sustituyen formulaciones genéricas (por ejemplo, «monitoreo», «mantenimiento», «alertas» o «app» sin definir) por módulos con propósito y audiencia claros.
+
+- **Panel de Gestión Multi-Tenant:** Espacio administrativo web donde cada empresa gestiona usuarios, vehículos, conductores y políticas propias dentro de un contexto aislado por identificador de arrendatario (<em>TenantId</em>). Resuelve el temor a fugas de datos entre competidores y permite al gestor de flota operar con confianza sobre información sensible propia del negocio.
+
+- **Dashboard de Telemetría en Tiempo Real:** Vista operativa integrada con Google Maps que muestra la posición y el estado de los vehículos activos del tenant en curso. Resuelve la falta de visibilidad en tiempo real que incrementa la incertidumbre logística y dificulta decisiones oportunas ante desviaciones de ruta o demoras.
+
+- **Motor Automatizado de Mantenimiento Preventivo:** Componente que evalúa reglas según kilometraje acumulado y temporizadores de servicio para generar alertas preventivas (p. ej., cambio de aceite) antes de que el vehículo incurra en fallas correctivas costosas. Reduce paradas no programadas y alinea al gestor de flota con una política explícita de cuidado del activo.
+
+- **Módulo de Gestión de Despacho:** Herramienta para asignar de forma dinámica conductores a vehículos y a rutas concretas, incorporando horarios y estado operativo de las unidades en un único flujo de planificación. Atiende la dispersión de información entre planificación, disponibilidad de activos y ejecución en ruta.
+
+- **Aplicación Móvil Offline-First:** Cliente de campo para el conductor que permite iniciar y cerrar jornada, registrar eventos relevantes y transmitir ubicación de forma diferida cuando la red es intermitente o ausente. Elimina la pérdida de trazabilidad operativa en zonas rurales y estabiliza la ingesta de datos que alimentan telemetría y mantenimiento preventivo.
 
 <h4 id="1232-lean-ux-assumptions">1.2.3.2 Lean UX Assumptions</h4>
 
@@ -446,22 +488,22 @@ Hemos observado que los conductores suelen transitar por zonas sin cobertura, lo
 <h4 id="1233-lean-ux-hypothesis">1.2.3.3 Lean UX Hypothesis</h4>
 
 **Hypothesis Statement 01**  
-Creemos que implementando aislamiento lógico estricto por TenantId para todas las operaciones de la plataforma, sabremos que hemos tenido éxito cuando el 100% de las pruebas de acceso cruzado entre empresas sean bloqueadas y validadas en QA.
+Creemos que el **Panel de Gestión Multi-Tenant**, al hacer cumplir el aislamiento lógico estricto mediante **TenantId** en todas las operaciones web administrativas, sabremos que hemos tenido éxito cuando el **100%** de las pruebas de acceso cruzado entre empresas sea bloqueado y validado en QA.
 
 **Hypothesis Statement 02**  
-Creemos que activando reglas de mantenimiento preventivo por kilometraje y tiempo (aceite, neumáticos y revisiones), sabremos que hemos tenido éxito cuando las fallas no programadas se reduzcan en al menos 30% durante los primeros seis meses.
+Creemos que el **Motor Automatizado de Mantenimiento Preventivo**, al ejecutar reglas por kilometraje y tiempo (aceite, neumáticos y revisiones) sobre datos de telemetría, sabremos que hemos tenido éxito cuando las fallas no programadas se reduzcan en **al menos 30%** durante los primeros seis meses.
 
 **Hypothesis Statement 03**  
-Creemos que centralizando en Orion la asignación de rutas, horarios, estado de unidades y alertas operativas, sabremos que hemos tenido éxito cuando el tiempo de planificación diaria del gestor se reduzca en 40%.
+Creemos que el **Módulo de Gestión de Despacho**, al concentrar la asignación dinámica de conductores a vehículos y rutas junto con horarios y estado operativo de las unidades, sabremos que hemos tenido éxito cuando el tiempo de planificación diaria del gestor de flota se reduzca en **40%**.
 
 **Hypothesis Statement 04**  
-Creemos que ofreciendo una capacitación guiada sobre la app móvil de Orion a los conductores, sabremos que hemos tenido éxito cuando al menos el 85% complete correctamente los flujos clave (inicio/fin de jornada, reporte de eventos y confirmación de ruta) en el primer mes.
+Creemos que, combinando la **Aplicación Móvil Offline-First** con capacitación guiada para los conductores, sabremos que hemos tenido éxito cuando **al menos el 85%** complete correctamente los flujos clave (inicio y fin de jornada, reporte de eventos y confirmación de ruta) en el primer mes.
 
 **Hypothesis Statement 05**  
-Creemos que implementando sincronización diferida en la app móvil para operar sin señal, sabremos que hemos tenido éxito cuando el 95% de eventos registrados offline se sincronicen correctamente al recuperar conectividad.
+Creemos que la **Aplicación Móvil Offline-First**, al persistir eventos y coordenadas en local y aplicar sincronización diferida al restablecer la red, sabremos que hemos tenido éxito cuando el **95%** de los eventos registrados sin conectividad se sincronicen correctamente tras recuperar señal.
 
 **Hypothesis Statement 06**  
-Creemos que aplicando caché y control de frecuencia de actualización en Google Maps, sabremos que hemos tenido éxito cuando el costo mensual de consumo de mapas se reduzca en 35% sin afectar la precisión del monitoreo de flota.
+Creemos que el **Dashboard de Telemetría en Tiempo Real** (Google Maps), complementado con caché y control de la frecuencia de actualización cartográfica, sabremos que hemos tenido éxito cuando el costo mensual de consumo de mapas se reduzca en **35%** sin deteriorar la precisión percibida del rastreo de vehículos activos.
 
 <h4 id="1234-lean-ux-canvas">1.2.3.4 Lean UX Canvas</h4>
 
@@ -1731,27 +1773,28 @@ El mapa de impacto del conductor de flota permitió comprender mejor su rol dent
 <h3 id="411-principles-statements">4.1.1 Principles Statements</h3>
 
 1. **Aislamiento Lógico por Defecto (Seguridad Multi-Tenant)**
-   - **Descripción:** Queda estrictamente prohibida la dependencia en el filtrado manual a nivel de código. Toda operación debe inyectar implícitamente el TenantId desde el API Gateway.
-   - **Justificación de Negocio:** Protege el secreto industrial entre empresas competidoras en el modelo SaaS.
+   - **Descripción:** Queda estrictamente prohibida la dependencia en el filtrado manual a nivel de código para la separación de datos. Toda operación de lectura/escritura debe inyectar implícitamente el TenantId desde el API Gateway hasta la capa de persistencia, apoyándose en políticas de base de datos como Row-Level Security (RLS).
+   - **Justificación de Negocio:** Orion opera bajo un modelo SaaS donde conviven datos de empresas de transporte competidoras. Mitigar el riesgo de exposición transversal de la información es innegociable para mantener la confianza comercial y proteger el secreto industrial de los clientes.
 
 2. **Identidad Centralizada y Desacoplada (Atributo: Seguridad/Mantenibilidad)**
   - **Descripción**: La autenticación y autorización se delegan exclusivamente a un servicio de IAM (Identity and Access Management) independiente. Los microservicios de negocio (Bounded Contexts) solo consumen tokens validados por el API Gateway.
   - **Justificación de Negocio:** Permite que el sistema crezca sin replicar lógica de seguridad en cada microservicio y facilita la auditoría de accesos.
 
 3. **Aislamiento de Proveedores Externos (Interoperabilidad)**
-   - **Descripción:** Las integraciones con servicios de terceros deberán canalizarse obligatoriamente a través de un patrón de Capa Anticorrupción (Anti-Corruption Layer).
-   - **Justificación de Negocio:** Independencia tecnológica y control de costos frente a terceros.
+   - **Descripción:** Las integraciones con servicios de terceros (específicamente proveedores cartográficos y APIs de Google Maps) deberán canalizarse obligatoriamente a través de un patrón de Capa Anticorrupción (Anti-Corruption Layer). Ningún microservicio core debe depender de los contratos de datos externos.
+   - **Justificación de Negocio:** Protege a Orion frente a la evolución técnica o cambios en la estructura de precios de terceros. Encapsular la integración asegura que una futura migración a otro proveedor (ej. OpenStreetMap) no requiera reescribir la lógica central de despacho y ruteo.
 
 4. **Diseño para el Fallo y Degradación Elegante (Resiliencia)**
-   - **Descripción:** Implementación de Circuit Breaker en llamadas externas. Si el mapa falla, se usa caché.
-   - **Justificación de Negocio:** Continuidad operativa crítica en la gestión de flotas.
+   - **Descripción:** El sistema debe impedir activamente la propagación de fallas en cascada (Cascading Failures). Es imperativa la implementación de la táctica de Circuit Breaker en las llamadas a servicios externos. Si el mapa falla, el sistema cortará la petición y operará en modo degradado (retornando la última ubicación en caché).
+   - **Justificación de Negocio:** La gestión de flotas exige continuidad operativa crítica. Cualquier caída de un servicio externo debe mitigarse internamente para que la vista del gestor de flota nunca colapse y la asignación de unidades no se detenga.
 
 5. **Llamadas Asincrónicas sobre Sincrónicas para Alta Carga (Performance)**
-   - **Descripción:** Ingesta masiva de GPS mediante Event-Driven Architecture y Message Brokers.
-   - **Justificación de Negocio:** Absorción de picos de carga durante horas punta sin degradar la UI del gestor
+   - **Descripción:** Queda restringido el uso de llamadas sincrónicas (bloqueantes) para la ingesta de telemetría vehicular. Toda recepción masiva de coordenadas GPS adoptará un patrón Event-Driven mediante un Message Broker (como Kafka o RabbitMQ), encolando los eventos para su procesamiento diferido.
+   - **Justificación de Negocio:** Durante las horas punta, Orion recibirá cientos de coordenadas GPS simultáneas. Desacoplar la recepción del procesamiento absorbe los picos de carga, garantizando que los tableros de control de los gestores mantengan una latencia mínima sin saturar la base de datos transaccional.
+
 6. **Persistencia Local como Estándar Móvil u "Offline-First" (Operatividad)**
-   - **Descripción:** Almacenamiento local en dispositivos móviles (SQLite) y sincronización con Retry & Backoff
-   - **Justificación de Negocio:** Garantiza trazabilidad en rutas con baja conectividad.
+   - **Descripción:** La aplicación móvil guardará todo evento logístico primariamente en un almacenamiento local ligero (ej. SQLite). La transmisión a la nube se delegará a procesos en segundo plano condicionados a la red, aplicando obligatoriamente tácticas de Retry con Backoff Exponencial.
+   - **Justificación de Negocio:** Las rutas de transporte frecuentemente atraviesan zonas de nula conectividad. Este principio garantiza el 100% de la trazabilidad de la jornada del conductor y salvaguarda la vida útil de la batería del dispositivo al evitar intentos de conexión fallidos continuos.
 
 <h3 id="412-approaches-statements-architectural-styles--patterns">4.1.2 Approaches Statements Architectural Styles & Patterns</h3>
 
@@ -1801,22 +1844,155 @@ Para Orion, la aplicación de **Domain-Driven Design (DDD)**  constituye el marc
   alt="Context Diagram " style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
 </p>
 
+<p>El diagrama de contenedores (C4 nivel 2) y los diagramas de componentes por servicio (C4 nivel 3), junto con diagramas de actividad y de estado, se agrupan en la <a href="#414-approach-driven-viewpoints-diagrams">sección 4.1.4</a>.</p>
+
 <h3 id="414-approach-driven-viewpoints-diagrams">4.1.4 Approach driven ViewPoints Diagrams</h3>
 
-Para complementar la visión estática de la arquitectura, se han elaborado diagramas de comportamiento que detallan la dinámica operativa de Orion.
+<p>Esta sección agrupa las vistas estáticas del modelo <strong>C4</strong> (contexto, contenedores y componentes por servicio) junto con diagramas UML complementarios de actividad y de estado que detallan la dinámica operativa de Orion.</p>
 
-Diagrama de contenedores
+### Diagramas complementarios de la arquitectura
+
+#### 1. Context Diagram (C4 nivel 1)
+
 <p align="center">
-  <img src="assets/chapter-iv/c4/containers-diagram.jpg"
-  alt="Containers Diagram" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <img src="assets/chapter-iv/c4-I/context.png"
+  alt="Context Diagram de Orion" style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Context Diagram: sistema Orion y sus actores e integraciones externas.</em>
 </p>
 
-Diagramas de actividades
-  - Gestión de incidente y mantenimiento correctivo
-  - Procesamiento de telemetría
-Diagramas de estado:
-  - Ciclo de vida del vehículo
-  - Parada en hoja de ruta
+---
+
+#### 2. Diagrama de Contenedores (C4 nivel 2)
+
+<div align="center">
+  <img 
+    src="assets/chapter-iv/c4-I/containers.png" 
+    alt="Containers Diagram" 
+    style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"
+  />
+  <br/>
+  <em>Diagrama de Contenedores de la plataforma Orion.</em>
+</div>
+
+---
+
+#### 3. Diagramas de componentes (C4 nivel 3)
+
+<p>Desglose interno de los principales contenedores backend en componentes lógicos (interfaces, aplicación, dominio, infraestructura e integraciones). Cada figura corresponde a un microservicio del perímetro Orion.</p>
+
+<h5 id="414-c4-iam-component">IAMService (Identity &amp; Access Management)</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/iam-component.png"
+    alt="IAMService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — IAMService.</em>
+</p>
+
+<h5 id="414-c4-telemetry-component">TelemetryService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/telemetry-component.png"
+    alt="TelemetryService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — TelemetryService.</em>
+</p>
+
+<h5 id="414-c4-fleet-component">FleetService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/fleet-component.png"
+    alt="FleetService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — FleetService.</em>
+</p>
+
+<h5 id="414-c4-dispatch-component">DispatchService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/dispatch-component.png"
+    alt="DispatchService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — DispatchService.</em>
+</p>
+
+<h5 id="414-c4-maintenance-component">MaintenanceService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/maintenance-component.png"
+    alt="MaintenanceService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — MaintenanceService.</em>
+</p>
+
+<h5 id="414-c4-notification-component">NotificationService</h5>
+<p>
+  <img src="assets/chapter-iv/c4-I/notification-component.png"
+    alt="NotificationService Component Diagram"
+    style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Diagrama de componentes — NotificationService.</em>
+</p>
+
+---
+
+#### 4. Diagramas de Actividades
+
+<ul>
+  <li>
+    <strong>Gestión de incidente y mantenimiento correctivo</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-corrective_maintenance.png" 
+      alt="Diagrama de Actividad - Incidente y Mantenimiento" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Procesamiento de telemetría</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-ingesta_telemetria.png" 
+      alt="Diagrama de Actividad - Procesamiento de Telemetría" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Creación y asignación de hoja de ruta</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/activity-routesheet.png" 
+      alt="Diagrama de Actividad - Creación y asignación de hoja de ruta" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+</ul>
+
+---
+
+#### 5. Diagramas de Estado
+
+<ul>
+  <li>
+    <strong>Ciclo de vida del vehículo</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/state-vehicle_lifecycle.png" 
+      alt="Diagrama de Estados - Ciclo de Vida del Vehículo" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+  <li>
+    <strong>Parada en hoja de ruta</strong><br/>
+    <img 
+      src="assets/chapter-iv/complementary-diagrams/state-stop_status.png" 
+      alt="Diagrama de Estados - Parada en Hoja de Ruta" 
+      style="width: 90%; max-width: 800px; height: auto; display: block; margin: 0.5em auto;"
+    />
+    <em></em>
+  </li>
+</ul>
   
 <h3 id="415-relationalnon-relational-database-diagram">4.1.5 Relational/Non Relational Database Diagram</h3>
 
@@ -1914,15 +2090,15 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Disponibilidad</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Degradación Controlada</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>TelemetryService</strong></td>
-      <td style="padding: 0.55rem; vertical-align: top;">Se aplica  <em>Circuit Breaker</em> sobre las invocaciones a la API de Google Maps: ante latencia extrema o errores sostenidos, el circuito abre y el sistema evita propagar la falla en cascada, operando en modo degradado para preservar la disponibilidad percibida del monitoreo cartográfico.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Excepciones / Degradación Controlada</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>TelemetryMapsService</strong></td>
+      <td style="padding: 0.55rem; vertical-align: top;">Se aplica el patrón <em>Circuit Breaker</em> sobre las invocaciones a la API de Google Maps: ante latencia extrema o errores sostenidos, el circuito abre y el sistema evita propagar la falla en cascada, operando en modo degradado (p. ej., sirviendo últimas respuestas válidas desde caché) para preservar la disponibilidad percibida del monitoreo cartográfico.</td>
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Performance</td>
       <td style="padding: 0.55rem; vertical-align: top;">Introducir Concurrencia (<em>Introduce Concurrency</em>)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>Message Broker</strong></td>
-      <td style="padding: 0.55rem; vertical-align: top;">La ingesta masiva de telemetría GPS se procesa asíncronamente. Los productores publican eventos en el broker y los consumidores los procesan concurrentemente. Ello absorbe picos de carga y evita la degradación de respuessta bajo alta concurrencia.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>Message Broker</strong> (Apache Kafka / RabbitMQ)</td>
+      <td style="padding: 0.55rem; vertical-align: top;">La ingesta masiva de telemetría GPS se desacopla del procesamiento síncrono: los productores publican eventos en el broker y los consumidores los procesan concurrentemente. Ello absorbe picos de carga y evita que el camino crítico bloquee la aplicación móvil o los servicios de consulta bajo alta concurrencia.</td>
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Performance</td>
@@ -1932,7 +2108,7 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Interoperabilidad</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Uso de un Intermediario</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Uso de un Intermediario (<em>Use an Intermediary</em>)</td>
       <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>API Gateway</strong></td>
       <td style="padding: 0.55rem; vertical-align: top;">El gateway actúa como fachada única de entrada: centraliza enrutamiento, políticas transversales (autenticación, límites de tasa, versionado) y uniformidad de contratos hacia los microservicios internos, facilitando que clientes heterogéneos y sistemas externos interactúen con Orion sin conocer la topología fina del backend.</td>
     </tr>
@@ -1946,12 +2122,12 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
       <td style="padding: 0.55rem; vertical-align: top;">Usabilidad</td>
       <td style="padding: 0.55rem; vertical-align: top;">Iniciativa del Sistema (<em>System Initiative</em>)</td>
       <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>MobileApp</strong> (cliente)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">La aplicación adopta un modelo <em>offline-first</em> con persistencia local en SQLite. Al recuperar la conexión, el sistema inicia la sincronización sin que el conductor deba reintentar manualmente.
+      <td style="padding: 0.55rem; vertical-align: top;">La aplicación adopta un modelo <em>offline-first</em> con persistencia local en SQLite: ante pérdida de conectividad, el sistema conserva autónomamente los eventos de jornada y reintenta la sincronización en segundo plano mediante <em>retry</em> con backoff exponencial al restablecerse la red, reduciendo la carga cognitiva del conductor y manteniendo continuidad operativa sin intervención manual.</td>
     </tr>
   </tbody>
 </table>
 
-<p>La conjugación coherente de las tácticas anteriores define la estrategia arquitectónica de Orion: la redundancia y degradación controlada aseguran un servicio continuo; la concurrencia mediada por broker y la persistencia especializada en series temporales sostienen el rendimiento bajo picos de telemetría; la intermediación a través del Gateway garantiza el aislamiento lógico de datos por Tenant y habilita integraciones empresariales predecibles; finalmente, la iniciativa del sistema en el cliente móvil cierra la brecha de usabilidad en entornos de conectividad débil. En conjunto, estas decisiones constituyen el cimiento técnico que hace viable el despliegue escalable y seguro del producto.</p>
+<p>La conjugación coherente de las tácticas anteriores define la estrategia arquitectónica <strong>Cloud-Native</strong> de Orion: la redundancia y la degradación controlada aseguran un servicio continuo; la concurrencia mediada por broker, la persistencia especializada en series temporales y la caché distribuida sostienen el rendimiento bajo picos de telemetría; la intermediación a través del Gateway garantiza el aislamiento lógico de datos por Tenant y habilita integraciones empresariales predecibles; finalmente, la iniciativa del sistema en el cliente móvil cierra la brecha de usabilidad en entornos de conectividad débil. En conjunto, estas decisiones constituyen el cimiento técnico que hace viable el despliegue multi-tenant escalable y seguro del producto en modalidad SaaS.</p>
 
 <h2 id="42-architectural-drivers">4.2 Architectural Drivers</h2>
 
@@ -2015,7 +2191,7 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
   </tbody>
 </table>
 
-<p><strong>Conclusión:</strong> En conjunto, estas cuatro funcionalidades primarias conforman el núcleo operativo de Orion y justifican la elección de un estilo arquitectónico basado en Microservicios. Las necesidades estrictas de desempeño asíncrono, resiliencia ante proveedores externos, integración limpia con terceros, aislamiento multi-tenant y soporte operativo sin conexión hacen inviable la elección de una arquitectura monolítica tradicional.</p>
+<p><strong>Conclusión:</strong> En conjunto, estas cuatro funcionalidades primarias conforman el núcleo operativo de Orion y justifican la elección de un estilo arquitectónico basado en Microservicios Cloud-Native. Las necesidades estrictas de desempeño asíncrono, resiliencia ante proveedores externos, integración limpia con terceros, aislamiento multi-tenant y soporte operativo sin conexión hacen inviable la elección de una arquitectura monolítica tradicional.</p>
 
 <h2 id="4110-quality-attribute-scenarios">4.1.10 Quality Attribute Scenarios</h2>
 
@@ -2189,7 +2365,7 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">CON-01</td>
       <td style="padding: 0.55rem; vertical-align: top;">Uso de software de terceros (Google Maps)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Dependencia innegociable de una API externa para la visualización cartográfica y geocodificación.<br><br><strong>Impacto en Disponibilidad e Interoperabilidad:</strong> Obliga a construir una capa de abstracción para estandarizar la comunicación y aplicar tácticas de <em>Circuit Breaker</em> para que el sistema siga operando si el proveedor falla.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Dependencia innegociable de una API externa para la visualización cartográfica y geocodificación.<br><br><strong>Impacto en Disponibilidad e Interoperabilidad:</strong> Obliga a construir una capa anticorrupción / de abstracción para estandarizar la comunicación y aplicar tácticas de <em>Circuit Breaker</em> para que el sistema siga operando si el proveedor falla.</td>
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">CON-02</td>
@@ -2221,11 +2397,9 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
 
 <h2 id="4112-architectural-concerns">4.1.12 Architectural Concerns</h2>
 
-Según la teoría que sistematiza el Software Engineering Institute (SEI), una **architectural concern** (*preocupación arquitectónica*) es un interés del arquitecto con **alto impacto** en la forma del sistema: el **primer lugar** en el que el **problema** (requisitos, contexto, restricciones) y la **solución** (abstracciones arquitectónicas, estilos, descomposición en contenedores) se articulan de manera explícita. No se trata de un comentario accesorio, sino del eje donde decidimos **qué** tensiona el diseño y **cómo** lo abordamos.
+<p>Para el SEI, una <em>architectural concern</em> (preocupación arquitectónica) es un tema que condiciona de forma directa la forma del sistema: enlaza requisitos, contexto y restricciones con decisiones de diseño (vistas, estilos, contenedores). En Orion, las vistas, las tácticas y la asignación de responsabilidades a contenedores son la respuesta explícita a cada preocupación que identificamos.</p>
 
-En nuestro trabajo hemos incorporado esas preocupaciones **dentro del diseño de la arquitectura**: cada decisión documentada en vistas, tácticas y asignación de responsabilidades a contenedores constituye la respuesta deliberada a una preocupación reconocida.
-
-Un **riesgo** surge cuando **aceptamos formalmente** convivir con una preocupación que, de materializarse sin contramedida, tendría **impacto negativo** en metas y requisitos (p. ej. confianza del cliente, continuidad del servicio o costo operativo). El diseño no borra el riesgo: lo **explicita** y le asocia **mitigaciones** arquitectónicas que podemos inspeccionar y verificar.
+<p>Un <strong>riesgo</strong> es la posibilidad de que una preocupación se materialice y perjudique objetivos o requisitos (por ejemplo, confianza del cliente, disponibilidad o coste operativo) si no hay contramedida. El diseño no elimina el riesgo: lo deja documentado y asocia mitigaciones que el equipo puede revisar y verificar.</p>
 
 <table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem; margin-bottom: 1rem;">
   <thead>
@@ -2596,64 +2770,250 @@ Enlace de trello: https://trello.com/invite/b/69f56589e0cac55f7b1a3608/ATTI3155f
 # Capítulo V: Product Implementation, Validation & Deployment
 
 <h2 id="51-testing-suites--general-patterns">5.1 Testing Suites & General Patterns</h2>
-<p><em>Contenido por desarrollar.</em></p>
+<p>En esta sección documentamos los patrones arquitectónicos aplicados en la implementación y las suites de pruebas (<em>testing suites</em>) configuradas en Orion para verificar, de forma sistemática y repetible, el cumplimiento de los atributos de calidad del sistema. Este enfoque articula pruebas automatizadas, aislamiento de dependencias y validación frente a requisitos funcionales explícitos. De este modo, garantizamos que la mantenibilidad del código, los controles de seguridad y la disponibilidad operativa del servicio queden respaldados por evidencia objetiva en el ciclo de desarrollo.</p>
 
 <h3 id="511-backend-application-core-testing-suite">5.1.1 Backend Application Core Testing Suite</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>El núcleo del backend de Orion se valida mediante un <em>test harness</em> que combina la verificación fina de componentes y la validación de comportamiento frente al <em>Product Backlog</em>.</p>
+
+<h4 id="5111-unit-testing">Pruebas unitarias (Unit Testing)</h4>
+<p>La lógica central del dominio, como los cálculos de ruteo en el DispatchService y las reglas de negocio, se comprueba mediante pruebas unitarias aisladas. Estas pruebas se ejecutan utilizando frameworks estándar del ecosistema elegido, como JUnit para Java/Spring Boot o Jest para Node.js. Para preservar el aislamiento y la velocidad de feedback, utilizamos <em>Mocks</em> e Inyección de Dependencias que sustituyen las conexiones externas, en particular el acceso a las bases de datos relacionales y de series temporales (PostgreSQL y TimescaleDB). Así, cada caso evalúa una unidad de código sin depender de la infraestructura externa.</p>
+
+<h4 id="5112-integration-acceptance-bdd">Pruebas de integración y de aceptación (BDD)</h4>
+<p>El vínculo entre el software entregado y las Historias de Usuario (<em>User Stories</em>) lo cubrimos mediante el enfoque Behavior-Driven Development (BDD). Utilizando el framework Cucumber y escenarios redactados en lenguaje Gherkin dentro de archivos .feature, expresamos el comportamiento esperado en un formato estructurado (Dado / Cuando / Entonces) comprensible tanto para el negocio como para el equipo técnico. Estos escenarios mapean de manera explícita los criterios de aceptación hacia pruebas automatizadas integradas en nuestro pipeline de CI/CD. Esto nos permite asegurar que ninguna funcionalidad clave sufra regresiones antes de su paso a producción.</p>
 
 <h3 id="512-pattern-based-backend-applications">5.1.2 Pattern Based Backend Application(s)</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>Hemos estructurado el interior de nuestros microservicios de Orion de manera uniforme, aplicando de forma consistente una arquitectura en capas basada en el patrón Controller-Service-Repository. Esta decisión nos permite separar claramente los límites de responsabilidad dentro de cada servicio, facilitar la evolución independiente de sus piezas y mantener una lectura predecible del código a medida que integramos nuevos casos de uso en la plataforma SaaS.</p>
+<p>En la capa de presentación, el Controller expone las APIs RESTful, valida la sintaxis de las peticiones entrantes y delega el trabajo sin concentrar reglas de dominio. El Service actúa como el núcleo aplicativo: aquí reside toda la lógica de negocio (como la asignación de rutas o las validaciones de telemetría), de modo que los controladores permanecen delgados y enfocados puramente en HTTP. Por su parte, el Repository concentra el acceso a datos y abstrae los detalles de persistencia, interactuando con un modelo políglota donde PostgreSQL soporta el núcleo transaccional y TimescaleDB atiende las métricas de series temporales.</p>
+<p>La orquestación entre estas tres capas se resuelve mediante el patrón de Inyección de Dependencias (<em>Dependency Injection</em>), el cual es central para cumplir con nuestro atributo de calidad de Testeabilidad. Al declarar dependencias explícitas y orientadas a interfaces, podemos inyectar <em>Mocks</em> de los repositorios durante las pruebas unitarias de los servicios. Esto nos permite validar reglas y flujos de negocio sin necesidad de levantar una base de datos real ni depender de la infraestructura externa.</p>
 
 <h3 id="513-pattern-based-custom-software-library">5.1.3 Pattern Based Custom Software Library</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>Para cumplir con el principio DRY (Don't Repeat Yourself) y centralizar la seguridad de la plataforma SaaS multi-tenant, hemos externalizado la lógica transversal en una librería personalizada o paquete común (Custom Software Library). Esta librería compartida es importada por todos nuestros microservicios y se encarga exclusivamente de la validación de firmas de tokens JWT y de la extracción segura del TenantId desde el contexto de la petición. De este modo, evitamos replicar código de seguridad en cada servicio y garantizamos que el aislamiento de datos se aplique de manera uniforme en toda la arquitectura.</p>
 
 <h3 id="514-framework-pattern-driven-refactoring-report">5.1.4 Framework Pattern Driven Refactoring Report</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>Durante la configuración inicial de la arquitectura, hemos refactorizado la base de código de los microservicios para alinearla estrictamente con los principios de Domain-Driven Design (DDD). Hemos reestructurado los paquetes internos de modo que los límites de contexto (Bounded Contexts), como la gestión de Telemetría, el Despacho de rutas y la Identidad, mantengan fronteras claras y alta cohesión. Esta refactorización previene el acoplamiento innecesario y prepara el sistema para que cada módulo pueda evolucionar y desplegarse de manera totalmente independiente.</p>
 
 <h2 id="52-software-configuration-management">5.2 Software Configuration Management</h2>
-<p><em>Contenido por desarrollar.</em></p>
+<p>La Gestión de la Configuración del Software (<em>Software Configuration Management</em>, SCM) en Orion formaliza cómo definimos, versionamos y controlamos los artefactos que conforman una plataforma SaaS cloud-native orientada a telemetría de flotas. En esta sección describimos el entorno de desarrollo adoptado por el equipo, la política de gestión del código fuente sobre GitHub y las convenciones de estilo que mantienen la coherencia entre el frontend, el backend basado en Spring Boot y los escenarios de prueba en Gherkin.</p>
 
 <h3 id="521-software-development-environment-configuration">5.2.1 Software Development Environment Configuration</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>Para garantizar un ciclo de vida de desarrollo estandarizado y colaborativo, hemos definido el entorno de trabajo del equipo de ingeniería. A continuación se detallan las herramientas oficiales estructuradas por categoría, incluyendo su ruta de referencia (para plataformas SaaS) o ruta de descarga (para software local), cumpliendo con las exigencias de configuración del proyecto Orion.</p>
+
+<p><strong>1. Project &amp; Requirements Management</strong></p>
+<ul>
+<li><strong>Trello:</strong> Plataforma SaaS utilizada como tablero ágil (Kanban) para visualizar y actualizar el estado de las tareas e Historias de Usuario durante los Sprints. Ruta de referencia: <a href="https://trello.com">https://trello.com</a>.</li>
+<li><strong>GitHub (Projects &amp; Issues):</strong> Herramienta SaaS para la trazabilidad de los hitos del proyecto y el control colaborativo mediante Pull Requests. Ruta de referencia: <a href="https://github.com">https://github.com</a>.</li>
+</ul>
+
+<p><strong>2. Product Design &amp; Architecture</strong></p>
+<ul>
+<li><strong>Figma:</strong> Plataforma SaaS para el prototipado de alta fidelidad y el diseño de interfaces (UX/UI) de la aplicación web y móvil. Ruta de referencia: <a href="https://www.figma.com">https://www.figma.com</a>.</li>
+<li><strong>UXPressia:</strong> Herramienta SaaS corporativa utilizada durante la fase de análisis para elaborar los User Personas, Empathy Maps y As-Is / To-Be Scenario Maps. Ruta de referencia: <a href="https://uxpressia.com">https://uxpressia.com</a>.</li>
+<li><strong>Lucidchart y Structurizr:</strong> Plataformas utilizadas para la diagramación de bases de datos, flujos lógicos y las vistas arquitectónicas del modelo C4. Rutas de referencia: <a href="https://www.lucidchart.com">https://www.lucidchart.com</a> | <a href="https://structurizr.com">https://structurizr.com</a>.</li>
+</ul>
+
+<p><strong>3. Software Development (IDEs &amp; SDKs)</strong></p>
+<ul>
+<li><strong>IntelliJ IDEA:</strong> Entorno de Desarrollo Integrado (IDE) principal, instalado localmente por los desarrolladores de backend para construir los microservicios en Java y Spring Boot. Ruta de descarga: <a href="https://www.jetbrains.com/idea/download">https://www.jetbrains.com/idea/download</a>.</li>
+<li><strong>WebStorm:</strong> IDE especializado instalado localmente para el desarrollo del ecosistema frontend web. Ruta de descarga: <a href="https://www.jetbrains.com/webstorm/download">https://www.jetbrains.com/webstorm/download</a>.</li>
+<li><strong>Visual Studio Code / Android Studio:</strong> IDEs configurados localmente para el desarrollo multiplataforma de la aplicación móvil del conductor. Rutas de descarga: <a href="https://code.visualstudio.com">https://code.visualstudio.com</a> | <a href="https://developer.android.com/studio">https://developer.android.com/studio</a>.</li>
+<li><strong>Flutter SDK:</strong> Kit de desarrollo de software instalado localmente para compilar y ejecutar la aplicación móvil nativa con enfoque offline-first. Ruta de descarga: <a href="https://flutter.dev/docs/get-started/install">https://flutter.dev/docs/get-started/install</a>.</li>
+</ul>
+
+<p><strong>4. Software Testing</strong></p>
+<ul>
+<li><strong>Postman:</strong> Cliente API instalado localmente para el diseño, depuración y ejecución de pruebas manuales y automatizadas sobre los endpoints RESTful de nuestros microservicios. Ruta de descarga: <a href="https://www.postman.com/downloads">https://www.postman.com/downloads</a>.</li>
+<li><strong>Cucumber:</strong> Framework integrado en el entorno de desarrollo para ejecutar pruebas de integración y de aceptación bajo el enfoque Behavior-Driven Development (BDD) utilizando lenguaje Gherkin. Ruta de referencia: <a href="https://cucumber.io">https://cucumber.io</a>.</li>
+</ul>
+
+<p><strong>5. Software Deployment &amp; Version Control</strong></p>
+<ul>
+<li><strong>Git:</strong> Sistema de control de versiones distribuido instalado en cada estación de trabajo para el seguimiento de modificaciones en el código fuente local. Ruta de descarga: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</li>
+<li><strong>Docker Desktop:</strong> Herramienta de contenedorización local utilizada para levantar la base de datos (PostgreSQL/TimescaleDB) y las dependencias de infraestructura sin contaminar el sistema operativo del desarrollador. Ruta de descarga: <a href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a>.</li>
+<li><strong>Google Cloud Platform / AWS:</strong> Proveedor de infraestructura en la nube elegido para el despliegue final de los contenedores en producción, respetando la arquitectura Cloud-Native exigida por el proyecto. Ruta de referencia: <a href="https://cloud.google.com">https://cloud.google.com</a> | <a href="https://aws.amazon.com">https://aws.amazon.com</a>.</li>
+</ul>
+
+<p><strong>6. Software Documentation</strong></p>
+<ul>
+<li><strong>Swagger UI (OpenAPI):</strong> Herramienta integrada internamente en nuestros microservicios para autogenerar y visualizar la documentación interactiva de nuestras APIs. Ruta de referencia: <a href="https://swagger.io/tools/swagger-ui">https://swagger.io/tools/swagger-ui</a>.</li>
+</ul>
+
+<p><strong>7. Core Frameworks &amp; Infrastructure Services</strong></p>
+<ul>
+<li><strong>Apache ActiveMQ:</strong> Message Broker de código abierto implementado para encolar masivamente los eventos de telemetría bajo alta concurrencia, desacoplando la ingesta de coordenadas GPS del hilo transaccional principal. Ruta de descarga: <a href="https://activemq.apache.org">https://activemq.apache.org</a>.</li>
+<li><strong>Spring Cloud Eureka:</strong> Servidor de Service Discovery configurado para que todos los microservicios del backend se registren y se descubran dinámicamente en tiempo de ejecución. Ruta de referencia: <a href="https://spring.io/projects/spring-cloud-netflix">https://spring.io/projects/spring-cloud-netflix</a>.</li>
+<li><strong>Astro:</strong> Framework web de alto rendimiento seleccionado para el desarrollo del portal administrativo del Gestor de Flota (FleetManagerSPA). Ruta de referencia: <a href="https://astro.build">https://astro.build</a>.</li>
+</ul>
 
 <h3 id="522-source-code-management">5.2.2 Source Code Management</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>Para el proyecto Orion hemos adoptado un flujo de trabajo estructurado sobre Git, utilizando GitHub como nuestra plataforma central de control de versiones y colaboración. Dado que nuestra arquitectura se basa en microservicios, manejamos un enfoque multi-repositorio donde cada contexto delimitado (como la gestión de Identidad, Flota, Despacho y Telemetría) cuenta con su propio repositorio oficial dentro de la organización del equipo.</p>
+
+<h4 id="5221-branching-gitflow">Estrategia de ramificación (GitFlow)</h4>
+<p>Implementamos rigurosamente GitFlow para organizar el trabajo en paralelo y asegurar la calidad del código. Las integraciones hacia la rama principal se realizan exclusivamente mediante Pull Requests (PR) sujetos a revisión por pares, lo cual reduce drásticamente el riesgo de regresiones. Nuestra estructura de ramas y sus convenciones de nomenclatura son las siguientes:</p>
+<ul>
+<li><strong>main:</strong> Contiene el código estable que refleja exactamente lo que se encuentra desplegado en producción.</li>
+<li><strong>develop:</strong> Línea de trabajo principal donde se integran las funcionalidades terminadas de cada iteración (Sprint).</li>
+<li><strong>feature/:</strong> Ramas efímeras creadas a partir de develop para desarrollar historias de usuario concretas. Siguen la convención feature/US&lt;ID&gt;-&lt;descripcion&gt; (por ejemplo: feature/US01-tenant-config).</li>
+<li><strong>release/:</strong> Ramas de preparación para los pases a producción. Siguen la convención release/v&lt;Version&gt;.</li>
+<li><strong>hotfix/:</strong> Ramas creadas directamente desde main para resolver incidentes críticos. Siguen la convención hotfix/v&lt;Version&gt;.</li>
+</ul>
+
+<h4 id="5222-versioning-commits">Versionado y commits</h4>
+<p>Para mantener una trazabilidad profesional en todos nuestros repositorios, aplicamos la especificación Semantic Versioning 2.0.0 (MAJOR.MINOR.PATCH) al momento de etiquetar nuestras versiones de despliegue. Asimismo, el historial de cambios se mantiene limpio y estructurado adoptando el estándar Conventional Commits. Es una regla innegociable que cada mensaje de commit inicie con un prefijo estructural (como feat:, fix:, test:, docs:) seguido de una descripción clara.</p>
+
+<h4 id="5223-official-links">Enlaces oficiales del proyecto</h4>
+<p>A continuación detallamos el acceso a nuestro espacio de trabajo centralizado. Mientras los repositorios se mantengan privados por políticas académicas y de protección de código, se garantiza que los miembros del jurado y docentes cuentan con el alcance de acceso necesario para auditar la evidencia de commits adjunta en este informe.</p>
+<table>
+<thead>
+<tr><th>Componente / Módulo</th><th>Enlace del repositorio (GitHub)</th></tr>
+</thead>
+<tbody>
+<tr><td>Organización general (Orion)</td><td>[Insertar enlace de la organización de GitHub aquí]</td></tr>
+<tr><td>IAM Service (Backend)</td><td>[Insertar enlace del repo aquí]</td></tr>
+<tr><td>Fleet Service (Backend)</td><td>[Insertar enlace del repo aquí]</td></tr>
+<tr><td>Dispatch Service (Backend)</td><td>[Insertar enlace del repo aquí]</td></tr>
+<tr><td>Telemetry Service (Backend)</td><td>[Insertar enlace del repo aquí]</td></tr>
+<tr><td>Mobile App (Flutter)</td><td>[Insertar enlace del repo aquí]</td></tr>
+<tr><td>FleetManager SPA (Web)</td><td>[Insertar enlace del repo aquí]</td></tr>
+</tbody>
+</table>
 
 <h3 id="523-source-code-style-guide--conventions">5.2.3 Source Code Style Guide & Conventions</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>Para asegurar la mantenibilidad a largo plazo y la coherencia técnica del proyecto Orion, hemos establecido como regla innegociable que todo el código fuente, los identificadores (variables, clases, métodos) y los mensajes de los commits deben redactarse estrictamente en idioma inglés. Además, el equipo ha adoptado las siguientes guías de estilo y convenciones oficiales según la tecnología.</p>
+
+<h4 id="5231-java-spring-backend">Java y Spring Boot (Backend)</h4>
+<p>Nos apegamos a la <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>. Respetamos la convención de estructurar los paquetes por capa y por Bounded Context (separando claramente la capa de API, la lógica de negocio y la persistencia). Utilizamos PascalCase para las clases e interfaces, y camelCase para variables y métodos. Además, es obligatorio extraer cualquier secreto o configuración sensible hacia variables de entorno, evitando incrustar credenciales en el repositorio.</p>
+
+<h4 id="5232-astro-typescript-ui">Astro, TypeScript y UI (Frontend Web)</h4>
+<p>Para el portal administrativo, aplicamos la <a href="https://google.github.io/styleguide/tsguide.html">Google TypeScript Style Guide</a>. Exigimos tipado estricto, el uso de camelCase para funciones y PascalCase para componentes, evitando identificadores genéricos que oculten la intención del dominio (como id en lugar de tenantId). A nivel de interfaz, priorizamos el uso de HTML semántico (header, nav, main, section) y encapsulamos el CSS de forma modular dentro de cada componente .astro utilizando nombres de clase autodescriptivos separados por guiones medios (por ejemplo, .fleet-summary-card).</p>
+
+<h4 id="5233-flutter-dart-mobile">Flutter y Dart (Mobile App)</h4>
+<p>Para la aplicación móvil del conductor, seguimos las convenciones oficiales de <a href="https://dart.dev/effective-dart">Effective Dart</a>. Organizamos el código separando estrictamente la lógica de estado, los servicios de persistencia local (SQLite para el enfoque offline-first) y la interfaz de usuario. Utilizamos snake_case para nombrar los archivos y carpetas, y PascalCase para los widgets, priorizando la inmutabilidad mediante constructores constantes (const) para optimizar el rendimiento del dispositivo.</p>
+
+<h4 id="5234-gherkin-testing">Gherkin (Testing Suites)</h4>
+<p>Para nuestras pruebas de integración, adoptamos las prácticas descritas en <em>Gherkin: Conventions for Readable Specifications</em> y la referencia del ecosistema Cucumber. Redactamos los escenarios BDD respetando estrictamente las palabras clave en inglés (Given, When, Then, And), con saltos de línea claros entre pasos. Las formulaciones deben estar alineadas semánticamente a las Historias de Usuario de Orion, garantizando que los criterios de aceptación permanezcan trazables y auditables frente a las pruebas automatizadas (<em>step definitions</em>). Referencia: <a href="https://cucumber.io/docs/gherkin/reference/">https://cucumber.io/docs/gherkin/reference/</a>.</p>
 
 <h3 id="524-software-deployment-configuration">5.2.4 Software Deployment Configuration</h3>
 <p><em>Contenido por desarrollar.</em></p>
 
 <h2 id="53-microservices-implementation">5.3 Microservices Implementation</h2>
-<p><em>Contenido por desarrollar.</em></p>
 
 <h3 id="521-sprint-1">5.2.1 Sprint 1</h3>
-<p><em>Contenido por desarrollar.</em></p>
 
 <h4 id="5211-sprint-backlog-1">5.2.1.1 Sprint Backlog 1</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+Proyecto en trello: https://trello.com/invite/b/69fe7cf4bc5c526cc5863c3e/ATTIb39ebbace93d6e6d898771ab5d5213121563F916/sprint-backlog-1-fundamentos-de-arquitectura
+
+<p align="center">
+  <img src="https://i.imgur.com/KgYONeN.png" 
+  alt="sprint_backlog_1"/>
+</p>
+
+A continuación, se presenta la tabla con las tareas necesarias para completar satisfactoriamente este primer sprint. Además, se asignó un miembro del equipo a cada tarea a desarrollar y el estado de cada tarea.
+
+| Sprint 1     | Sprint Backlog 1                              |                |                                                              |                                                                                                                                                                                        | Estimation (Hours) | Assigned to                          | Status |
+|--------------|-----------------------------------------------|----------------|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|--------------------------------------|--------|
+| User Stories |                                               | Work Item/Task | Title                                                        | Description                                                                                                                                                                            |                    |                                      |        |
+| US03         | Gestión de Usuarios y Roles                   | TS-01          | Diseñar estructura de usuarios y roles                       | Diseñar las entidades y relaciones necesarias para gestionar usuarios y roles dentro del sistema.                                                                                    | 0.5                | Gonzales Castillo, Angel Martin      | Done   |
+|              |                                               | TS-02          | Implementar endpoint de registro de usuarios                 | Desarrollar el endpoint para registrar nuevos usuarios en el sistema con validaciones correspondientes.                                                                               | 0.6                | Solano Armas, Angelo Hector          | Done   |
+|              |                                               | TS-03          | Implementar asignación de roles                              | Implementar la lógica para asignar roles a los usuarios según permisos definidos.                                                                                                     | 0.5                | Mostajo Orosco, Maria Fernanda       | Done   |
+|              |                                               | TS-04          | Validar permisos según rol                                   | Implementar validaciones para restringir funcionalidades dependiendo del rol del usuario.                                                                                             | 0.5                | Iglesias Pérez, Sergio Sebastián     | Done   |
+| US04         | Autenticación JWT                             | TS-05          | Configurar autenticación mediante JWT                        | Implementar autenticación basada en JSON Web Tokens para proteger el acceso al sistema.                                                                                               | 0.7                | Cossar Sánchez, Eduardo José         | Done   |
+|              |                                               | TS-06          | Generar tokens de acceso                                     | Implementar la generación automática de tokens JWT al iniciar sesión correctamente.                                                                                                   | 0.4                | Gonzales Castillo, Angel Martin      | Done   |
+|              |                                               | TS-07          | Validar tokens en solicitudes protegidas                     | Implementar middleware de validación de tokens para verificar autenticidad y permisos.                                                                                                | 0.6                | Solano Armas, Angelo Hector          | Done   |
+| US05         | Expiración de Sesión                          | TS-08          | Configurar expiración automática de sesión                   | Implementar tiempo de expiración para sesiones autenticadas mediante JWT.                                                                                                             | 0.5                | Mostajo Orosco, Maria Fernanda       | Done   |
+|              |                                               | TS-09          | Gestionar cierre de sesión por expiración                    | Implementar lógica que cierre automáticamente la sesión cuando el token expire.                                                                                                       | 0.4                | Iglesias Pérez, Sergio Sebastián     | Done   |
+|              |                                               | TS-10          | Mostrar mensaje de sesión expirada                           | Implementar notificación visual para informar al usuario cuando su sesión haya expirado.                                                                                              | 0.3                | Cossar Sánchez, Eduardo José         | Done   |
+| US08         | Visualización en Mapa                         | TS-11          | Diseñar interfaz de visualización del mapa                   | Diseñar la interfaz para mostrar rutas y ubicaciones dentro de un mapa interactivo.                                                                                                   | 0.6                | Gonzales Castillo, Angel Martin      | Done   |
+|              |                                               | TS-12          | Integrar API de mapas                                        | Integrar un servicio de mapas para visualizar ubicaciones y recorridos dentro de la aplicación.                                                                                      | 0.8                | Solano Armas, Angelo Hector          | Done   |
+|              |                                               | TS-13          | Mostrar rutas y ubicaciones en tiempo real                   | Implementar la lógica para visualizar rutas y posiciones actualizadas dentro del mapa.                                                                                                | 0.7                | Mostajo Orosco, Maria Fernanda       | Done   |
+| US09         | Historial de Rutas                            | TS-14          | Diseñar estructura de almacenamiento de rutas                | Diseñar la estructura de datos necesaria para almacenar el historial de rutas recorridas.                                                                                             | 0.5                | Iglesias Pérez, Sergio Sebastián     | Done   |
+|              |                                               | TS-15          | Implementar registro de rutas realizadas                     | Desarrollar la lógica para guardar automáticamente las rutas realizadas por el usuario.                                                                                               | 0.6                | Cossar Sánchez, Eduardo José         | Done   |
+|              |                                               | TS-16          | Implementar visualización del historial de rutas             | Implementar la interfaz para consultar y visualizar el historial de rutas registradas.                                                                                                | 0.6                | Gonzales Castillo, Angel Martin      | Done   |
+|              |                                               | TS-17          | Filtrar historial de rutas por fecha                         | Implementar filtros que permitan buscar rutas realizadas según fechas específicas.                                                                                                    | 0.4                | Solano Armas, Angelo Hector          | Done   |
+| US13         | Registro de Activos                           | TS-18          | Diseñar estructura de activos                                | Diseñar las entidades y atributos necesarios para registrar los activos dentro del sistema.                                                                                           | 0.5                | Mostajo Orosco, Maria Fernanda       | Done   |
+|              |                                               | TS-19          | Implementar registro de activos                              | Desarrollar la funcionalidad para registrar nuevos activos en la aplicación.                                                                                                          | 0.6                | Iglesias Pérez, Sergio Sebastián     | Done   |
+|              |                                               | TS-20          | Validar datos de activos registrados                         | Implementar validaciones para asegurar la integridad de la información de los activos.                                                                                                | 0.4                | Cossar Sánchez, Eduardo José         | Done   |
+| US17         | Reporte de Jornada                            | TS-21          | Diseñar interfaz de reporte de jornada                       | Diseñar la interfaz para visualizar y registrar reportes relacionados con la jornada laboral.                                                                                        | 0.5                | Gonzales Castillo, Angel Martin      | Done   |
+|              |                                               | TS-22          | Implementar generación de reportes                           | Implementar la lógica para generar reportes de jornada con la información registrada por el usuario.                                                                                  | 0.7                | Solano Armas, Angelo Hector          | Done   |
+|              |                                               | TS-23          | Exportar reporte de jornada                                  | Implementar funcionalidad para exportar reportes en formatos compatibles.                                                                                                             | 0.5                | Mostajo Orosco, Maria Fernanda       | Done   |
+| US18         | Recepción de Horarios                         | TS-24          | Diseñar estructura de horarios                               | Diseñar la estructura de datos necesaria para almacenar horarios asignados.                                                                                                           | 0.4                | Iglesias Pérez, Sergio Sebastián     | Done   |
+|              |                                               | TS-25          | Implementar recepción de horarios                            | Desarrollar la funcionalidad para recibir y mostrar horarios asignados al usuario.                                                                                                    | 0.6                | Cossar Sánchez, Eduardo José         | Done   |
+|              |                                               | TS-26          | Validar visualización de horarios                            | Verificar que los horarios se visualicen correctamente según el usuario autenticado.                                                                                                  | 0.4                | Gonzales Castillo, Angel Martin      | Done   |
+
 
 <h4 id="5212-development-evidence-for-sprint-review">5.2.1.2 Development Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+En esta sección, se describen los principales avances de implementación realizados en este primer sprint. Se tienen como principales avances la implementación del Backend
+
+A continuación, se muestra una tabla que contiene la información sobre los **commits** realizados que contienen las funcionalidades implementadas para completar el primer sprint.
+
+
+| Repository                     | Branch                        | Commit Id                                | Commit Message                                                                          | Commited On |
+|--------------------------------|-------------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------|-------------|
+| GosLogic/orion-backend-api     | feature/user-roles            | a73fd912bc45ef1da93bc4a8f20a12de45bc781a | feat(users): implement user roles and permissions management                            | 14/04/2026  |
+| GosLogic/orion-backend-api     | feature/jwt-authentication    | c91be452df61aa74ce9fbd13e9f7acb6d51ae912 | feat(authentication): add JWT authentication and token generation                       | 15/04/2026  |
+| GosLogic/orion-backend-api     | feature/session-expiration    | 84da0b3f9f4ec9a0bd74e8e4d61fbc0efaa82913 | feat(session): implement automatic session expiration handling                          | 16/04/2026  |
+| GosLogic/orion-backend-api     | feature/route-history         | 7bcdf1a8a61e4f7cb36cfd1908db56aafec3d782 | feat(routes): add route history persistence and retrieval                               | 18/04/2026  |
+| GosLogic/orion-backend-api     | feature/workday-reports       | d5f0ce31ea8d3e78bc7af1dbe16f9e4d6ab712fe | feat(reports): implement workday report generation                                      | 20/04/2026  |
+| GosLogic/orion-mobile-app      | feature/map-visualization     | e12ab9837bcf91a2ef5d4ac6bc9fda71a8ce7211 | feat(map): integrate interactive map visualization for routes                           | 19/04/2026  |
+| GosLogic/orion-mobile-app      | feature/assets-registration   | b61de0ac92fe84d7ac9e4a1fbd45c7ef102ab634 | feat(assets): implement asset registration interface                                    | 21/04/2026  |
+| GosLogic/orion-mobile-app      | feature/schedule-reception    | 92ac71dfb64e8efcb9134f5d8aa4ce10be31df72 | feat(schedule): add schedule reception and visualization module                         | 22/04/2026  |
+| GosLogic/orion-mobile-app      | feature/history-filters       | 3df7bc1ea82f64dcab1ef5c6b7d82f1ad7bc9132 | feat(history): add filters for route history by date                                    | 22/04/2026  |
+| GosLogic/orion-mobile-app      | feature/session-management    | 8be1da6c7f4ae5db91cf73ea12f6b9dc5f8a31ef | feat(authentication): add expired session notification and automatic logout             | 17/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/workday-dashboard     | f4ce9a8db73ef2a9bc4fd12ea84cb7d9ef2c731a | feat(dashboard): create dashboard for workday reports                                   | 23/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/roles-management      | c6ae91df82cb57efda6e18ab73f1bc8de5a912bc | feat(admin): add user role administration panel                                         | 15/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/map-tracking          | 1bc9de73fa84c6ab72df913ec7abf5d8c13e94ad | feat(tracking): implement real-time location tracking on map                            | 20/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/report-export         | 4efbc912da73ce81ab5f4d7ce90a81fc73de5ab2 | feat(reports): add export functionality for workday reports                             | 24/04/2026  |
+| GosLogic/orion-web-dashboard   | feature/assets-module         | 7da3bc91ef5a84dc72ab6e19cf73bd18ae6f2c91 | feat(assets): add asset management and registration module                              | 21/04/2026  |
 
 <h4 id="5213-testing-suite-evidence-for-sprint-review">5.2.1.3 Testing Suite Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+En esta sección se explica y presenta el conjunto de Unit Tests, Integration Tests y Acceptance Tests automatizados implementados para los Web Services relacionados con los User Stories especificados en el Sprint.
+
+Para los Unit Tests se utilizó xUnit, verificando el comportamiento de las clases principales del backend y la lógica de negocio implementada en Flutter. Para los Acceptance Tests bajo el enfoque BDD, se elaboraron archivos .feature utilizando el lenguaje Gherkin, los cuales se relacionan directamente con los User Stories implementados.
+
+A continuación, se muestran tablas que incluyen la relación de tests diseñados, junto con los id de commits relacionados con los avances en Testing para este Sprint. Los Unit Tests y los .feature de Gherkin están ubicados en el repositorio del backend.
+
+| Repository                   | Branch                             | Commit Id                                | Commit Message                                                                          | Commited On |
+|------------------------------|------------------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------|-------------|
+| GosLogic/orion-backend-api   | feature/authentication-tests       | 91ab5d73cf8e12db7ac5e94f1bde73ca9e8f12ac | test(authentication): add JWT authentication unit tests                                 | 25/04/2026  |
+| GosLogic/orion-backend-api   | feature/session-tests              | 8fc2de71ab45f39ce17bd5af8c1de72fa95bc123 | test(session): validate session expiration scenarios                                    | 25/04/2026  |
+| GosLogic/orion-backend-api   | feature/roles-tests                | b71ea5cf93ad7e12fc84bd19ef6ca7d28b4ce912 | test(users): add user role validation tests                                             | 26/04/2026  |
+| GosLogic/orion-backend-api   | feature/routes-tests               | c95ab71df4ce8d2fb6e91ac73de54bf18ca3d721 | test(routes): add route history repository tests                                        | 27/04/2026  |
+| GosLogic/orion-backend-api   | feature/report-tests               | d72bc18fa95de3ab81fc74de19ba6cf72ed1a593 | test(reports): validate workday report generation                                       | 27/04/2026  |
+| GosLogic/orion-backend-api   | feature/assets-tests               | 6be1fd9ac37e4bc91de57af2c81bd63ea74cf192 | test(assets): add asset registration service tests                                      | 28/04/2026  |
+| GosLogic/orion-backend-api   | feature/schedule-tests             | f4ad82ce91bc74ea3df8ab61c92ed57af18ce234 | test(schedule): validate assigned schedules retrieval                                   | 28/04/2026  |
+| GosLogic/orion-backend-api   | feature/api-integration-tests      | 2de74bcf81ea5cd93abf74ed18fc62ba7d91ce53 | test(api): add integration tests for secured endpoints                                  | 29/04/2026  |
+| GosLogic/orion-mobile-app    | feature/map-ui-tests               | a8dce712bf49ea73cf5d81ab27ce91df5bc7a214 | test(map): add UI tests for map visualization module                                    | 29/04/2026  |
+| GosLogic/orion-mobile-app    | feature/history-ui-tests           | c31bf5ae74dc91fb28ce73da51fc84be9d12ac73 | test(history): validate route history filters and visualization                         | 30/04/2026  |
+| GosLogic/orion-mobile-app    | feature/session-ui-tests           | e94fc17ab82de53bcf71ad95e3cb72fa81ce5d62 | test(authentication): add expired session notification tests                            | 30/04/2026  |
+| GosLogic/orion-mobile-app    | feature/assets-ui-tests            | 74bc91de5af38ce27db51ac9fe72da84bc19ef63 | test(assets): validate asset registration form behavior                                 | 30/04/2026  |
+| GosLogic/orion-web-dashboard | feature/dashboard-tests            | 1ac74de9bf25ca81ed73ab4fc91de82ba7cf519d | test(dashboard): add workday dashboard component tests                                  | 01/05/2026  |
+| GosLogic/orion-web-dashboard | feature/export-tests               | 58de91ac7fb24ce83da71bf5c92ae17dc4ab8f31 | test(reports): validate export functionality for reports                                | 01/05/2026  |
+| GosLogic/orion-web-dashboard | feature/tracking-tests             | 93ab71ce4df82bc51ae97fd3cb18da74fe5bc612 | test(tracking): add real-time tracking rendering tests                                  | 02/05/2026  |
+| GosLogic/orion-web-dashboard | feature/acceptance-tests           | d18bc74ea52df91ac73eb4fd18ca95bf72de63a1 | chore(test): add acceptance test configuration and example scenarios                    | 02/05/2026  |\
 
 <h4 id="5214-execution-evidence-for-sprint-review">5.2.1.4 Execution Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+En esta sección, se presenta la evidencia de ejecución de los productos implementados en este sprint. Los logros incluyen el desarrollo y despliegue del Landing Page y la aplicación nativa para Android
+
+A continuación, se muestran las capturas de pantalla y enlaces de acceso a cada producto implementado. Estas evidencias reflejan el progreso realizado en el sprint y sirven como comprobante del trabajo completado.
+
 
 <h4 id="5215-microservices-documentation-evidence-for-sprint-review">5.2.1.5 Microservices Documentation Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+Durante el desarrollo de este sprint no se realizaron actividades relacionadas con la implementación o documentación de microservicios, debido a que el alcance del sprint estuvo enfocado en funcionalidades de autenticación, gestión de usuarios, visualización de rutas y reportes del sistema.
 
 <h4 id="5216-software-deployment-evidence-for-sprint-review">5.2.1.6 Software Deployment Evidence for Sprint Review</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+
 
 <h4 id="5217-team-collaboration-insights-during-sprint">5.2.1.7 Team Collaboration Insights during Sprint</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+
 
 <h4 id="5218-kanban-board">5.2.1.8 Kanban Board</h4>
-<p><em>Contenido por desarrollar.</em></p>
+
+
 
 <h3 id="522-sprint-2">5.2.2 Sprint 2</h3>
 <p><em>Contenido por desarrollar.</em></p>
@@ -2752,19 +3112,27 @@ Enlace de trello: https://trello.com/invite/b/69f56589e0cac55f7b1a3608/ATTI3155f
 
 <div style="page-break-after: always;"></div>
 
-<h1 id="conclusiones">Conclusiones</h1>
+# Conclusiones y recomendaciones
 
-<p>Cierre del informe (archivo separado de <code>00-introduction.md</code>).</p>
+## Conclusiones
 
-<p><em>Resumen o cierre general: por desarrollar.</em></p>
+En conclusión, logramos resolver el problema central del proyecto: la ineficiencia y la falta de control operativo en la gestión de flotas para PYMES. Durante la fase inicial de Lean UX planteamos la hipótesis de que centralizar la logística en la nube optimizaría el monitoreo de los activos. Esto se materializó con éxito al diseñar una arquitectura SaaS Cloud-Native. Además, logramos mitigar el riesgo más crítico del negocio, que era la posible exposición de datos entre empresas competidoras, implementando tácticas de Row-Level Security en nuestra base de datos relacional y validando estrictamente el TenantId desde el API Gateway.
 
-<h2 id="conclusiones-y-recomendaciones">Conclusiones y recomendaciones</h2>
+Por otro lado, logramos manejar el supuesto sobre la pérdida de conectividad de los conductores en rutas rurales directamente desde el diseño de la arquitectura. Al establecer un enfoque offline-first con persistencia local en SQLite y tácticas de resincronización automática para la app móvil, garantizamos la continuidad de la operación. Esta decisión cumple con los criterios de éxito de usabilidad proyectados, ya que permite a los conductores registrar su jornada sin depender de una red de internet estable.
 
-<p><em>Contenido por desarrollar.</em></p>
+Finalmente, aplicar el método ADD v3 nos permitió resolver el desafío de procesar la telemetría GPS masiva sin saturar el sistema. Para lograrlo, adoptamos una arquitectura orientada a eventos usando Apache ActiveMQ y un almacenamiento especializado en series de tiempo con TimescaleDB. Todo este diseño se ejecutó respetando nuestra restricción principal de usar solo tecnologías Open Source, asegurando que la plataforma Orion sea un producto rentable.
 
-<h2 id="video-about-the-team">Video About-The-Team</h2>
+## Recomendaciones y Roadmap
 
-<p><em>Contenido por desarrollar.</em></p>
+Para asegurar que el producto siga creciendo de forma escalable, recomendamos integrar las siguientes iniciativas estratégicas al Roadmap de Orion:
+
+Evolución a Mantenimiento Predictivo con IA: Cuando la base de datos TelemetryDB acumule suficiente información histórica sobre el comportamiento de las flotas, el sistema debería dar el siguiente paso. Recomendamos integrar modelos de Machine Learning para identificar patrones anómalos y predecir fallas mecánicas antes de que ocurran, pasando de un modelo de alertas simples a uno predictivo basado en el riesgo real del vehículo.
+
+Escalabilidad Física del Aislamiento Multi-Tenant: A medida que la plataforma sume clientes corporativos más grandes con auditorías estrictas, será necesario evolucionar el modelo de datos. Recomendamos planificar una transición del esquema actual compartido hacia un enfoque físico de Schema-per-Tenant o Database-per-Tenant. Esto mejorará el rendimiento de cada cliente, reforzará la seguridad y evitará que la alta carga de una empresa afecte a las demás en la base de datos central.
+
+## Video About-the-Team
+
+*Contenido por desarrollar.*
 
 
 ---
@@ -2806,6 +3174,13 @@ Enlace de trello: https://trello.com/invite/b/69f56589e0cac55f7b1a3608/ATTI3155f
 <div style="page-break-after: always;"></div>
 
 <h1 id="links">Links</h1>
+
+<h2 id="trello">Trello</h2>
+
+- **Product Backlog (Capítulo III — Goslogic):** https://trello.com/invite/b/69f432bbe4fbd84d7926aa2c/ATTI61d4b7dffe97b1c335c47c6925e0e96d7AC04AE7/goslogic
+- **Architectural Design Backlog (Capítulo IV):** https://trello.com/invite/b/69f56589e0cac55f7b1a3608/ATTI3155f3901eeb23694ea9a16fa5d2a589076C55C5/architectural-design-backlog-1-goslogic
+
+<h2 id="entrevistas">Entrevistas</h2>
 
 - **Entrevista 1:** https://youtu.be/kXKhMsL1lxE
 - **Entrevista 2:** https://youtu.be/wGiuLdgBVDE

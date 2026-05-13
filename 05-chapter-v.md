@@ -125,7 +125,17 @@
 <p>Para nuestras pruebas de integración, adoptamos las prácticas descritas en <em>Gherkin: Conventions for Readable Specifications</em> y la referencia del ecosistema Cucumber. Redactamos los escenarios BDD respetando estrictamente las palabras clave en inglés (Given, When, Then, And), con saltos de línea claros entre pasos. Las formulaciones deben estar alineadas semánticamente a las Historias de Usuario de Orion, garantizando que los criterios de aceptación permanezcan trazables y auditables frente a las pruebas automatizadas (<em>step definitions</em>). Referencia: <a href="https://cucumber.io/docs/gherkin/reference/">https://cucumber.io/docs/gherkin/reference/</a>.</p>
 
 <h3 id="524-software-deployment-configuration">5.2.4 Software Deployment Configuration</h3>
-<p><em>Contenido por desarrollar.</em></p>
+<p>Para el despliegue de la solución, se ha diseñado una estrategia híbrida que separa la capa de presentación de la capa de servicios, optimizando el uso de recursos en la nube y garantizando la visibilidad de los microservicios.</p>
+
+<h4 id="5241-frontend-layer">Capa de Frontend (Landing Page &amp; Web Application)</h4>
+<p>El despliegue de la Landing Page y la aplicación Frontend se realizará mediante Azure Static Web Apps (SWA). Esta elección permite aprovechar la integración nativa con GitHub Actions para flujos de CI/CD, asegurando que cada cambio en la rama principal se refleje automáticamente en un entorno de producción optimizado para contenido estático.</p>
+
+<h4 id="5242-microservices-backend-layer">Capa de Microservicios (Backend)</h4>
+<p>Dada la naturaleza de la arquitectura orientada a microservicios y el contexto académico del proyecto, se ha planificado la siguiente configuración de despliegue:</p>
+<p><strong>Service Discovery (Netflix Eureka):</strong> Se tiene previsto el despliegue de un servidor de Eureka que actuará como el registro central de servicios. Esto permitirá que los microservicios se localicen entre sí dinámicamente, facilitando la comunicación interna sin depender de configuraciones de red estáticas.</p>
+<p><strong>Contenerización con Docker:</strong> Cada microservicio será empaquetado en contenedores Docker. Se planea utilizar imágenes ligeras para asegurar un despliegue eficiente y una portabilidad completa entre los entornos de desarrollo de los integrantes y el entorno de nube.</p>
+<p><strong>Alojamiento en Azure:</strong> Los contenedores se desplegarán preferentemente en Azure App Services for Containers o mediante el uso de Azure Container Instances (ACI), permitiendo levantar el ecosistema completo (incluyendo el API Gateway y Eureka) de forma centralizada.</p>
+<p><strong>Gestión de Datos:</strong> Se utilizarán instancias gestionadas de bases de datos (como Azure SQL Database o PostgreSQL) para garantizar la persistencia y disponibilidad de la información de forma independiente al ciclo de vida de los contenedores de aplicación.</p>
 
 <h2 id="53-microservices-implementation">5.3 Microservices Implementation</h2>
 
@@ -254,7 +264,37 @@ Durante el desarrollo de este sprint no se realizaron actividades relacionadas c
 
 <h4 id="5216-software-deployment-evidence-for-sprint-review">5.2.1.6 Software Deployment Evidence for Sprint Review</h4>
 
+<p>En esta sección se presentan las evidencias que corroboran el despliegue funcional de los componentes de software en sus respectivos entornos de producción o staging. A la fecha del informe, el equipo tiene operativo en <strong>Azure Static Web Apps</strong> el despliegue continuo de la <strong>Landing Page</strong> y del <strong>portal web</strong> (FleetManager SPA), integrado con <strong>GitHub Actions</strong>.</p>
 
+<p><strong>1. Evidencia de despliegue de aplicaciones (frontend)</strong></p>
+<table border="1" style="border-collapse: collapse; width: 100%; font-size: 0.95rem;">
+<thead>
+<tr><th style="padding: 0.5rem;">Componente</th><th style="padding: 0.5rem;">URL de despliegue (Azure SWA)</th><th style="padding: 0.5rem;">Estado</th></tr>
+</thead>
+<tbody>
+<tr><td style="padding: 0.5rem;">Landing Page</td><td style="padding: 0.5rem;"><a href="https://white-pond-0bebfff03.7.azurestaticapps.net">https://white-pond-0bebfff03.7.azurestaticapps.net</a></td><td style="padding: 0.5rem;">En línea</td></tr>
+<tr><td style="padding: 0.5rem;">Web Application (FleetManager SPA)</td><td style="padding: 0.5rem;"><a href="https://witty-island-064950f03.7.azurestaticapps.net">https://witty-island-064950f03.7.azurestaticapps.net</a></td><td style="padding: 0.5rem;">En línea</td></tr>
+</tbody>
+</table>
+
+<p align="center">
+  <img src="assets/chapter-v/DEPLOYMENT_EVIDENCE_AZURE_SWA.png"
+    alt="Evidencia de despliegue: Landing Page o portal web en Azure Static Web Apps"
+    style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Figura: evidencia de despliegue frontend en Azure SWA</em>
+</p>
+
+<p><strong>2. Evidencia de pipelines de despliegue (CI/CD)</strong></p>
+<p>Historial de ejecuciones exitosas en <strong>GitHub Actions</strong> para los repositorios que publican hacia Azure Static Web Apps, validando compilación y despliegue automatizado.</p>
+
+<p align="center">
+  <img src="assets/chapter-v/DEPLOYMENT_EVIDENCE_GITHUB_ACTIONS.png"
+    alt="Evidencia CI/CD: GitHub Actions con despliegue exitoso hacia Azure SWA"
+    style="width: 95%; max-width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+  <br/>
+  <em>Figura: pipeline CI/CD en GitHub Actions</em>
+</p>
 
 <h4 id="5217-team-collaboration-insights-during-sprint">5.2.1.7 Team Collaboration Insights during Sprint</h4>
 
