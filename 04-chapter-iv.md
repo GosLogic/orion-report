@@ -9,27 +9,28 @@
 <h3 id="411-principles-statements">4.1.1 Principles Statements</h3>
 
 1. **Aislamiento Lógico por Defecto (Seguridad Multi-Tenant)**
-   - **Descripción:** Queda estrictamente prohibida la dependencia en el filtrado manual a nivel de código. Toda operación debe inyectar implícitamente el TenantId desde el API Gateway.
-   - **Justificación de Negocio:** Protege el secreto industrial entre empresas competidoras en el modelo SaaS.
+   - **Descripción:** Queda estrictamente prohibida la dependencia en el filtrado manual a nivel de código para la separación de datos. Toda operación de lectura/escritura debe inyectar implícitamente el TenantId desde el API Gateway hasta la capa de persistencia, apoyándose en políticas de base de datos como Row-Level Security (RLS).
+   - **Justificación de Negocio:** Orion opera bajo un modelo SaaS donde conviven datos de empresas de transporte competidoras. Mitigar el riesgo de exposición transversal de la información es innegociable para mantener la confianza comercial y proteger el secreto industrial de los clientes.
 
 2. **Identidad Centralizada y Desacoplada (Atributo: Seguridad/Mantenibilidad)**
   - **Descripción**: La autenticación y autorización se delegan exclusivamente a un servicio de IAM (Identity and Access Management) independiente. Los microservicios de negocio (Bounded Contexts) solo consumen tokens validados por el API Gateway.
   - **Justificación de Negocio:** Permite que el sistema crezca sin replicar lógica de seguridad en cada microservicio y facilita la auditoría de accesos.
 
 3. **Aislamiento de Proveedores Externos (Interoperabilidad)**
-   - **Descripción:** Las integraciones con servicios de terceros deberán canalizarse obligatoriamente a través de un patrón de Capa Anticorrupción (Anti-Corruption Layer).
-   - **Justificación de Negocio:** Independencia tecnológica y control de costos frente a terceros.
+   - **Descripción:** Las integraciones con servicios de terceros (específicamente proveedores cartográficos y APIs de Google Maps) deberán canalizarse obligatoriamente a través de un patrón de Capa Anticorrupción (Anti-Corruption Layer). Ningún microservicio core debe depender de los contratos de datos externos.
+   - **Justificación de Negocio:** Protege a Orion frente a la evolución técnica o cambios en la estructura de precios de terceros. Encapsular la integración asegura que una futura migración a otro proveedor (ej. OpenStreetMap) no requiera reescribir la lógica central de despacho y ruteo.
 
 4. **Diseño para el Fallo y Degradación Elegante (Resiliencia)**
-   - **Descripción:** Implementación de Circuit Breaker en llamadas externas. Si el mapa falla, se usa caché.
-   - **Justificación de Negocio:** Continuidad operativa crítica en la gestión de flotas.
+   - **Descripción:** El sistema debe impedir activamente la propagación de fallas en cascada (Cascading Failures). Es imperativa la implementación de la táctica de Circuit Breaker en las llamadas a servicios externos. Si el mapa falla, el sistema cortará la petición y operará en modo degradado (retornando la última ubicación en caché).
+   - **Justificación de Negocio:** La gestión de flotas exige continuidad operativa crítica. Cualquier caída de un servicio externo debe mitigarse internamente para que la vista del gestor de flota nunca colapse y la asignación de unidades no se detenga.
 
 5. **Llamadas Asincrónicas sobre Sincrónicas para Alta Carga (Performance)**
-   - **Descripción:** Ingesta masiva de GPS mediante Event-Driven Architecture y Message Brokers.
-   - **Justificación de Negocio:** Absorción de picos de carga durante horas punta sin degradar la UI del gestor
+   - **Descripción:** Queda restringido el uso de llamadas sincrónicas (bloqueantes) para la ingesta de telemetría vehicular. Toda recepción masiva de coordenadas GPS adoptará un patrón Event-Driven mediante un Message Broker (como Kafka o RabbitMQ), encolando los eventos para su procesamiento diferido.
+   - **Justificación de Negocio:** Durante las horas punta, Orion recibirá cientos de coordenadas GPS simultáneas. Desacoplar la recepción del procesamiento absorbe los picos de carga, garantizando que los tableros de control de los gestores mantengan una latencia mínima sin saturar la base de datos transaccional.
+
 6. **Persistencia Local como Estándar Móvil u "Offline-First" (Operatividad)**
-   - **Descripción:** Almacenamiento local en dispositivos móviles (SQLite) y sincronización con Retry & Backoff
-   - **Justificación de Negocio:** Garantiza trazabilidad en rutas con baja conectividad.
+   - **Descripción:** La aplicación móvil guardará todo evento logístico primariamente en un almacenamiento local ligero (ej. SQLite). La transmisión a la nube se delegará a procesos en segundo plano condicionados a la red, aplicando obligatoriamente tácticas de Retry con Backoff Exponencial.
+   - **Justificación de Negocio:** Las rutas de transporte frecuentemente atraviesan zonas de nula conectividad. Este principio garantiza el 100% de la trazabilidad de la jornada del conductor y salvaguarda la vida útil de la batería del dispositivo al evitar intentos de conexión fallidos continuos.
 
 <h3 id="412-approaches-statements-architectural-styles--patterns">4.1.2 Approaches Statements Architectural Styles & Patterns</h3>
 
@@ -253,15 +254,15 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Disponibilidad</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Degradación Controlada</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>TelemetryService</strong></td>
-      <td style="padding: 0.55rem; vertical-align: top;">Se aplica  <em>Circuit Breaker</em> sobre las invocaciones a la API de Google Maps: ante latencia extrema o errores sostenidos, el circuito abre y el sistema evita propagar la falla en cascada, operando en modo degradado para preservar la disponibilidad percibida del monitoreo cartográfico.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Excepciones / Degradación Controlada</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>TelemetryMapsService</strong></td>
+      <td style="padding: 0.55rem; vertical-align: top;">Se aplica el patrón <em>Circuit Breaker</em> sobre las invocaciones a la API de Google Maps: ante latencia extrema o errores sostenidos, el circuito abre y el sistema evita propagar la falla en cascada, operando en modo degradado (p. ej., sirviendo últimas respuestas válidas desde caché) para preservar la disponibilidad percibida del monitoreo cartográfico.</td>
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Performance</td>
       <td style="padding: 0.55rem; vertical-align: top;">Introducir Concurrencia (<em>Introduce Concurrency</em>)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>Message Broker</strong></td>
-      <td style="padding: 0.55rem; vertical-align: top;">La ingesta masiva de telemetría GPS se procesa asíncronamente. Los productores publican eventos en el broker y los consumidores los procesan concurrentemente. Ello absorbe picos de carga y evita la degradación de respuessta bajo alta concurrencia.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>Message Broker</strong> (Apache Kafka / RabbitMQ)</td>
+      <td style="padding: 0.55rem; vertical-align: top;">La ingesta masiva de telemetría GPS se desacopla del procesamiento síncrono: los productores publican eventos en el broker y los consumidores los procesan concurrentemente. Ello absorbe picos de carga y evita que el camino crítico bloquee la aplicación móvil o los servicios de consulta bajo alta concurrencia.</td>
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Performance</td>
@@ -271,7 +272,7 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">Interoperabilidad</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Uso de un Intermediario</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Uso de un Intermediario (<em>Use an Intermediary</em>)</td>
       <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>API Gateway</strong></td>
       <td style="padding: 0.55rem; vertical-align: top;">El gateway actúa como fachada única de entrada: centraliza enrutamiento, políticas transversales (autenticación, límites de tasa, versionado) y uniformidad de contratos hacia los microservicios internos, facilitando que clientes heterogéneos y sistemas externos interactúen con Orion sin conocer la topología fina del backend.</td>
     </tr>
@@ -285,12 +286,12 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
       <td style="padding: 0.55rem; vertical-align: top;">Usabilidad</td>
       <td style="padding: 0.55rem; vertical-align: top;">Iniciativa del Sistema (<em>System Initiative</em>)</td>
       <td style="padding: 0.55rem; vertical-align: top;">Contenedor <strong>MobileApp</strong> (cliente)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">La aplicación adopta un modelo <em>offline-first</em> con persistencia local en SQLite. Al recuperar la conexión, el sistema inicia la sincronización sin que el conductor deba reintentar manualmente.
+      <td style="padding: 0.55rem; vertical-align: top;">La aplicación adopta un modelo <em>offline-first</em> con persistencia local en SQLite: ante pérdida de conectividad, el sistema conserva autónomamente los eventos de jornada y reintenta la sincronización en segundo plano mediante <em>retry</em> con backoff exponencial al restablecerse la red, reduciendo la carga cognitiva del conductor y manteniendo continuidad operativa sin intervención manual.</td>
     </tr>
   </tbody>
 </table>
 
-<p>La conjugación coherente de las tácticas anteriores define la estrategia arquitectónica de Orion: la redundancia y degradación controlada aseguran un servicio continuo; la concurrencia mediada por broker y la persistencia especializada en series temporales sostienen el rendimiento bajo picos de telemetría; la intermediación a través del Gateway garantiza el aislamiento lógico de datos por Tenant y habilita integraciones empresariales predecibles; finalmente, la iniciativa del sistema en el cliente móvil cierra la brecha de usabilidad en entornos de conectividad débil. En conjunto, estas decisiones constituyen el cimiento técnico que hace viable el despliegue escalable y seguro del producto.</p>
+<p>La conjugación coherente de las tácticas anteriores define la estrategia arquitectónica <strong>Cloud-Native</strong> de Orion: la redundancia y la degradación controlada aseguran un servicio continuo; la concurrencia mediada por broker, la persistencia especializada en series temporales y la caché distribuida sostienen el rendimiento bajo picos de telemetría; la intermediación a través del Gateway garantiza el aislamiento lógico de datos por Tenant y habilita integraciones empresariales predecibles; finalmente, la iniciativa del sistema en el cliente móvil cierra la brecha de usabilidad en entornos de conectividad débil. En conjunto, estas decisiones constituyen el cimiento técnico que hace viable el despliegue multi-tenant escalable y seguro del producto en modalidad SaaS.</p>
 
 <h2 id="42-architectural-drivers">4.2 Architectural Drivers</h2>
 
@@ -354,7 +355,7 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
   </tbody>
 </table>
 
-<p><strong>Conclusión:</strong> En conjunto, estas cuatro funcionalidades primarias conforman el núcleo operativo de Orion y justifican la elección de un estilo arquitectónico basado en Microservicios. Las necesidades estrictas de desempeño asíncrono, resiliencia ante proveedores externos, integración limpia con terceros, aislamiento multi-tenant y soporte operativo sin conexión hacen inviable la elección de una arquitectura monolítica tradicional.</p>
+<p><strong>Conclusión:</strong> En conjunto, estas cuatro funcionalidades primarias conforman el núcleo operativo de Orion y justifican la elección de un estilo arquitectónico basado en Microservicios Cloud-Native. Las necesidades estrictas de desempeño asíncrono, resiliencia ante proveedores externos, integración limpia con terceros, aislamiento multi-tenant y soporte operativo sin conexión hacen inviable la elección de una arquitectura monolítica tradicional.</p>
 
 <h2 id="4110-quality-attribute-scenarios">4.1.10 Quality Attribute Scenarios</h2>
 
@@ -528,7 +529,7 @@ Según la taxonomía del SEI, una táctica arquitectónica es una decisión de d
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">CON-01</td>
       <td style="padding: 0.55rem; vertical-align: top;">Uso de software de terceros (Google Maps)</td>
-      <td style="padding: 0.55rem; vertical-align: top;">Dependencia innegociable de una API externa para la visualización cartográfica y geocodificación.<br><br><strong>Impacto en Disponibilidad e Interoperabilidad:</strong> Obliga a construir una capa de abstracción para estandarizar la comunicación y aplicar tácticas de <em>Circuit Breaker</em> para que el sistema siga operando si el proveedor falla.</td>
+      <td style="padding: 0.55rem; vertical-align: top;">Dependencia innegociable de una API externa para la visualización cartográfica y geocodificación.<br><br><strong>Impacto en Disponibilidad e Interoperabilidad:</strong> Obliga a construir una capa anticorrupción / de abstracción para estandarizar la comunicación y aplicar tácticas de <em>Circuit Breaker</em> para que el sistema siga operando si el proveedor falla.</td>
     </tr>
     <tr>
       <td style="padding: 0.55rem; vertical-align: top;">CON-02</td>

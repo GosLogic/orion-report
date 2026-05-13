@@ -89,7 +89,7 @@ La ineficiencia eleva los costos logísticos hasta un 21.1% sobre las ventas (fr
 
 <h4 id="1231-lean-ux-problem-statement">1.2.3.1 Lean UX Problem Statement</h4>
 
-Nuestra solución busca proveer una plataforma SaaS multi-tenant que permita centralizar la gestión operativa y el ciclo de vida vehicular, integrando telemetría en tiempo real y mantenimiento preventivo.
+Orion se plantea como una plataforma SaaS multi-tenant orientada a la gestión y telemetría de flotas vehiculares; las capacidades concretas que la materializan frente a los pain points del gestor de flota y del conductor se especifican en las Ideas de Solución que siguen a los planteamientos de problema.
 
 Hemos observado que las empresas de transporte sufren altos costos operativos debido a fallas mecánicas imprevistas y la falta de visibilidad en tiempo real de sus vehículos, lo que repercute en la disponibilidad de sus activos.
 
@@ -106,6 +106,20 @@ Nuestra solución busca proveer una herramienta móvil con enfoque offline-first
 Hemos observado que los conductores suelen transitar por zonas sin cobertura, lo que ocasiona la pérdida de registros críticos de jornada, ubicación y eventos de mantenimiento.
 
 ¿Cómo podemos garantizar que el registro de datos sea continuo y resiliente en zonas con conectividad intermitente?
+
+**Lean UX: Solution Ideas**
+
+Las siguientes funcionalidades traducen el alcance de Orion en entregables verificables y sustituyen formulaciones genéricas (por ejemplo, «monitoreo», «mantenimiento», «alertas» o «app» sin definir) por módulos con propósito y audiencia claros.
+
+- **Panel de Gestión Multi-Tenant:** Espacio administrativo web donde cada empresa gestiona usuarios, vehículos, conductores y políticas propias dentro de un contexto aislado por identificador de arrendatario (<em>TenantId</em>). Resuelve el temor a fugas de datos entre competidores y permite al gestor de flota operar con confianza sobre información sensible propia del negocio.
+
+- **Dashboard de Telemetría en Tiempo Real:** Vista operativa integrada con Google Maps que muestra la posición y el estado de los vehículos activos del tenant en curso. Resuelve la falta de visibilidad en tiempo real que incrementa la incertidumbre logística y dificulta decisiones oportunas ante desviaciones de ruta o demoras.
+
+- **Motor Automatizado de Mantenimiento Preventivo:** Componente que evalúa reglas según kilometraje acumulado y temporizadores de servicio para generar alertas preventivas (p. ej., cambio de aceite) antes de que el vehículo incurra en fallas correctivas costosas. Reduce paradas no programadas y alinea al gestor de flota con una política explícita de cuidado del activo.
+
+- **Módulo de Gestión de Despacho:** Herramienta para asignar de forma dinámica conductores a vehículos y a rutas concretas, incorporando horarios y estado operativo de las unidades en un único flujo de planificación. Atiende la dispersión de información entre planificación, disponibilidad de activos y ejecución en ruta.
+
+- **Aplicación Móvil Offline-First:** Cliente de campo para el conductor que permite iniciar y cerrar jornada, registrar eventos relevantes y transmitir ubicación de forma diferida cuando la red es intermitente o ausente. Elimina la pérdida de trazabilidad operativa en zonas rurales y estabiliza la ingesta de datos que alimentan telemetría y mantenimiento preventivo.
 
 <h4 id="1232-lean-ux-assumptions">1.2.3.2 Lean UX Assumptions</h4>
 
@@ -135,22 +149,22 @@ Hemos observado que los conductores suelen transitar por zonas sin cobertura, lo
 <h4 id="1233-lean-ux-hypothesis">1.2.3.3 Lean UX Hypothesis</h4>
 
 **Hypothesis Statement 01**  
-Creemos que implementando aislamiento lógico estricto por TenantId para todas las operaciones de la plataforma, sabremos que hemos tenido éxito cuando el 100% de las pruebas de acceso cruzado entre empresas sean bloqueadas y validadas en QA.
+Creemos que el **Panel de Gestión Multi-Tenant**, al hacer cumplir el aislamiento lógico estricto mediante **TenantId** en todas las operaciones web administrativas, sabremos que hemos tenido éxito cuando el **100%** de las pruebas de acceso cruzado entre empresas sea bloqueado y validado en QA.
 
 **Hypothesis Statement 02**  
-Creemos que activando reglas de mantenimiento preventivo por kilometraje y tiempo (aceite, neumáticos y revisiones), sabremos que hemos tenido éxito cuando las fallas no programadas se reduzcan en al menos 30% durante los primeros seis meses.
+Creemos que el **Motor Automatizado de Mantenimiento Preventivo**, al ejecutar reglas por kilometraje y tiempo (aceite, neumáticos y revisiones) sobre datos de telemetría, sabremos que hemos tenido éxito cuando las fallas no programadas se reduzcan en **al menos 30%** durante los primeros seis meses.
 
 **Hypothesis Statement 03**  
-Creemos que centralizando en Orion la asignación de rutas, horarios, estado de unidades y alertas operativas, sabremos que hemos tenido éxito cuando el tiempo de planificación diaria del gestor se reduzca en 40%.
+Creemos que el **Módulo de Gestión de Despacho**, al concentrar la asignación dinámica de conductores a vehículos y rutas junto con horarios y estado operativo de las unidades, sabremos que hemos tenido éxito cuando el tiempo de planificación diaria del gestor de flota se reduzca en **40%**.
 
 **Hypothesis Statement 04**  
-Creemos que ofreciendo una capacitación guiada sobre la app móvil de Orion a los conductores, sabremos que hemos tenido éxito cuando al menos el 85% complete correctamente los flujos clave (inicio/fin de jornada, reporte de eventos y confirmación de ruta) en el primer mes.
+Creemos que, combinando la **Aplicación Móvil Offline-First** con capacitación guiada para los conductores, sabremos que hemos tenido éxito cuando **al menos el 85%** complete correctamente los flujos clave (inicio y fin de jornada, reporte de eventos y confirmación de ruta) en el primer mes.
 
 **Hypothesis Statement 05**  
-Creemos que implementando sincronización diferida en la app móvil para operar sin señal, sabremos que hemos tenido éxito cuando el 95% de eventos registrados offline se sincronicen correctamente al recuperar conectividad.
+Creemos que la **Aplicación Móvil Offline-First**, al persistir eventos y coordenadas en local y aplicar sincronización diferida al restablecer la red, sabremos que hemos tenido éxito cuando el **95%** de los eventos registrados sin conectividad se sincronicen correctamente tras recuperar señal.
 
 **Hypothesis Statement 06**  
-Creemos que aplicando caché y control de frecuencia de actualización en Google Maps, sabremos que hemos tenido éxito cuando el costo mensual de consumo de mapas se reduzca en 35% sin afectar la precisión del monitoreo de flota.
+Creemos que el **Dashboard de Telemetría en Tiempo Real** (Google Maps), complementado con caché y control de la frecuencia de actualización cartográfica, sabremos que hemos tenido éxito cuando el costo mensual de consumo de mapas se reduzca en **35%** sin deteriorar la precisión percibida del rastreo de vehículos activos.
 
 <h4 id="1234-lean-ux-canvas">1.2.3.4 Lean UX Canvas</h4>
 
